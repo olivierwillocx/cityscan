@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LAB MR — CityScan</title>
+<title>CityScan</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
@@ -34,7 +34,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.15;margin:0
 .top{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
 .top-in{max-width:1240px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .brand{display:flex;align-items:baseline;gap:12px;flex:1 1 auto;min-width:0}
-.mark{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-size:25px;font-weight:700;letter-spacing:.02em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.mark{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-size:25px;font-weight:700;letter-spacing:-.01em;color:var(--ink);text-decoration:none;white-space:nowrap}
 .mark .wm{font-style:normal}.mark b{color:var(--accent);font-weight:inherit}
 .mark svg{width:28px;height:28px;flex:none}
 .who{color:var(--muted);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -139,7 +139,7 @@ button.fig:hover{border-color:var(--accent)}
 </style>
 
 <header class="top"><div class="top-in">
-  <div class="brand"><a class="mark" href="#/" aria-label="CityScan — accueil"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M2 9V4a2 2 0 0 1 2-2h5M19 2h5a2 2 0 0 1 2 2v5M26 19v5a2 2 0 0 1-2 2h-5M9 26H4a2 2 0 0 1-2-2v-5" stroke="var(--ink)"/><path d="M8 20v-5M12 20V9M16 20v-7M20 20v-9" stroke="var(--ink)"/><path d="M5 14.5h18" stroke="var(--accent)"/></svg><i class="wm">CITY<b>SCAN</b></i></a><a class="who" id="who" href="#/fr/auteur" style="text-decoration:none"></a></div>
+  <div class="brand"><a class="mark" href="#/" aria-label="CityScan — accueil"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M2 9V4a2 2 0 0 1 2-2h5M19 2h5a2 2 0 0 1 2 2v5M26 19v5a2 2 0 0 1-2 2h-5M9 26H4a2 2 0 0 1-2-2v-5" stroke="var(--ink)"/><path d="M8 20v-5M12 20V9M16 20v-7M20 20v-9" stroke="var(--ink)"/><path d="M5 14.5h18" stroke="var(--accent)"/></svg><i class="wm">City<b>Scan</b></i></a><a class="who" id="who" href="#/fr/auteur" style="text-decoration:none"></a></div>
   <label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder=""></label>
   <div class="lang" role="group" aria-label="Langue / Taal"><button id="lfr" aria-pressed="true">FR</button><button id="lnl" aria-pressed="false">NL</button></div>
 </div></header>
@@ -177,7 +177,7 @@ const T={
  fr:{
   who:"par Olivier Willocx, député bruxellois (MR)", search:"Rechercher une ville, un thème…",
   thesis:"Ce qui marche — et ce qui rate — dans les <em>villes d'Europe</em>, lu depuis Bruxelles.",
-  thesisP:"LAB MR passe la presse européenne au crible des compétences de la Région bruxelloise, de la COCOM et de la COCOF. Pas une liste d'idées : des décisions prises, des budgets votés, des résultats publiés — et, pour chacune, ce qui existe déjà à Bruxelles, ce qui bloquerait et la question parlementaire qui peut en sortir. Les bonnes pratiques sont retenues d'où qu'elles viennent ; les mauvaises aussi, parce qu'un échec documenté ailleurs vaut une étude d'impact gratuite.",
+  thesisP:"CityScan passe la presse européenne au crible des compétences de la Région bruxelloise, de la COCOM et de la COCOF. Pas une liste d'idées : des décisions prises, des budgets votés, des résultats publiés — et, pour chacune, ce qui existe déjà à Bruxelles, ce qui bloquerait et la question parlementaire qui peut en sortir. Les bonnes pratiques sont retenues d'où qu'elles viennent ; les mauvaises aussi, parce qu'un échec documenté ailleurs vaut une étude d'impact gratuite.",
   legendBest:"Bonne pratique — à transposer", legendBad:"Mauvaise pratique — à éviter", legendWatch:"À évaluer — résultats attendus",
   mNav:"Parcourir", mMat:"Par matière", mInst:"Par institution", mCity:"Par ville", mVerdict:"Par verdict",
   home:"Accueil", all:"Toutes les fiches", chrono:"Chronologie", latest:"Dernière livraison", editions:"Livraisons", method:"Méthode et limites", cities:"Toutes les villes",
@@ -194,13 +194,13 @@ const T={
   methodIntro:"Chaque semaine, quatre équipes de recherche passent la presse quotidienne nationale, la presse spécialisée sur les villes et la presse belge au crible des compétences bruxelloises, en six langues. Une initiative n'est retenue que si elle est concrète — décision prise, budget voté, mesure lancée, résultat publié — et si au moins une source de presse datée, ouverte et lue, la confirme. Les effets d'annonce et les projets pilotes sans calendrier sont écartés. Quand un chiffre provient de la ville elle-même ou est contesté, la fiche le dit. Quand rien de solide n'a été trouvé dans une matière, la fiche n'est pas écrite : la lacune est signalée plutôt que comblée.",
   methodVerdict:"Le verdict — bonne pratique, mauvaise pratique, à évaluer — porte sur les résultats constatés, pas sur la couleur politique de la majorité qui a pris la mesure. Une bonne idée venue d'une majorité de gauche y figure comme bonne pratique ; un dispositif libéral dont l'évaluation déçoit y figure comme mauvaise pratique.",
   libraryNote:"La bibliothèque a été constituée par un rattrapage rétrospectif sur douze mois, puis elle s'enrichit chaque lundi d'une nouvelle livraison.",
-  foot1:"LAB MR — revue de presse européenne des initiatives des villes dans les compétences de la Région de Bruxelles-Capitale, de la COCOM et de la COCOF.",
+  foot1:"CityScan — revue de presse européenne des initiatives des villes dans les compétences de la Région de Bruxelles-Capitale, de la COCOM et de la COCOF.",
   foot2:"Chaque fiche renvoie à au moins une source de presse datée. Mise à jour hebdomadaire, le lundi."
  },
  nl:{
   who:"door Olivier Willocx, Brussels volksvertegenwoordiger (MR)", search:"Zoek een stad, een thema…",
   thesis:"Wat werkt — en wat mislukt — in de <em>steden van Europa</em>, gelezen vanuit Brussel.",
-  thesisP:"LAB MR zeeft de Europese pers door de bevoegdheden van het Brussels Gewest, de GGC en de COCOF. Geen ideeënlijst: genomen beslissingen, gestemde budgetten, gepubliceerde resultaten — en voor elk ervan wat al in Brussel bestaat, wat zou blokkeren en de parlementaire vraag die eruit kan volgen. Goede praktijken worden weerhouden waar ze ook vandaan komen; slechte ook, want een elders gedocumenteerde mislukking is een gratis impactstudie.",
+  thesisP:"CityScan zeeft de Europese pers door de bevoegdheden van het Brussels Gewest, de GGC en de COCOF. Geen ideeënlijst: genomen beslissingen, gestemde budgetten, gepubliceerde resultaten — en voor elk ervan wat al in Brussel bestaat, wat zou blokkeren en de parlementaire vraag die eruit kan volgen. Goede praktijken worden weerhouden waar ze ook vandaan komen; slechte ook, want een elders gedocumenteerde mislukking is een gratis impactstudie.",
   legendBest:"Goede praktijk — over te nemen", legendBad:"Slechte praktijk — te vermijden", legendWatch:"Te evalueren — resultaten verwacht",
   mNav:"Bladeren", mMat:"Per materie", mInst:"Per instelling", mCity:"Per stad", mVerdict:"Per oordeel",
   home:"Start", all:"Alle fiches", chrono:"Chronologie", latest:"Laatste editie", editions:"Edities", method:"Methode en grenzen", cities:"Alle steden",
@@ -217,7 +217,7 @@ const T={
   methodIntro:"Elke week zeven vier onderzoeksteams de nationale kwaliteitspers, de gespecialiseerde stedenpers en de Belgische pers door de Brusselse bevoegdheden, in zes talen. Een initiatief wordt enkel weerhouden als het concreet is — beslissing genomen, budget gestemd, maatregel gelanceerd, resultaat gepubliceerd — en als minstens één gedateerde, geopende en gelezen persbron het bevestigt. Aankondigingseffecten en proefprojecten zonder kalender vallen af. Wanneer een cijfer van de stad zelf komt of betwist wordt, zegt de fiche dat. Wanneer niets solide gevonden werd in een materie, wordt de fiche niet geschreven: de leemte wordt gemeld, niet opgevuld.",
   methodVerdict:"Het oordeel — goede praktijk, slechte praktijk, te evalueren — slaat op de vastgestelde resultaten, niet op de politieke kleur van de meerderheid die de maatregel nam. Een goed idee van een linkse meerderheid staat er als goede praktijk; een liberale maatregel waarvan de evaluatie tegenvalt, staat er als slechte praktijk.",
   libraryNote:"De bibliotheek werd opgebouwd met een retrospectieve inhaalslag over twaalf maanden en groeit sindsdien elke maandag aan met een nieuwe editie.",
-  foot1:"LAB MR — Europees persoverzicht van stedelijke initiatieven binnen de bevoegdheden van het Brussels Hoofdstedelijk Gewest, de GGC en de COCOF.",
+  foot1:"CityScan — Europees persoverzicht van stedelijke initiatieven binnen de bevoegdheden van het Brussels Hoofdstedelijk Gewest, de GGC en de COCOF.",
   foot2:"Elke fiche verwijst naar minstens één gedateerde persbron. Wekelijks bijgewerkt, op maandag."
  }
 };
@@ -363,7 +363,7 @@ function renderMain(){
       p:["Olivier Willocx, né à Bruxelles en 1966, est député au Parlement bruxellois pour le MR depuis les élections du 9 juin 2024. Il est aussi conseiller communal à Schaerbeek.",
          "Avant d'entrer au Parlement, il a passé près d'un quart de siècle à la tête de BECI, la Chambre de commerce et Union des entreprises de Bruxelles (2000-2024), dont il a été directeur général puis administrateur délégué. Il a présidé le Conseil économique et social de la Région de Bruxelles-Capitale (2012-2015) et siégé comme juge social au tribunal puis conseiller social à la Cour du travail de Bruxelles.",
          "Économiste de formation (ULB), titulaire d'un master en droit européen de l'Université d'Amsterdam, il a été conseiller au cabinet d'un ministre bruxellois et attaché économique de la Région auprès de l'Union européenne. Il a enseigné pendant près de vingt ans et a été, durant 21 ans, vice-président de la plus grande école de promotion sociale de Bruxelles.",
-         "LAB MR prolonge ce parcours : regarder ce que les autres villes d'Europe ont réellement fait, mesurer ce qui a marché et ce qui a raté, et en tirer des propositions concrètes pour Bruxelles."],
+         "CityScan prolonge ce parcours : regarder ce que les autres villes d'Europe ont réellement fait, mesurer ce qui a marché et ce qui a raté, et en tirer des propositions concrètes pour Bruxelles."],
       k:"Parcours",
       tl:[["2024 –","Député bruxellois (MR)"],["2000 – 2024","Directeur général puis administrateur délégué de BECI"],["2012 – 2015","Président du Conseil économique et social bruxellois"],["2014 – 2021","Conseiller social à la Cour du travail de Bruxelles"],["1995 – 1997","Conseiller au cabinet d'un ministre bruxellois"]],
       c:"Contact"},
@@ -371,11 +371,11 @@ function renderMain(){
       p:["Olivier Willocx, geboren in Brussel in 1966, is sinds de verkiezingen van 9 juni 2024 Brussels volksvertegenwoordiger voor de MR. Hij is ook gemeenteraadslid in Schaarbeek.",
          "Voor zijn intrede in het Parlement leidde hij bijna een kwarteeuw BECI, de Kamer van Koophandel en Verbond van Ondernemingen van Brussel (2000-2024), eerst als directeur-generaal en daarna als gedelegeerd bestuurder. Hij was voorzitter van de Economische en Sociale Raad van het Brussels Hoofdstedelijk Gewest (2012-2015) en zetelde als rechter in sociale zaken en raadsheer in sociale zaken bij het Arbeidshof van Brussel.",
          "Hij is econoom (ULB) en behaalde een master Europees recht aan de Universiteit van Amsterdam. Hij was adviseur op het kabinet van een Brussels minister en economisch attaché van het Gewest bij de Europese Unie. Hij gaf bijna twintig jaar les en was 21 jaar ondervoorzitter van de grootste school voor sociale promotie in Brussel.",
-         "LAB MR bouwt daarop voort: kijken wat andere Europese steden echt gedaan hebben, meten wat werkte en wat mislukte, en daaruit concrete voorstellen voor Brussel halen."],
+         "CityScan bouwt daarop voort: kijken wat andere Europese steden echt gedaan hebben, meten wat werkte en wat mislukte, en daaruit concrete voorstellen voor Brussel halen."],
       k:"Loopbaan",
       tl:[["2024 –","Brussels volksvertegenwoordiger (MR)"],["2000 – 2024","Directeur-generaal en daarna gedelegeerd bestuurder van BECI"],["2012 – 2015","Voorzitter van de Brusselse Economische en Sociale Raad"],["2014 – 2021","Raadsheer in sociale zaken, Arbeidshof Brussel"],["1995 – 1997","Adviseur op het kabinet van een Brussels minister"]],
       c:"Contact"}}[lang];
-    html='<section class="thesis"><div class="eyebrow">LAB MR</div><h1>'+A.h+'</h1><p style="margin-top:6px;font-weight:600;color:var(--ink)">'+A.sub+'</p>'
+    html='<section class="thesis"><div class="eyebrow">CityScan</div><h1>'+A.h+'</h1><p style="margin-top:6px;font-weight:600;color:var(--ink)">'+A.sub+'</p>'
      +A.p.map(x=>'<p>'+esc(x)+'</p>').join("")+'</section>'
      +head(A.k)+'<ul class="plain">'+A.tl.map(r=>'<li style="display:grid;grid-template-columns:120px 1fr;gap:12px"><span class="eyebrow" style="padding-top:3px;font-variant-numeric:tabular-nums">'+r[0]+'</span><span>'+esc(r[1])+'</span></li>').join("")+'</ul>'
      +head(A.c)+'<ul class="plain"><li>olivier.willocx@mrbruxelles.be</li><li><a href="https://www.linkedin.com/in/olivierwillocx/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://www.parlement.brussels" target="_blank" rel="noopener">parlement.brussels</a></li></ul>';
