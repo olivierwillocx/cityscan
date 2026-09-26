@@ -34,8 +34,9 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.15;margin:0
 .top{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
 .top-in{max-width:1240px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .brand{display:flex;align-items:baseline;gap:12px;flex:1 1 auto;min-width:0}
-.mark{font-family:var(--display);font-size:26px;font-weight:700;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
-.mark span{color:var(--accent)}
+.mark{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-size:25px;font-weight:700;letter-spacing:.02em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.mark .wm{font-style:normal}.mark b{color:var(--accent);font-weight:inherit}
+.mark svg{width:28px;height:28px;flex:none}
 .who{color:var(--muted);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
 .lang button{padding:5px 12px;font-family:var(--mono);font-size:12px;letter-spacing:.06em}
@@ -138,7 +139,7 @@ button.fig:hover{border-color:var(--accent)}
 </style>
 
 <header class="top"><div class="top-in">
-  <div class="brand"><a class="mark" href="#/">LAB <span>MR</span></a><a class="who" id="who" href="#/fr/auteur" style="text-decoration:none"></a></div>
+  <div class="brand"><a class="mark" href="#/" aria-label="CityScan — accueil"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M2 9V4a2 2 0 0 1 2-2h5M19 2h5a2 2 0 0 1 2 2v5M26 19v5a2 2 0 0 1-2 2h-5M9 26H4a2 2 0 0 1-2-2v-5" stroke="var(--ink)"/><path d="M8 20v-5M12 20V9M16 20v-7M20 20v-9" stroke="var(--ink)"/><path d="M5 14.5h18" stroke="var(--accent)"/></svg><i class="wm">CITY<b>SCAN</b></i></a><a class="who" id="who" href="#/fr/auteur" style="text-decoration:none"></a></div>
   <label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder=""></label>
   <div class="lang" role="group" aria-label="Langue / Taal"><button id="lfr" aria-pressed="true">FR</button><button id="lnl" aria-pressed="false">NL</button></div>
 </div></header>
