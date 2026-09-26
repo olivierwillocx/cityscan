@@ -1,0 +1,402 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LAB MR — CityScan</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F4F5F9; --surface:#FFFFFF; --surface2:#EBEEF6; --ink:#171E33; --muted:#5B6480; --line:#D9DDE8;
+  --accent:#2247C9; --accent-ink:#FFFFFF; --accent-soft:#E4EAFB;
+  --best:#1B7F5C; --best-soft:#DFF3EA; --bad:#B8322A; --bad-soft:#F9E3E0; --watch:#A86E0C; --watch-soft:#FBEFD6;
+  --shadow:0 1px 2px rgba(23,30,51,.06),0 8px 24px -12px rgba(23,30,51,.18);
+  --display:"Fraunces",Georgia,"Times New Roman",serif; --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif; --mono:"IBM Plex Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1220; --surface:#161B2D; --surface2:#1F2540; --ink:#E8EBF4; --muted:#A3ABC4; --line:#2B3352;
+  --accent:#7B98FF; --accent-ink:#0E1220; --accent-soft:#1F2A55;
+  --best:#5BC79A; --best-soft:#123A2C; --bad:#F08A80; --bad-soft:#48201C; --watch:#F0B85A; --watch-soft:#3E2E0F;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+}}
+:root[data-theme="dark"]{
+  --bg:#0E1220; --surface:#161B2D; --surface2:#1F2540; --ink:#E8EBF4; --muted:#A3ABC4; --line:#2B3352;
+  --accent:#7B98FF; --accent-ink:#0E1220; --accent-soft:#1F2A55;
+  --best:#5BC79A; --best-soft:#123A2C; --bad:#F08A80; --bad-soft:#48201C; --watch:#F0B85A; --watch-soft:#3E2E0F;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+a{color:var(--accent)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.15;margin:0;text-wrap:balance}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+.top{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.top-in{max-width:1240px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:12px;flex:1 1 auto;min-width:0}
+.mark{font-family:var(--display);font-size:26px;font-weight:700;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.mark span{color:var(--accent)}
+.who{color:var(--muted);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{padding:5px 12px;font-family:var(--mono);font-size:12px;letter-spacing:.06em}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.search{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--bg);min-width:190px;flex:0 1 300px}
+.search input{border:0;background:transparent;color:var(--ink);font:inherit;width:100%;outline:none}
+.search input::placeholder{color:var(--muted)}
+
+.wrap{max-width:1240px;margin:0 auto;padding-block:24px 64px;padding-inline:20px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:34px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr;gap:18px}}
+.side{position:sticky;top:76px;align-self:start;display:flex;flex-direction:column;gap:18px;max-height:calc(100vh - 96px);overflow-y:auto;padding-right:4px}
+@media (max-width:900px){.side{position:static;max-height:none;overflow:visible}}
+.menu h4{font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.menu ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+@media (max-width:900px){.menu ul{flex-direction:row;flex-wrap:wrap;gap:6px}}
+.menu li button{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;padding:6px 10px;border-radius:8px;color:var(--ink);font-size:15px}
+.menu li button:hover{background:var(--surface2)}
+.menu li button[aria-current="true"]{background:var(--accent-soft);color:var(--accent);font-weight:600}
+@media (max-width:900px){.menu li button{width:auto;border:1px solid var(--line);background:var(--surface);padding:5px 10px;font-size:14px}}
+.menu .n{font-family:var(--mono);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.menu li button[aria-current="true"] .n{color:inherit}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none;margin-right:7px}
+.dot.best{background:var(--best)}.dot.bad{background:var(--bad)}.dot.watch{background:var(--watch)}
+
+.thesis{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;box-shadow:var(--shadow)}
+.thesis h1{font-size:clamp(26px,3.5vw,40px);font-weight:500;letter-spacing:-.01em;max-width:22ch}
+.thesis h1 em{font-style:italic;color:var(--accent)}
+.thesis p{max-width:70ch;margin:14px 0 0;color:var(--muted);font-size:17px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-size:14px}
+.legend span{display:inline-flex;align-items:center}
+
+.figs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:16px}
+@media (max-width:820px){.figs{grid-template-columns:repeat(2,1fr)}}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-align:left}
+.fig b{font-family:var(--display);font-size:28px;font-weight:700;display:block;line-height:1;font-variant-numeric:tabular-nums}
+.fig small{color:var(--muted);font-size:13px;display:block;margin-top:2px}
+button.fig:hover{border-color:var(--accent)}
+.fig.best b{color:var(--best)}.fig.bad b{color:var(--bad)}
+
+.sec{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:30px 0 12px}
+.sec h2{font-size:23px;font-weight:600}
+.sec .meta{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.lead{background:var(--surface2);border-left:3px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0;max-width:80ch}
+.lead p{margin:0}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:14px 16px;text-align:left;display:flex;flex-direction:column;gap:9px}
+.tile:hover{border-color:var(--accent)}
+.tile .h{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.tile .h b{font-family:var(--display);font-size:17px;font-weight:600;line-height:1.2}
+.tile .h span{font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.vbar{display:flex;height:6px;border-radius:3px;overflow:hidden;background:var(--surface2)}
+.vbar i{display:block}
+.vbar i.best{background:var(--best)}.vbar i.bad{background:var(--bad)}.vbar i.watch{background:var(--watch)}
+.tile .sub{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.tile .sub b{font-weight:600}
+.tile .sub .cb{color:var(--best)}.tile .sub .cd{color:var(--bad)}.tile .sub .cw{color:var(--watch)}
+
+.yearnav{display:flex;gap:6px;flex-wrap:wrap;margin:-2px 0 16px}
+.yearnav button{font-family:var(--mono);font-size:12px;letter-spacing:.04em;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--surface)}
+.yearnav button:hover{border-color:var(--accent);color:var(--accent)}
+.yearnav button[aria-current="true"]{background:var(--accent);color:var(--accent-ink);border-color:transparent;font-weight:500}
+.group h3{font-size:13.5px;font-family:var(--mono);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}
+.cards{display:flex;flex-direction:column;gap:10px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card.best{border-left:4px solid var(--best)}.card.bad{border-left:4px solid var(--bad)}.card.watch{border-left:4px solid var(--watch)}
+.card summary{list-style:none;cursor:pointer;padding:15px 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px 14px;align-items:start}
+.card summary::-webkit-details-marker{display:none}
+.card summary:hover{background:var(--surface2)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;align-items:center;grid-column:1/-1}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--bg)}
+.chip.inst{border-color:transparent;background:var(--accent-soft);color:var(--accent);font-weight:500}
+.chip.v{border-color:transparent;font-weight:500}
+.chip.v.best{background:var(--best-soft);color:var(--best)}.chip.v.bad{background:var(--bad-soft);color:var(--bad)}.chip.v.watch{background:var(--watch-soft);color:var(--watch)}
+.card .t{font-family:var(--display);font-weight:600;font-size:18.5px;line-height:1.28;text-wrap:balance}
+.card .c{color:var(--muted);font-size:14px}
+.tr{display:flex;flex-direction:column;align-items:flex-end;gap:4px;font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.bars{display:flex;gap:3px}.bars i{width:14px;height:6px;border-radius:2px;background:var(--line)}.bars i.on{background:var(--accent)}
+.card summary .open{font-family:var(--mono);font-size:11px;color:var(--accent);grid-column:1/-1;letter-spacing:.06em;text-transform:uppercase}
+.card[open] summary .open{display:none}
+.body{padding:4px 18px 20px;border-top:1px dashed var(--line);display:grid;grid-template-columns:152px minmax(0,1fr);gap:11px 18px;font-size:15.5px}
+@media (max-width:660px){.body{grid-template-columns:1fr;gap:3px 0}.body dt{margin-top:11px}}
+.body dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.body dd{margin:0;max-width:74ch}
+.body dd.angle{background:var(--accent-soft);padding:10px 14px;border-radius:8px;font-weight:600}
+.body ul{margin:0;padding-left:18px}.body li{margin:2px 0;word-break:break-word}
+.body .src{font-size:14px}
+
+.plain{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px 22px;margin:0;list-style:none}
+.plain li{padding:9px 0;border-bottom:1px solid var(--line)}.plain li:last-child{border:0}
+.rowlist{display:grid;gap:8px}
+.row{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:13px 16px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;text-align:left;width:100%}
+.row:hover{border-color:var(--accent)}
+.row b{font-family:var(--display);font-size:17px;font-weight:600}
+.row .n{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.empty{color:var(--muted);padding:28px;text-align:center;border:1px dashed var(--line);border-radius:12px}
+.foot{max-width:1240px;margin:0 auto;padding:18px 20px 44px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+.foot p{margin:4px 0;max-width:90ch}
+@media (prefers-reduced-motion:no-preference){.card summary,.tile,.row{transition:background .15s,border-color .15s}}
+</style>
+
+<header class="top"><div class="top-in">
+  <div class="brand"><a class="mark" href="#/">LAB <span>MR</span></a><a class="who" id="who" href="#/fr/auteur" style="text-decoration:none"></a></div>
+  <label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder=""></label>
+  <div class="lang" role="group" aria-label="Langue / Taal"><button id="lfr" aria-pressed="true">FR</button><button id="lnl" aria-pressed="false">NL</button></div>
+</div></header>
+
+<div class="wrap">
+  <aside class="side" id="side"></aside>
+  <main id="main"></main>
+</div>
+<footer class="foot" id="foot"></footer>
+
+<script>window.LABMR = { auteur: "Olivier Willocx", editions: [], fiches: [] };</script>
+<!-- Une ligne par fichier de donnees. Pour ajouter une livraison : deposer data/AAAA-MM-JJ.js et ajouter sa ligne ici. -->
+<script src="data/archive.js"></script>
+<script src="data/2026-09-14.js"></script>
+<script src="data/2026-09-20.js"></script>
+<script src="data/2026-09-21.js"></script>
+<script src="data/2026-09-25.js"></script>
+<script>
+(function(){
+const D=(function(){
+  const L=window.LABMR;
+  if(!L||!L.fiches||!L.fiches.length) return window.LABMR_DATA;   // repli sur l ancien fichier unique
+  const M_FR=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+  const M_NL=["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"];
+  const lbl=(iso,m)=>{const p=iso.split("-");return (+p[2])+" "+m[+p[1]-1]+" "+p[0];};
+  const fiches=L.fiches.slice().sort((a,b)=>b.dateISO.localeCompare(a.dateISO)||a.id.localeCompare(b.id));
+  const editions=L.editions.slice().sort((a,b)=>b.id.localeCompare(a.id));
+  const fin=fiches[0].dateISO, debut=fiches[fiches.length-1].dateISO;
+  return { auteur:L.auteur, editions:editions, fiches:fiches,
+    maj:{fr:lbl(fin,M_FR),nl:lbl(fin,M_NL)},
+    couverture:{fr:lbl(debut,M_FR)+" – "+lbl(fin,M_FR), nl:lbl(debut,M_NL)+" – "+lbl(fin,M_NL)} };
+})();
+const F=D.fiches;
+const T={
+ fr:{
+  who:"par Olivier Willocx, député bruxellois (MR)", search:"Rechercher une ville, un thème…",
+  thesis:"Ce qui marche — et ce qui rate — dans les <em>villes d'Europe</em>, lu depuis Bruxelles.",
+  thesisP:"LAB MR passe la presse européenne au crible des compétences de la Région bruxelloise, de la COCOM et de la COCOF. Pas une liste d'idées : des décisions prises, des budgets votés, des résultats publiés — et, pour chacune, ce qui existe déjà à Bruxelles, ce qui bloquerait et la question parlementaire qui peut en sortir. Les bonnes pratiques sont retenues d'où qu'elles viennent ; les mauvaises aussi, parce qu'un échec documenté ailleurs vaut une étude d'impact gratuite.",
+  legendBest:"Bonne pratique — à transposer", legendBad:"Mauvaise pratique — à éviter", legendWatch:"À évaluer — résultats attendus",
+  mNav:"Parcourir", mMat:"Par matière", mInst:"Par institution", mCity:"Par ville", mVerdict:"Par verdict",
+  home:"Accueil", all:"Toutes les fiches", chrono:"Chronologie", latest:"Dernière livraison", editions:"Livraisons", method:"Méthode et limites", cities:"Toutes les villes",
+  best:"Bonnes pratiques", bad:"Mauvaises pratiques", watch:"À évaluer",
+  fFiches:"fiches", fVilles:"villes", fPays:"pays", fBad:"mauvaises pratiques", fBest:"bonnes pratiques", fMois:"mois de veille", allYears:"Toutes les années",
+  byMat:"Entrer par la matière",
+  top3:"Les trois initiatives à retenir", production:"Produit le", covering:"Période couverte",
+  fVille:"Ville / autorité", fDate:"Date", fComp:"Compétence bruxelloise", fQuoi:"De quoi s'agit-il", fRes:"Résultats connus", fTrans:"Transposabilité à Bruxelles", fAngle:"Angle parlementaire", fSrc:"Sources", open:"Lire la fiche ▾",
+  transpo:{forte:"forte",moyenne:"moyenne",faible:"faible"}, transpoL:"Transposabilité",
+  followH:"Annoncé, à surveiller", noRes:"Matières sans initiative retenue cette semaine-là", doubts:"Doutes résiduels", methodH:"Comment cette revue est faite", author:"L'auteur",
+  none:"Aucune fiche ne correspond.", results:"résultats", weekOf:"Semaine", verdictName:{best:"Bonne pratique",bad:"Mauvaise pratique",watch:"À évaluer"},
+  instName:{"Région":"Région","COCOM":"COCOM","COCOF":"COCOF","COCOM / COCOF":"COCOM / COCOF"},
+  months:["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],
+  methodIntro:"Chaque semaine, quatre équipes de recherche passent la presse quotidienne nationale, la presse spécialisée sur les villes et la presse belge au crible des compétences bruxelloises, en six langues. Une initiative n'est retenue que si elle est concrète — décision prise, budget voté, mesure lancée, résultat publié — et si au moins une source de presse datée, ouverte et lue, la confirme. Les effets d'annonce et les projets pilotes sans calendrier sont écartés. Quand un chiffre provient de la ville elle-même ou est contesté, la fiche le dit. Quand rien de solide n'a été trouvé dans une matière, la fiche n'est pas écrite : la lacune est signalée plutôt que comblée.",
+  methodVerdict:"Le verdict — bonne pratique, mauvaise pratique, à évaluer — porte sur les résultats constatés, pas sur la couleur politique de la majorité qui a pris la mesure. Une bonne idée venue d'une majorité de gauche y figure comme bonne pratique ; un dispositif libéral dont l'évaluation déçoit y figure comme mauvaise pratique.",
+  libraryNote:"La bibliothèque a été constituée par un rattrapage rétrospectif sur douze mois, puis elle s'enrichit chaque lundi d'une nouvelle livraison.",
+  foot1:"LAB MR — revue de presse européenne des initiatives des villes dans les compétences de la Région de Bruxelles-Capitale, de la COCOM et de la COCOF.",
+  foot2:"Chaque fiche renvoie à au moins une source de presse datée. Mise à jour hebdomadaire, le lundi."
+ },
+ nl:{
+  who:"door Olivier Willocx, Brussels volksvertegenwoordiger (MR)", search:"Zoek een stad, een thema…",
+  thesis:"Wat werkt — en wat mislukt — in de <em>steden van Europa</em>, gelezen vanuit Brussel.",
+  thesisP:"LAB MR zeeft de Europese pers door de bevoegdheden van het Brussels Gewest, de GGC en de COCOF. Geen ideeënlijst: genomen beslissingen, gestemde budgetten, gepubliceerde resultaten — en voor elk ervan wat al in Brussel bestaat, wat zou blokkeren en de parlementaire vraag die eruit kan volgen. Goede praktijken worden weerhouden waar ze ook vandaan komen; slechte ook, want een elders gedocumenteerde mislukking is een gratis impactstudie.",
+  legendBest:"Goede praktijk — over te nemen", legendBad:"Slechte praktijk — te vermijden", legendWatch:"Te evalueren — resultaten verwacht",
+  mNav:"Bladeren", mMat:"Per materie", mInst:"Per instelling", mCity:"Per stad", mVerdict:"Per oordeel",
+  home:"Start", all:"Alle fiches", chrono:"Chronologie", latest:"Laatste editie", editions:"Edities", method:"Methode en grenzen", cities:"Alle steden",
+  best:"Goede praktijken", bad:"Slechte praktijken", watch:"Te evalueren",
+  fFiches:"fiches", fVilles:"steden", fPays:"landen", fBad:"slechte praktijken", fBest:"goede praktijken", fMois:"maanden monitoring", allYears:"Alle jaren",
+  byMat:"Binnenkomen via de materie",
+  top3:"De drie initiatieven om te onthouden", production:"Opgesteld op", covering:"Gedekte periode",
+  fVille:"Stad / overheid", fDate:"Datum", fComp:"Brusselse bevoegdheid", fQuoi:"Waarover gaat het", fRes:"Bekende resultaten", fTrans:"Overdraagbaarheid naar Brussel", fAngle:"Parlementaire invalshoek", fSrc:"Bronnen", open:"Lees de fiche ▾",
+  transpo:{forte:"sterk",moyenne:"gemiddeld",faible:"zwak"}, transpoL:"Overdraagbaarheid",
+  followH:"Aangekondigd, op te volgen", noRes:"Materies zonder weerhouden initiatief die week", doubts:"Resterende twijfels", methodH:"Hoe deze revue gemaakt wordt", author:"De auteur",
+  none:"Geen enkele fiche komt overeen.", results:"resultaten", weekOf:"Week", verdictName:{best:"Goede praktijk",bad:"Slechte praktijk",watch:"Te evalueren"},
+  instName:{"Région":"Gewest","COCOM":"GGC","COCOF":"COCOF","COCOM / COCOF":"GGC / COCOF"},
+  months:["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"],
+  methodIntro:"Elke week zeven vier onderzoeksteams de nationale kwaliteitspers, de gespecialiseerde stedenpers en de Belgische pers door de Brusselse bevoegdheden, in zes talen. Een initiatief wordt enkel weerhouden als het concreet is — beslissing genomen, budget gestemd, maatregel gelanceerd, resultaat gepubliceerd — en als minstens één gedateerde, geopende en gelezen persbron het bevestigt. Aankondigingseffecten en proefprojecten zonder kalender vallen af. Wanneer een cijfer van de stad zelf komt of betwist wordt, zegt de fiche dat. Wanneer niets solide gevonden werd in een materie, wordt de fiche niet geschreven: de leemte wordt gemeld, niet opgevuld.",
+  methodVerdict:"Het oordeel — goede praktijk, slechte praktijk, te evalueren — slaat op de vastgestelde resultaten, niet op de politieke kleur van de meerderheid die de maatregel nam. Een goed idee van een linkse meerderheid staat er als goede praktijk; een liberale maatregel waarvan de evaluatie tegenvalt, staat er als slechte praktijk.",
+  libraryNote:"De bibliotheek werd opgebouwd met een retrospectieve inhaalslag over twaalf maanden en groeit sindsdien elke maandag aan met een nieuwe editie.",
+  foot1:"LAB MR — Europees persoverzicht van stedelijke initiatieven binnen de bevoegdheden van het Brussels Hoofdstedelijk Gewest, de GGC en de COCOF.",
+  foot2:"Elke fiche verwijst naar minstens één gedateerde persbron. Wekelijks bijgewerkt, op maandag."
+ }
+};
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+let lang="fr", route={view:"home",key:null}, q="";
+const t=()=>T[lang];
+const MATS=(function(){const m=new Map();F.forEach(f=>{if(!m.has(f.matiere.key))m.set(f.matiere.key,f.matiere)});return [...m.values()].sort((a,b)=>cnt(b.key)-cnt(a.key))})();
+function cnt(k){return F.filter(f=>f.matiere.key===k).length}
+function vcount(list){return {best:list.filter(f=>f.verdict==="best").length,bad:list.filter(f=>f.verdict==="bad").length,watch:list.filter(f=>f.verdict==="watch").length}}
+
+function parseHash(){
+  const h=location.hash.replace(/^#\/?/,"").split("/").filter(Boolean);
+  if(h[0]==="nl"||h[0]==="fr")lang=h.shift();
+  route={view:h[0]||"home",key:h[1]?decodeURIComponent(h[1]):null};
+}
+function go(view,key){location.hash="#/"+lang+"/"+(view||"home")+(key?"/"+encodeURIComponent(key):"");}
+function setLang(l){lang=l;go(route.view,route.key);}
+function matches(f){
+  if(!q)return true;const s=q.toLowerCase();
+  return [f.titre[lang],f.ville[lang],f.theme[lang],f.quoi[lang],f.matiere[lang],f.villeKey,f.inst,f.competence[lang],f.transposabilite[lang]].join(" ").toLowerCase().includes(s);
+}
+function bars(tr){const n={forte:3,moyenne:2,faible:1}[tr]||0;return '<span class="bars">'+[1,2,3].map(i=>'<i class="'+(i<=n?"on":"")+'"></i>').join("")+'</span>';}
+function vbar(list){const c=vcount(list),n=list.length||1;return '<span class="vbar"><i class="best" style="width:'+(c.best/n*100)+'%"></i><i class="bad" style="width:'+(c.bad/n*100)+'%"></i><i class="watch" style="width:'+(c.watch/n*100)+'%"></i></span>';}
+function fmtMonth(iso){const L=t(),[y,m]=iso.split("-");return L.months[+m-1]+" "+y;}
+
+function nbMois(){
+  const d=F.map(f=>f.dateISO).sort(), a=d[0].split("-"), b=d[d.length-1].split("-");
+  return (b[0]-a[0])*12+(b[1]-a[1])+1;
+}
+function annees(){return [...new Set(F.map(f=>f.dateISO.slice(0,4)))].sort().reverse()}
+function card(f){
+  const L=t();
+  return '<details class="card '+f.verdict+'" id="'+f.id+'">'
+  +'<summary><div class="chips">'
+  +'<span class="chip v '+f.verdict+'">'+L.verdictName[f.verdict]+'</span>'
+  +'<span class="chip inst">'+esc(L.instName[f.inst]||f.inst)+'</span>'
+  +'<span class="chip">'+esc(f.theme[lang])+'</span>'
+  +'<span class="chip">'+esc(f.villeKey)+' · '+esc(f.pays)+'</span>'
+  +'<span class="chip">'+esc(fmtMonth(f.dateISO))+'</span></div>'
+  +'<div><div class="t">'+esc(f.titre[lang])+'</div><div class="c">'+esc(f.date[lang])+'</div></div>'
+  +'<div class="tr">'+L.transpoL+' · '+L.transpo[f.transpo]+bars(f.transpo)+'</div>'
+  +'<span class="open">'+L.open+'</span></summary>'
+  +'<dl class="body">'
+  +'<dt>'+L.fVille+'</dt><dd>'+esc(f.ville[lang])+'</dd>'
+  +'<dt>'+L.fComp+'</dt><dd>'+esc(f.competence[lang])+'</dd>'
+  +'<dt>'+L.fQuoi+'</dt><dd>'+esc(f.quoi[lang])+'</dd>'
+  +'<dt>'+L.fRes+'</dt><dd>'+esc(f.resultats[lang])+'</dd>'
+  +'<dt>'+L.fTrans+'</dt><dd>'+esc(f.transposabilite[lang])+'</dd>'
+  +'<dt>'+L.fAngle+'</dt><dd class="angle">'+esc(f.angle[lang])+'</dd>'
+  +'<dt>'+L.fSrc+'</dt><dd class="src"><ul>'+f.sources.map(s=>'<li>'+esc(s.media)+', '+esc(s.date)+' — <a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.url.replace(/^https?:\/\/(www\.)?/,"").slice(0,64))+(s.url.length>72?"…":"")+'</a></li>').join("")+'</ul></dd>'
+  +'</dl></details>';
+}
+function grouped(list,keyFn,labelFn){
+  const g=new Map();list.forEach(f=>{const k=keyFn(f);if(!g.has(k))g.set(k,[]);g.get(k).push(f)});
+  return [...g.entries()].map(([k,fs])=>'<section class="group"><h3><span>'+esc(labelFn(k))+'</span><span>'+fs.length+'</span></h3><div class="cards">'+fs.map(card).join("")+'</div></section>').join("");
+}
+function head(title,meta){return '<div class="sec"><h2>'+title+'</h2>'+(meta?'<span class="meta">'+esc(meta)+'</span>':"")+'</div>';}
+
+function renderSide(){
+  const L=t();
+  const item=(v,k,label,n,dot)=>'<li><button data-v="'+v+'" data-k="'+(k||"")+'" aria-current="'+(route.view===v&&(route.key||null)===(k||null))+'">'+(dot?'<span><span class="dot '+dot+'"></span>'+esc(label)+'</span>':'<span>'+esc(label)+'</span>')+(n!=null?'<span class="n">'+n+'</span>':"")+'</button></li>';
+  const cities=[...new Set(F.map(f=>f.villeKey))].map(c=>[c,F.filter(f=>f.villeKey===c).length]).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
+  document.getElementById("side").innerHTML=
+   '<nav class="menu"><h4>'+L.mNav+'</h4><ul>'
+   +item("home",null,L.home)+item("all",null,L.all,F.length)+item("chrono",null,L.chrono)
+   +item("edition",D.editions[0].id,L.latest,F.filter(f=>f.edition===D.editions[0].id).length)
+   +item("editions",null,L.editions,D.editions.length)+item("method",null,L.method)+item("auteur",null,L.author)+'</ul></nav>'
+   +'<nav class="menu"><h4>'+L.mVerdict+'</h4><ul>'
+   +item("verdict","best",L.best,F.filter(f=>f.verdict==="best").length,"best")
+   +item("verdict","bad",L.bad,F.filter(f=>f.verdict==="bad").length,"bad")
+   +item("verdict","watch",L.watch,F.filter(f=>f.verdict==="watch").length,"watch")+'</ul></nav>'
+   +'<nav class="menu"><h4>'+L.mMat+'</h4><ul>'+MATS.map(m=>item("matiere",m.key,m[lang],cnt(m.key))).join("")+'</ul></nav>'
+   +'<nav class="menu"><h4>'+L.mInst+'</h4><ul>'+["Région","COCOM","COCOF"].map(i=>item("inst",i,L.instName[i],F.filter(f=>f.inst.indexOf(i)>=0).length)).join("")+'</ul></nav>'
+   +'<nav class="menu"><h4>'+L.mCity+'</h4><ul>'+cities.slice(0,12).map(([c,n])=>item("city",c,c,n)).join("")+item("cities",null,L.cities,cities.length)+'</ul></nav>';
+  document.querySelectorAll("#side button").forEach(b=>b.addEventListener("click",()=>{q="";document.getElementById("q").value="";go(b.dataset.v,b.dataset.k||null)}));
+}
+
+function renderMain(){
+  const L=t(),ed=D.editions[0];let html="";
+  if(q){
+    const r=F.filter(matches);
+    html=head("« "+esc(q)+" »",r.length+" "+L.results)+(r.length?'<div class="cards">'+r.map(card).join("")+'</div>':'<div class="empty">'+L.none+'</div>');
+  } else if(route.view==="home"){
+    const c=vcount(F),cities=new Set(F.map(f=>f.villeKey)).size,pays=new Set(F.map(f=>f.pays)).size;
+    html='<section class="thesis"><div class="eyebrow">Best &amp; bad practices from Europe’s cities</div><h1>'+L.thesis+'</h1><p>'+L.thesisP+'</p>'
+     +'<div class="legend"><span><span class="dot best"></span>'+L.legendBest+'</span><span><span class="dot bad"></span>'+L.legendBad+'</span><span><span class="dot watch"></span>'+L.legendWatch+'</span></div></section>'
+     +'<div class="figs">'
+     +'<button class="fig" data-v="all"><b>'+F.length+'</b><small>'+L.fFiches+'</small></button>'
+     +'<button class="fig bad" data-v="verdict" data-k="bad"><b>'+c.bad+'</b><small>'+L.fBad+'</small></button>'
+     +'<button class="fig best" data-v="verdict" data-k="best"><b>'+c.best+'</b><small>'+L.fBest+'</small></button>'
+     +'<button class="fig" data-v="cities"><b>'+cities+'</b><small>'+L.fVilles+' · '+pays+' '+L.fPays+'</small></button>'
+     +'<button class="fig" data-v="chrono"><b>'+nbMois()+'</b><small>'+L.fMois+'</small></button></div>'
+     +head(L.byMat,D.couverture[lang])
+     +'<div class="grid">'+MATS.map(m=>{const list=F.filter(f=>f.matiere.key===m.key);const vc=vcount(list);
+        return '<button class="tile" data-v="matiere" data-k="'+m.key+'"><span class="h"><b>'+esc(m[lang])+'</b><span>'+list.length+'</span></span>'+vbar(list)+'<span class="sub"><b class="cb">'+vc.best+'</b> · <b class="cd">'+vc.bad+'</b> · <b class="cw">'+vc.watch+'</b></span></button>'}).join("")+'</div>'
+     +head(L.latest,ed.periode[lang])
+     +'<div class="lead"><p>'+esc(ed.top3[lang])+'</p></div>'
+     +'<div class="rowlist" style="margin-top:10px"><button class="row" data-v="edition" data-k="'+ed.id+'"><b>'+esc(ed.periode[lang])+'</b><span class="n">'+F.filter(f=>f.edition===ed.id).length+' '+L.fFiches+' →</span></button></div>';
+  } else if(route.view==="all"){
+    html=head(L.all,F.length+" "+L.fFiches)+grouped(F,f=>f.matiere.key,k=>MATS.find(m=>m.key===k)[lang]);
+  } else if(route.view==="chrono"){
+    const ans=annees(), an=(route.key&&(route.key==="all"||ans.indexOf(route.key)>=0))?route.key:ans[0];
+    const r=an==="all"?F:F.filter(f=>f.dateISO.slice(0,4)===an);
+    const chip=(k,lab,n)=>'<button data-v="chrono" data-k="'+k+'" aria-current="'+(an===k)+'">'+esc(lab)+' <span style="opacity:.6">'+n+'</span></button>';
+    html=head(L.chrono,D.couverture[lang])
+     +'<div class="yearnav">'+ans.map(y=>chip(y,y,F.filter(f=>f.dateISO.slice(0,4)===y).length)).join("")+chip("all",L.allYears,F.length)+'</div>'
+     +grouped(r,f=>f.dateISO.slice(0,7),k=>fmtMonth(k+"-01"));
+  } else if(route.view==="verdict"){
+    const r=F.filter(f=>f.verdict===route.key);
+    html=head('<span class="dot '+route.key+'"></span>'+L[route.key],r.length+" "+L.fFiches)
+     +'<p style="max-width:70ch;color:var(--muted);margin:-4px 0 4px">'+(route.key==="best"?L.legendBest:route.key==="bad"?L.legendBad:L.legendWatch)+'</p>'
+     +grouped(r,f=>f.matiere.key,k=>MATS.find(m=>m.key===k)[lang]);
+  } else if(route.view==="matiere"){
+    const m=MATS.find(x=>x.key===route.key)||MATS[0],r=F.filter(f=>f.matiere.key===m.key);
+    html=head(esc(m[lang]),r.length+" "+L.fFiches)+grouped(r,f=>f.theme[lang],k=>k);
+  } else if(route.view==="inst"){
+    const r=F.filter(f=>f.inst.indexOf(route.key)>=0);
+    html=head(esc(L.instName[route.key]||route.key),r.length+" "+L.fFiches)+grouped(r,f=>f.matiere.key,k=>MATS.find(m=>m.key===k)[lang]);
+  } else if(route.view==="city"){
+    const r=F.filter(f=>f.villeKey===route.key);
+    html=head(esc(route.key),r.length+" "+L.fFiches)+grouped(r,f=>f.matiere.key,k=>MATS.find(m=>m.key===k)[lang]);
+  } else if(route.view==="cities"){
+    const cities=[...new Set(F.map(f=>f.villeKey))].map(c=>[c,F.filter(f=>f.villeKey===c)]).sort((a,b)=>b[1].length-a[1].length||a[0].localeCompare(b[0]));
+    html=head(L.cities,cities.length+" "+L.fVilles)+'<div class="grid">'+cities.map(([c,list])=>
+      '<button class="tile" data-v="city" data-k="'+esc(c)+'"><span class="h"><b>'+esc(c)+'</b><span>'+list.length+'</span></span>'+vbar(list)+'<span class="sub">'+esc(list[0].pays)+'</span></button>').join("")+'</div>';
+  } else if(route.view==="editions"){
+    html=head(L.editions,D.editions.length)+'<p style="max-width:74ch;color:var(--muted);margin:-4px 0 12px">'+L.libraryNote+'</p>'
+     +'<div class="rowlist">'+D.editions.map(e=>'<button class="row" data-v="edition" data-k="'+e.id+'"><span><b>'+esc(e.periode[lang])+'</b><br><span class="n">'+L.production+' '+esc(e.production[lang])+'</span></span><span class="n">'+F.filter(f=>f.edition===e.id).length+' '+L.fFiches+' →</span></button>').join("")+'</div>';
+  } else if(route.view==="edition"){
+    const e=D.editions.find(x=>x.id===route.key)||ed,r=F.filter(f=>f.edition===e.id);
+    html=head(esc(e.periode[lang]),L.production+" "+e.production[lang])
+     +'<div class="lead"><p>'+esc(e.top3[lang])+'</p></div>'
+     +grouped(r,f=>f.matiere.key,k=>MATS.find(m=>m.key===k)[lang])
+     +head(L.followH)+'<ul class="plain">'+e.aSuivre[lang].map(a=>'<li>'+esc(a)+'</li>').join("")+'</ul>'
+     +head(L.noRes)+'<p style="max-width:74ch;color:var(--muted)">'+esc(e.sansResultat[lang])+'</p>';
+  } else if(route.view==="method"){
+    html=head(L.methodH,D.couverture[lang])
+     +'<p style="max-width:74ch">'+L.methodIntro+'</p><p style="max-width:74ch">'+L.methodVerdict+'</p><p style="max-width:74ch">'+L.libraryNote+'</p>'
+     +head(L.doubts,ed.periode[lang])+'<ul class="plain">'+ed.doutes[lang].map(a=>'<li>'+esc(a)+'</li>').join("")+'</ul>';
+  } else if(route.view==="auteur"){
+    const A={
+     fr:{h:"Olivier Willocx",sub:"Député au Parlement de la Région de Bruxelles-Capitale (MR)",
+      p:["Olivier Willocx, né à Bruxelles en 1966, est député au Parlement bruxellois pour le MR depuis les élections du 9 juin 2024. Il est aussi conseiller communal à Schaerbeek.",
+         "Avant d'entrer au Parlement, il a passé près d'un quart de siècle à la tête de BECI, la Chambre de commerce et Union des entreprises de Bruxelles (2000-2024), dont il a été directeur général puis administrateur délégué. Il a présidé le Conseil économique et social de la Région de Bruxelles-Capitale (2012-2015) et siégé comme juge social au tribunal puis conseiller social à la Cour du travail de Bruxelles.",
+         "Économiste de formation (ULB), titulaire d'un master en droit européen de l'Université d'Amsterdam, il a été conseiller au cabinet d'un ministre bruxellois et attaché économique de la Région auprès de l'Union européenne. Il a enseigné pendant près de vingt ans et a été, durant 21 ans, vice-président de la plus grande école de promotion sociale de Bruxelles.",
+         "LAB MR prolonge ce parcours : regarder ce que les autres villes d'Europe ont réellement fait, mesurer ce qui a marché et ce qui a raté, et en tirer des propositions concrètes pour Bruxelles."],
+      k:"Parcours",
+      tl:[["2024 –","Député bruxellois (MR)"],["2000 – 2024","Directeur général puis administrateur délégué de BECI"],["2012 – 2015","Président du Conseil économique et social bruxellois"],["2014 – 2021","Conseiller social à la Cour du travail de Bruxelles"],["1995 – 1997","Conseiller au cabinet d'un ministre bruxellois"]],
+      c:"Contact"},
+     nl:{h:"Olivier Willocx",sub:"Volksvertegenwoordiger in het Brussels Hoofdstedelijk Parlement (MR)",
+      p:["Olivier Willocx, geboren in Brussel in 1966, is sinds de verkiezingen van 9 juni 2024 Brussels volksvertegenwoordiger voor de MR. Hij is ook gemeenteraadslid in Schaarbeek.",
+         "Voor zijn intrede in het Parlement leidde hij bijna een kwarteeuw BECI, de Kamer van Koophandel en Verbond van Ondernemingen van Brussel (2000-2024), eerst als directeur-generaal en daarna als gedelegeerd bestuurder. Hij was voorzitter van de Economische en Sociale Raad van het Brussels Hoofdstedelijk Gewest (2012-2015) en zetelde als rechter in sociale zaken en raadsheer in sociale zaken bij het Arbeidshof van Brussel.",
+         "Hij is econoom (ULB) en behaalde een master Europees recht aan de Universiteit van Amsterdam. Hij was adviseur op het kabinet van een Brussels minister en economisch attaché van het Gewest bij de Europese Unie. Hij gaf bijna twintig jaar les en was 21 jaar ondervoorzitter van de grootste school voor sociale promotie in Brussel.",
+         "LAB MR bouwt daarop voort: kijken wat andere Europese steden echt gedaan hebben, meten wat werkte en wat mislukte, en daaruit concrete voorstellen voor Brussel halen."],
+      k:"Loopbaan",
+      tl:[["2024 –","Brussels volksvertegenwoordiger (MR)"],["2000 – 2024","Directeur-generaal en daarna gedelegeerd bestuurder van BECI"],["2012 – 2015","Voorzitter van de Brusselse Economische en Sociale Raad"],["2014 – 2021","Raadsheer in sociale zaken, Arbeidshof Brussel"],["1995 – 1997","Adviseur op het kabinet van een Brussels minister"]],
+      c:"Contact"}}[lang];
+    html='<section class="thesis"><div class="eyebrow">LAB MR</div><h1>'+A.h+'</h1><p style="margin-top:6px;font-weight:600;color:var(--ink)">'+A.sub+'</p>'
+     +A.p.map(x=>'<p>'+esc(x)+'</p>').join("")+'</section>'
+     +head(A.k)+'<ul class="plain">'+A.tl.map(r=>'<li style="display:grid;grid-template-columns:120px 1fr;gap:12px"><span class="eyebrow" style="padding-top:3px;font-variant-numeric:tabular-nums">'+r[0]+'</span><span>'+esc(r[1])+'</span></li>').join("")+'</ul>'
+     +head(A.c)+'<ul class="plain"><li>olivier.willocx@mrbruxelles.be</li><li><a href="https://www.linkedin.com/in/olivierwillocx/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://www.parlement.brussels" target="_blank" rel="noopener">parlement.brussels</a></li></ul>';
+  }
+  const m=document.getElementById("main");m.innerHTML=html;
+  m.querySelectorAll("[data-v]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.v,b.dataset.k||null)));
+}
+function render(){
+  const L=t();document.documentElement.lang=lang;
+  document.getElementById("who").textContent=L.who;document.getElementById("who").href="#/"+lang+"/auteur";
+  document.getElementById("q").placeholder=L.search;
+  document.getElementById("lfr").setAttribute("aria-pressed",lang==="fr");
+  document.getElementById("lnl").setAttribute("aria-pressed",lang==="nl");
+  document.getElementById("foot").innerHTML='<p>'+L.foot1+'</p><p>'+L.foot2+' © '+esc(D.auteur)+'.</p>';
+  renderSide();renderMain();window.scrollTo({top:0});
+}
+document.getElementById("lfr").addEventListener("click",()=>setLang("fr"));
+document.getElementById("lnl").addEventListener("click",()=>setLang("nl"));
+document.getElementById("q").addEventListener("input",e=>{q=e.target.value.trim();renderMain()});
+window.addEventListener("hashchange",()=>{parseHash();render()});
+parseHash();render();
+})();
+</script>
+
+</body></html>
