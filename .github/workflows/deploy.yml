@@ -16,6 +16,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Assurer la mention editeur responsable
+        run: python3 .github/ensure_editeur.py
+
       - name: Deploiement FTP vers OVH (dossier www)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
