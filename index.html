@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CityScan</title>
@@ -95,6 +94,20 @@ button.fig:hover{border-color:var(--accent)}
 .tile .sub b{font-weight:600}
 .tile .sub .cb{color:var(--best)}.tile .sub .cd{color:var(--bad)}.tile .sub .cw{color:var(--watch)}
 
+.prose{max-width:72ch}
+.prose p{margin:0 0 16px;font-size:17px;line-height:1.62}
+.prose p.sig{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-family:var(--display);font-weight:600;font-size:17px;line-height:1.5}
+.legal{display:grid;gap:14px;max-width:80ch}
+.legal section{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:16px 18px}
+.legal h3{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.legal p{margin:0;font-size:15.5px;line-height:1.6}
+.todo{background:var(--watch-soft);color:var(--watch);border:1px dashed var(--watch);border-radius:5px;padding:1px 7px;font-family:var(--mono);font-size:12.5px;font-weight:500}
+.cta{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:11px 20px;border-radius:9px}
+.cta:hover{filter:brightness(1.08)}
+.fine{color:var(--muted);font-size:13.5px;line-height:1.55;max-width:74ch}
+.note{background:var(--watch-soft);color:var(--watch);border:1px solid var(--watch);border-radius:9px;padding:10px 14px;font-size:14px;margin-bottom:14px;max-width:80ch}
+.footnav{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.footnav button{color:var(--accent);text-decoration:underline;text-underline-offset:3px;font-size:13px;padding:0}
 .yearnav{display:flex;gap:6px;flex-wrap:wrap;margin:-2px 0 16px}
 .yearnav button{font-family:var(--mono);font-size:12px;letter-spacing:.04em;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--surface)}
 .yearnav button:hover{border-color:var(--accent);color:var(--accent)}
@@ -141,7 +154,7 @@ button.fig:hover{border-color:var(--accent)}
 <header class="top"><div class="top-in">
   <div class="brand"><a class="mark" href="#/" aria-label="CityScan — accueil"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M2 9V4a2 2 0 0 1 2-2h5M19 2h5a2 2 0 0 1 2 2v5M26 19v5a2 2 0 0 1-2 2h-5M9 26H4a2 2 0 0 1-2-2v-5" stroke="var(--ink)"/><path d="M8 20v-5M12 20V9M16 20v-7M20 20v-9" stroke="var(--ink)"/><path d="M5 14.5h18" stroke="var(--accent)"/></svg><i class="wm">City<b>Scan</b></i></a><a class="who" id="who" href="#/fr/auteur" style="text-decoration:none"></a></div>
   <label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder=""></label>
-  <div class="lang" role="group" aria-label="Langue / Taal"><button id="lfr" aria-pressed="true">FR</button><button id="lnl" aria-pressed="false">NL</button></div>
+  <div class="lang" role="group" aria-label="Langue / Taal / Language"><button id="lfr" aria-pressed="true">FR</button><button id="lnl" aria-pressed="false">NL</button><button id="len" aria-pressed="false">EN</button></div>
 </div></header>
 
 <div class="wrap">
@@ -152,11 +165,26 @@ button.fig:hover{border-color:var(--accent)}
 
 <script>window.LABMR = { auteur: "Olivier Willocx", editions: [], fiches: [] };</script>
 <!-- Une ligne par fichier de donnees. Pour ajouter une livraison : deposer data/AAAA-MM-JJ.js et ajouter sa ligne ici. -->
+<script src="data/pages.js"></script>
 <script src="data/archive.js"></script>
 <script src="data/2026-09-14.js"></script>
 <script src="data/2026-09-20.js"></script>
 <script src="data/2026-09-21.js"></script>
 <script src="data/2026-09-25.js"></script>
+<script src="data/new-aide.js"></script>
+<script src="data/new-centre.js"></script>
+<script src="data/new-eco-fisc.js"></script>
+<script src="data/new-form-cult.js"></script>
+<script src="data/new-fruk.js"></script>
+<script src="data/new-logement.js"></script>
+<script src="data/new-mobilite.js"></script>
+<script src="data/new-nord.js"></script>
+<script src="data/new-proprete-env.js"></script>
+<script src="data/new-sante.js"></script>
+<script src="data/new-secu-gouv.js"></script>
+<script src="data/new-sud.js"></script>
+<script src="data/new-urbanisme.js"></script>
+<script src="data/en-archive.js"></script>
 <script>
 (function(){
 const D=(function(){
@@ -164,26 +192,33 @@ const D=(function(){
   if(!L||!L.fiches||!L.fiches.length) return window.LABMR_DATA;   // repli sur l ancien fichier unique
   const M_FR=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
   const M_NL=["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"];
+  const M_EN=["January","February","March","April","May","June","July","August","September","October","November","December"];
   const lbl=(iso,m)=>{const p=iso.split("-");return (+p[2])+" "+m[+p[1]-1]+" "+p[0];};
+  const EP=L.enPatch||{};
+  L.fiches.forEach(function(f){ const e=EP[f.id]; if(!e) return;
+    for(const k in e){ if(f[k]&&typeof f[k]==="object"&&f[k].en==null) f[k].en=e[k]; } });
+  const ME=L.matieresEN||{};
+  L.fiches.forEach(function(f){ if(f.matiere&&f.matiere.en==null&&ME[f.matiere.key]) f.matiere.en=ME[f.matiere.key]; });
   const fiches=L.fiches.slice().sort((a,b)=>b.dateISO.localeCompare(a.dateISO)||a.id.localeCompare(b.id));
   const editions=L.editions.slice().sort((a,b)=>b.id.localeCompare(a.id));
   const fin=fiches[0].dateISO, debut=fiches[fiches.length-1].dateISO;
   return { auteur:L.auteur, editions:editions, fiches:fiches,
-    maj:{fr:lbl(fin,M_FR),nl:lbl(fin,M_NL)},
-    couverture:{fr:lbl(debut,M_FR)+" – "+lbl(fin,M_FR), nl:lbl(debut,M_NL)+" – "+lbl(fin,M_NL)} };
+    maj:{fr:lbl(fin,M_FR),nl:lbl(fin,M_NL),en:lbl(fin,M_EN)},
+    couverture:{fr:lbl(debut,M_FR)+" – "+lbl(fin,M_FR), nl:lbl(debut,M_NL)+" – "+lbl(fin,M_NL), en:lbl(debut,M_EN)+" – "+lbl(fin,M_EN)} };
 })();
 const F=D.fiches;
 const T={
  fr:{
   who:"par Olivier Willocx, député bruxellois (MR)", search:"Rechercher une ville, un thème…",
-  thesis:"Ce qui marche — et ce qui rate — dans les <em>villes d'Europe</em>, lu depuis Bruxelles.",
-  thesisP:"CityScan passe la presse européenne au crible des compétences de la Région bruxelloise, de la COCOM et de la COCOF. Pas une liste d'idées : des décisions prises, des budgets votés, des résultats publiés — et, pour chacune, ce qui existe déjà à Bruxelles, ce qui bloquerait et la question parlementaire qui peut en sortir. Les bonnes pratiques sont retenues d'où qu'elles viennent ; les mauvaises aussi, parce qu'un échec documenté ailleurs vaut une étude d'impact gratuite.",
+  thesis:"Ce qui marche — et ce qui rate — dans les <em>villes comparables</em>, lu depuis Bruxelles.",
+  thesisP:"CityScan passe la presse européenne — et celle de quelques démocraties comparables hors d'Europe — au crible des compétences de la Région bruxelloise, de la COCOM et de la COCOF. Pas une liste d'idées : des décisions prises, des budgets votés, des résultats publiés — et, pour chacune, ce qui existe déjà à Bruxelles, ce qui bloquerait et la question parlementaire qui peut en sortir. Les bonnes pratiques sont retenues d'où qu'elles viennent ; les mauvaises aussi, parce qu'un échec documenté ailleurs vaut une étude d'impact gratuite.",
   legendBest:"Bonne pratique — à transposer", legendBad:"Mauvaise pratique — à éviter", legendWatch:"À évaluer — résultats attendus",
   mNav:"Parcourir", mMat:"Par matière", mInst:"Par institution", mCity:"Par ville", mVerdict:"Par verdict",
   home:"Accueil", all:"Toutes les fiches", chrono:"Chronologie", latest:"Dernière livraison", editions:"Livraisons", method:"Méthode et limites", cities:"Toutes les villes",
   best:"Bonnes pratiques", bad:"Mauvaises pratiques", watch:"À évaluer",
   fFiches:"fiches", fVilles:"villes", fPays:"pays", fBad:"mauvaises pratiques", fBest:"bonnes pratiques", fMois:"mois de veille", allYears:"Toutes les années",
-  byMat:"Entrer par la matière",
+  byMat:"Entrer par la matière", why:"Pourquoi", legalShort:"Mentions légales", reco:"Recommander une initiative", recoShort:"Recommander", ver:"Version",
+  noEn:"",
   top3:"Les trois initiatives à retenir", production:"Produit le", covering:"Période couverte",
   fVille:"Ville / autorité", fDate:"Date", fComp:"Compétence bruxelloise", fQuoi:"De quoi s'agit-il", fRes:"Résultats connus", fTrans:"Transposabilité à Bruxelles", fAngle:"Angle parlementaire", fSrc:"Sources", open:"Lire la fiche ▾",
   transpo:{forte:"forte",moyenne:"moyenne",faible:"faible"}, transpoL:"Transposabilité",
@@ -193,20 +228,21 @@ const T={
   months:["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],
   methodIntro:"Chaque semaine, quatre équipes de recherche passent la presse quotidienne nationale, la presse spécialisée sur les villes et la presse belge au crible des compétences bruxelloises, en six langues. Une initiative n'est retenue que si elle est concrète — décision prise, budget voté, mesure lancée, résultat publié — et si au moins une source de presse datée, ouverte et lue, la confirme. Les effets d'annonce et les projets pilotes sans calendrier sont écartés. Quand un chiffre provient de la ville elle-même ou est contesté, la fiche le dit. Quand rien de solide n'a été trouvé dans une matière, la fiche n'est pas écrite : la lacune est signalée plutôt que comblée.",
   methodVerdict:"Le verdict — bonne pratique, mauvaise pratique, à évaluer — porte sur les résultats constatés, pas sur la couleur politique de la majorité qui a pris la mesure. Une bonne idée venue d'une majorité de gauche y figure comme bonne pratique ; un dispositif libéral dont l'évaluation déçoit y figure comme mauvaise pratique.",
-  libraryNote:"La bibliothèque a été constituée par un rattrapage rétrospectif sur douze mois, puis elle s'enrichit chaque lundi d'une nouvelle livraison.",
-  foot1:"CityScan — revue de presse européenne des initiatives des villes dans les compétences de la Région de Bruxelles-Capitale, de la COCOM et de la COCOF.",
+  libraryNote:"La bibliothèque a été constituée par un rattrapage rétrospectif de trois ans, puis elle s'enrichit chaque lundi d'une nouvelle livraison. Elle couvre l'Europe et, hors d'Europe, des démocraties dont les villes sont comparables aux nôtres par leur taille, leurs compétences et leur manière de publier ce qu'elles font : Canada, Australie, Nouvelle-Zélande, Israël, Chili, Uruguay.",
+  foot1:"CityScan — revue de presse internationale des initiatives des villes dans les compétences de la Région de Bruxelles-Capitale, de la COCOM et de la COCOF.",
   foot2:"Chaque fiche renvoie à au moins une source de presse datée. Mise à jour hebdomadaire, le lundi."
  },
  nl:{
   who:"door Olivier Willocx, Brussels volksvertegenwoordiger (MR)", search:"Zoek een stad, een thema…",
-  thesis:"Wat werkt — en wat mislukt — in de <em>steden van Europa</em>, gelezen vanuit Brussel.",
-  thesisP:"CityScan zeeft de Europese pers door de bevoegdheden van het Brussels Gewest, de GGC en de COCOF. Geen ideeënlijst: genomen beslissingen, gestemde budgetten, gepubliceerde resultaten — en voor elk ervan wat al in Brussel bestaat, wat zou blokkeren en de parlementaire vraag die eruit kan volgen. Goede praktijken worden weerhouden waar ze ook vandaan komen; slechte ook, want een elders gedocumenteerde mislukking is een gratis impactstudie.",
+  thesis:"Wat werkt — en wat mislukt — in <em>vergelijkbare steden</em>, gelezen vanuit Brussel.",
+  thesisP:"CityScan zeeft de Europese pers — en die van enkele vergelijkbare democratieën buiten Europa — door de bevoegdheden van het Brussels Gewest, de GGC en de COCOF. Geen ideeënlijst: genomen beslissingen, gestemde budgetten, gepubliceerde resultaten — en voor elk ervan wat al in Brussel bestaat, wat zou blokkeren en de parlementaire vraag die eruit kan volgen. Goede praktijken worden weerhouden waar ze ook vandaan komen; slechte ook, want een elders gedocumenteerde mislukking is een gratis impactstudie.",
   legendBest:"Goede praktijk — over te nemen", legendBad:"Slechte praktijk — te vermijden", legendWatch:"Te evalueren — resultaten verwacht",
   mNav:"Bladeren", mMat:"Per materie", mInst:"Per instelling", mCity:"Per stad", mVerdict:"Per oordeel",
   home:"Start", all:"Alle fiches", chrono:"Chronologie", latest:"Laatste editie", editions:"Edities", method:"Methode en grenzen", cities:"Alle steden",
   best:"Goede praktijken", bad:"Slechte praktijken", watch:"Te evalueren",
   fFiches:"fiches", fVilles:"steden", fPays:"landen", fBad:"slechte praktijken", fBest:"goede praktijken", fMois:"maanden monitoring", allYears:"Alle jaren",
-  byMat:"Binnenkomen via de materie",
+  byMat:"Binnenkomen via de materie", why:"Waarom", legalShort:"Wettelijke vermeldingen", reco:"Een initiatief aanbevelen", recoShort:"Aanbevelen", ver:"Versie",
+  noEn:"",
   top3:"De drie initiatieven om te onthouden", production:"Opgesteld op", covering:"Gedekte periode",
   fVille:"Stad / overheid", fDate:"Datum", fComp:"Brusselse bevoegdheid", fQuoi:"Waarover gaat het", fRes:"Bekende resultaten", fTrans:"Overdraagbaarheid naar Brussel", fAngle:"Parlementaire invalshoek", fSrc:"Bronnen", open:"Lees de fiche ▾",
   transpo:{forte:"sterk",moyenne:"gemiddeld",faible:"zwak"}, transpoL:"Overdraagbaarheid",
@@ -214,14 +250,44 @@ const T={
   none:"Geen enkele fiche komt overeen.", results:"resultaten", weekOf:"Week", verdictName:{best:"Goede praktijk",bad:"Slechte praktijk",watch:"Te evalueren"},
   instName:{"Région":"Gewest","COCOM":"GGC","COCOF":"COCOF","COCOM / COCOF":"GGC / COCOF"},
   months:["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"],
-  methodIntro:"Elke week zeven vier onderzoeksteams de nationale kwaliteitspers, de gespecialiseerde stedenpers en de Belgische pers door de Brusselse bevoegdheden, in zes talen. Een initiatief wordt enkel weerhouden als het concreet is — beslissing genomen, budget gestemd, maatregel gelanceerd, resultaat gepubliceerd — en als minstens één gedateerde, geopende en gelezen persbron het bevestigt. Aankondigingseffecten en proefprojecten zonder kalender vallen af. Wanneer een cijfer van de stad zelf komt of betwist wordt, zegt de fiche dat. Wanneer niets solide gevonden werd in een materie, wordt de fiche niet geschreven: de leemte wordt gemeld, niet opgevuld.",
+  methodIntro:"Elke week ziften vier onderzoeksteams de nationale kwaliteitspers, de gespecialiseerde stedenpers en de Belgische pers door de Brusselse bevoegdheden, in zes talen. Een initiatief wordt enkel weerhouden als het concreet is — beslissing genomen, budget gestemd, maatregel gelanceerd, resultaat gepubliceerd — en als minstens één gedateerde, geopende en gelezen persbron het bevestigt. Aankondigingseffecten en proefprojecten zonder kalender vallen af. Wanneer een cijfer van de stad zelf komt of betwist wordt, zegt de fiche dat. Wanneer niets solide gevonden werd in een materie, wordt de fiche niet geschreven: de leemte wordt gemeld, niet opgevuld.",
   methodVerdict:"Het oordeel — goede praktijk, slechte praktijk, te evalueren — slaat op de vastgestelde resultaten, niet op de politieke kleur van de meerderheid die de maatregel nam. Een goed idee van een linkse meerderheid staat er als goede praktijk; een liberale maatregel waarvan de evaluatie tegenvalt, staat er als slechte praktijk.",
-  libraryNote:"De bibliotheek werd opgebouwd met een retrospectieve inhaalslag over twaalf maanden en groeit sindsdien elke maandag aan met een nieuwe editie.",
-  foot1:"CityScan — Europees persoverzicht van stedelijke initiatieven binnen de bevoegdheden van het Brussels Hoofdstedelijk Gewest, de GGC en de COCOF.",
+  libraryNote:"De bibliotheek werd opgebouwd met een retrospectieve inhaalslag over drie jaar en groeit sindsdien elke maandag aan met een nieuwe editie. Ze bestrijkt Europa en, daarbuiten, democratieën waarvan de steden met de onze vergelijkbaar zijn qua omvang, bevoegdheden en de manier waarop ze publiceren wat ze doen: Canada, Australië, Nieuw-Zeeland, Israël, Chili, Uruguay.",
+  foot1:"CityScan — internationaal persoverzicht van stedelijke initiatieven binnen de bevoegdheden van het Brussels Hoofdstedelijk Gewest, de GGC en de COCOF.",
   foot2:"Elke fiche verwijst naar minstens één gedateerde persbron. Wekelijks bijgewerkt, op maandag."
+ },
+ en:{
+  who:"by Olivier Willocx, Member of the Brussels Parliament (MR)", search:"Search a city, a topic…",
+  thesis:"What works — and what fails — in <em>comparable cities</em>, read from Brussels.",
+  thesisP:"CityScan sifts the European press — and that of a few comparable democracies beyond Europe — through the competences of the Brussels Region, the COCOM and the COCOF. Not a list of ideas: decisions taken, budgets voted, results published — and, for each, what already exists in Brussels, what would block it, and the parliamentary question that can come out of it. Good practices are kept wherever they come from; so are bad ones, because a failure documented elsewhere is a free impact study.",
+  legendBest:"Good practice — worth transposing", legendBad:"Bad practice — worth avoiding", legendWatch:"To be evaluated — results awaited",
+  mNav:"Browse", mMat:"By field", mInst:"By institution", mCity:"By city", mVerdict:"By verdict",
+  home:"Home", all:"All entries", chrono:"Timeline", latest:"Latest delivery", editions:"Deliveries", method:"Method and limits", cities:"All cities",
+  best:"Good practices", bad:"Bad practices", watch:"To be evaluated",
+  fFiches:"entries", fVilles:"cities", fPays:"countries", fBad:"bad practices", fBest:"good practices", fMois:"months of monitoring", allYears:"All years",
+  byMat:"Enter by field", why:"Why", legalShort:"Legal notice", reco:"Recommend an initiative", recoShort:"Recommend",
+  top3:"The three initiatives to remember", production:"Produced on", covering:"Period covered",
+  fVille:"City / authority", fDate:"Date", fComp:"Brussels competence", fQuoi:"What it is about", fRes:"Known results", fTrans:"Transferability to Brussels", fAngle:"Parliamentary angle", fSrc:"Sources", open:"Read the entry ▾",
+  transpo:{forte:"strong",moyenne:"moderate",faible:"weak"}, transpoL:"Transferability",
+  followH:"Announced, to be watched", noRes:"Fields with no entry kept that week", doubts:"Remaining doubts", methodH:"How this review is made", author:"The author",
+  none:"No entry matches.", results:"results", weekOf:"Week", verdictName:{best:"Good practice",bad:"Bad practice",watch:"To be evaluated"},
+  instName:{"Région":"Region","COCOM":"COCOM","COCOF":"COCOF","COCOM / COCOF":"COCOM / COCOF"},
+  months:["January","February","March","April","May","June","July","August","September","October","November","December"],
+  methodIntro:"Each week, research teams sift the national quality press, the specialist urban press and the Belgian press through the Brussels competences, in several languages. An initiative is kept only if it is concrete — decision taken, budget voted, measure launched, result published — and only if at least one dated press source, opened and read, confirms it. Announcements and pilot schemes without a timetable are set aside. Where a figure comes from the city itself or is contested, the entry says so. Where nothing solid was found in a field, the entry is not written: the gap is reported rather than filled.",
+  methodVerdict:"The verdict — good practice, bad practice, to be evaluated — is about the results observed, not about the politics of the majority that took the measure. A good idea from a left-wing majority appears here as a good practice; a liberal scheme whose evaluation disappoints appears as a bad practice.",
+  libraryNote:"The library was built by a three-year retrospective catch-up, and grows every Monday with a new delivery. It covers Europe and, beyond it, democracies whose cities are comparable to ours in size, in competences and in the way they publish what they do: Canada, Australia, New Zealand, Israel, Chile, Uruguay.",
+  noEn:"This entry has not been translated into English yet; it is shown in French. Translation of the archive is under way.",
+  foot1:"CityScan — an international press review of city initiatives within the competences of the Brussels-Capital Region, the COCOM and the COCOF.",
+  foot2:"Every entry links to at least one dated press source. Updated weekly, on Mondays.",
+  ver:"Version"
  }
 };
 const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const tr=function(o){if(o==null)return "";if(typeof o==="string")return o;if(o[lang]!=null)return o[lang];if(o.fr!=null)return o.fr;if(o.nl!=null)return o.nl;return o.en!=null?o.en:"";};
+const VT=function(){return (window.LABMR&&window.LABMR.villesTrad)||{};};
+const vk=function(c){const e=VT()[c];return (e&&e[lang])||c;};
+const txt=s=>esc(s).replace(/\[\[(.+?)\]\]/g,'<span class="todo">$1</span>');
+const PG=()=>(window.LABMR&&window.LABMR.pages)||{};
 let lang="fr", route={view:"home",key:null}, q="";
 const t=()=>T[lang];
 const MATS=(function(){const m=new Map();F.forEach(f=>{if(!m.has(f.matiere.key))m.set(f.matiere.key,f.matiere)});return [...m.values()].sort((a,b)=>cnt(b.key)-cnt(a.key))})();
@@ -230,14 +296,14 @@ function vcount(list){return {best:list.filter(f=>f.verdict==="best").length,bad
 
 function parseHash(){
   const h=location.hash.replace(/^#\/?/,"").split("/").filter(Boolean);
-  if(h[0]==="nl"||h[0]==="fr")lang=h.shift();
+  if(h[0]==="nl"||h[0]==="fr"||h[0]==="en")lang=h.shift();
   route={view:h[0]||"home",key:h[1]?decodeURIComponent(h[1]):null};
 }
 function go(view,key){location.hash="#/"+lang+"/"+(view||"home")+(key?"/"+encodeURIComponent(key):"");}
 function setLang(l){lang=l;go(route.view,route.key);}
 function matches(f){
   if(!q)return true;const s=q.toLowerCase();
-  return [f.titre[lang],f.ville[lang],f.theme[lang],f.quoi[lang],f.matiere[lang],f.villeKey,f.inst,f.competence[lang],f.transposabilite[lang]].join(" ").toLowerCase().includes(s);
+  return [tr(f.titre),tr(f.ville),tr(f.theme),tr(f.quoi),tr(f.matiere),f.villeKey,vk(f.villeKey),f.inst,tr(f.competence),tr(f.transposabilite)].join(" ").toLowerCase().includes(s);
 }
 function bars(tr){const n={forte:3,moyenne:2,faible:1}[tr]||0;return '<span class="bars">'+[1,2,3].map(i=>'<i class="'+(i<=n?"on":"")+'"></i>').join("")+'</span>';}
 function vbar(list){const c=vcount(list),n=list.length||1;return '<span class="vbar"><i class="best" style="width:'+(c.best/n*100)+'%"></i><i class="bad" style="width:'+(c.bad/n*100)+'%"></i><i class="watch" style="width:'+(c.watch/n*100)+'%"></i></span>';}
@@ -254,19 +320,19 @@ function card(f){
   +'<summary><div class="chips">'
   +'<span class="chip v '+f.verdict+'">'+L.verdictName[f.verdict]+'</span>'
   +'<span class="chip inst">'+esc(L.instName[f.inst]||f.inst)+'</span>'
-  +'<span class="chip">'+esc(f.theme[lang])+'</span>'
-  +'<span class="chip">'+esc(f.villeKey)+' · '+esc(f.pays)+'</span>'
+  +'<span class="chip">'+esc(tr(f.theme))+'</span>'
+  +'<span class="chip">'+esc(vk(f.villeKey))+' · '+esc(f.pays)+'</span>'
   +'<span class="chip">'+esc(fmtMonth(f.dateISO))+'</span></div>'
-  +'<div><div class="t">'+esc(f.titre[lang])+'</div><div class="c">'+esc(f.date[lang])+'</div></div>'
+  +'<div><div class="t">'+esc(tr(f.titre))+'</div><div class="c">'+esc(tr(f.date))+'</div></div>'
   +'<div class="tr">'+L.transpoL+' · '+L.transpo[f.transpo]+bars(f.transpo)+'</div>'
   +'<span class="open">'+L.open+'</span></summary>'
   +'<dl class="body">'
-  +'<dt>'+L.fVille+'</dt><dd>'+esc(f.ville[lang])+'</dd>'
-  +'<dt>'+L.fComp+'</dt><dd>'+esc(f.competence[lang])+'</dd>'
-  +'<dt>'+L.fQuoi+'</dt><dd>'+esc(f.quoi[lang])+'</dd>'
-  +'<dt>'+L.fRes+'</dt><dd>'+esc(f.resultats[lang])+'</dd>'
-  +'<dt>'+L.fTrans+'</dt><dd>'+esc(f.transposabilite[lang])+'</dd>'
-  +'<dt>'+L.fAngle+'</dt><dd class="angle">'+esc(f.angle[lang])+'</dd>'
+  +'<dt>'+L.fVille+'</dt><dd>'+esc(tr(f.ville))+'</dd>'
+  +'<dt>'+L.fComp+'</dt><dd>'+esc(tr(f.competence))+'</dd>'
+  +'<dt>'+L.fQuoi+'</dt><dd>'+esc(tr(f.quoi))+'</dd>'
+  +'<dt>'+L.fRes+'</dt><dd>'+esc(tr(f.resultats))+'</dd>'
+  +'<dt>'+L.fTrans+'</dt><dd>'+esc(tr(f.transposabilite))+'</dd>'
+  +'<dt>'+L.fAngle+'</dt><dd class="angle">'+esc(tr(f.angle))+'</dd>'
   +'<dt>'+L.fSrc+'</dt><dd class="src"><ul>'+f.sources.map(s=>'<li>'+esc(s.media)+', '+esc(s.date)+' — <a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.url.replace(/^https?:\/\/(www\.)?/,"").slice(0,64))+(s.url.length>72?"…":"")+'</a></li>').join("")+'</ul></dd>'
   +'</dl></details>';
 }
@@ -279,19 +345,19 @@ function head(title,meta){return '<div class="sec"><h2>'+title+'</h2>'+(meta?'<s
 function renderSide(){
   const L=t();
   const item=(v,k,label,n,dot)=>'<li><button data-v="'+v+'" data-k="'+(k||"")+'" aria-current="'+(route.view===v&&(route.key||null)===(k||null))+'">'+(dot?'<span><span class="dot '+dot+'"></span>'+esc(label)+'</span>':'<span>'+esc(label)+'</span>')+(n!=null?'<span class="n">'+n+'</span>':"")+'</button></li>';
-  const cities=[...new Set(F.map(f=>f.villeKey))].map(c=>[c,F.filter(f=>f.villeKey===c).length]).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
+  const cities=[...new Set(F.map(f=>f.villeKey))].map(c=>[c,F.filter(f=>f.villeKey===c).length]).sort((a,b)=>b[1]-a[1]||vk(a[0]).localeCompare(vk(b[0])));
   document.getElementById("side").innerHTML=
    '<nav class="menu"><h4>'+L.mNav+'</h4><ul>'
-   +item("home",null,L.home)+item("all",null,L.all,F.length)+item("chrono",null,L.chrono)
+   +item("home",null,L.home)+item("pourquoi",null,L.why)+item("reco",null,L.recoShort)+item("all",null,L.all,F.length)+item("chrono",null,L.chrono)
    +item("edition",D.editions[0].id,L.latest,F.filter(f=>f.edition===D.editions[0].id).length)
    +item("editions",null,L.editions,D.editions.length)+item("method",null,L.method)+item("auteur",null,L.author)+'</ul></nav>'
    +'<nav class="menu"><h4>'+L.mVerdict+'</h4><ul>'
    +item("verdict","best",L.best,F.filter(f=>f.verdict==="best").length,"best")
    +item("verdict","bad",L.bad,F.filter(f=>f.verdict==="bad").length,"bad")
    +item("verdict","watch",L.watch,F.filter(f=>f.verdict==="watch").length,"watch")+'</ul></nav>'
-   +'<nav class="menu"><h4>'+L.mMat+'</h4><ul>'+MATS.map(m=>item("matiere",m.key,m[lang],cnt(m.key))).join("")+'</ul></nav>'
+   +'<nav class="menu"><h4>'+L.mMat+'</h4><ul>'+MATS.map(m=>item("matiere",m.key,tr(m),cnt(m.key))).join("")+'</ul></nav>'
    +'<nav class="menu"><h4>'+L.mInst+'</h4><ul>'+["Région","COCOM","COCOF"].map(i=>item("inst",i,L.instName[i],F.filter(f=>f.inst.indexOf(i)>=0).length)).join("")+'</ul></nav>'
-   +'<nav class="menu"><h4>'+L.mCity+'</h4><ul>'+cities.slice(0,12).map(([c,n])=>item("city",c,c,n)).join("")+item("cities",null,L.cities,cities.length)+'</ul></nav>';
+   +'<nav class="menu"><h4>'+L.mCity+'</h4><ul>'+cities.slice(0,12).map(([c,n])=>item("city",c,vk(c),n)).join("")+item("cities",null,L.cities,cities.length)+'</ul></nav>';
   document.querySelectorAll("#side button").forEach(b=>b.addEventListener("click",()=>{q="";document.getElementById("q").value="";go(b.dataset.v,b.dataset.k||null)}));
 }
 
@@ -302,7 +368,7 @@ function renderMain(){
     html=head("« "+esc(q)+" »",r.length+" "+L.results)+(r.length?'<div class="cards">'+r.map(card).join("")+'</div>':'<div class="empty">'+L.none+'</div>');
   } else if(route.view==="home"){
     const c=vcount(F),cities=new Set(F.map(f=>f.villeKey)).size,pays=new Set(F.map(f=>f.pays)).size;
-    html='<section class="thesis"><div class="eyebrow">Best &amp; bad practices from Europe’s cities</div><h1>'+L.thesis+'</h1><p>'+L.thesisP+'</p>'
+    html='<section class="thesis"><div class="eyebrow">Best &amp; bad practices from cities like ours</div><h1>'+L.thesis+'</h1><p>'+L.thesisP+'</p>'
      +'<div class="legend"><span><span class="dot best"></span>'+L.legendBest+'</span><span><span class="dot bad"></span>'+L.legendBad+'</span><span><span class="dot watch"></span>'+L.legendWatch+'</span></div></section>'
      +'<div class="figs">'
      +'<button class="fig" data-v="all"><b>'+F.length+'</b><small>'+L.fFiches+'</small></button>'
@@ -310,76 +376,115 @@ function renderMain(){
      +'<button class="fig best" data-v="verdict" data-k="best"><b>'+c.best+'</b><small>'+L.fBest+'</small></button>'
      +'<button class="fig" data-v="cities"><b>'+cities+'</b><small>'+L.fVilles+' · '+pays+' '+L.fPays+'</small></button>'
      +'<button class="fig" data-v="chrono"><b>'+nbMois()+'</b><small>'+L.fMois+'</small></button></div>'
-     +head(L.byMat,D.couverture[lang])
+     +head(L.byMat,tr(D.couverture))
      +'<div class="grid">'+MATS.map(m=>{const list=F.filter(f=>f.matiere.key===m.key);const vc=vcount(list);
-        return '<button class="tile" data-v="matiere" data-k="'+m.key+'"><span class="h"><b>'+esc(m[lang])+'</b><span>'+list.length+'</span></span>'+vbar(list)+'<span class="sub"><b class="cb">'+vc.best+'</b> · <b class="cd">'+vc.bad+'</b> · <b class="cw">'+vc.watch+'</b></span></button>'}).join("")+'</div>'
-     +head(L.latest,ed.periode[lang])
-     +'<div class="lead"><p>'+esc(ed.top3[lang])+'</p></div>'
-     +'<div class="rowlist" style="margin-top:10px"><button class="row" data-v="edition" data-k="'+ed.id+'"><b>'+esc(ed.periode[lang])+'</b><span class="n">'+F.filter(f=>f.edition===ed.id).length+' '+L.fFiches+' →</span></button></div>';
+        return '<button class="tile" data-v="matiere" data-k="'+m.key+'"><span class="h"><b>'+esc(tr(m))+'</b><span>'+list.length+'</span></span>'+vbar(list)+'<span class="sub"><b class="cb">'+vc.best+'</b> · <b class="cd">'+vc.bad+'</b> · <b class="cw">'+vc.watch+'</b></span></button>'}).join("")+'</div>'
+     +head(L.latest,tr(ed.periode))
+     +'<div class="lead"><p>'+esc(tr(ed.top3))+'</p></div>'
+     +'<div class="rowlist" style="margin-top:10px"><button class="row" data-v="edition" data-k="'+ed.id+'"><b>'+esc(tr(ed.periode))+'</b><span class="n">'+F.filter(f=>f.edition===ed.id).length+' '+L.fFiches+' →</span></button></div>';
   } else if(route.view==="all"){
-    html=head(L.all,F.length+" "+L.fFiches)+grouped(F,f=>f.matiere.key,k=>MATS.find(m=>m.key===k)[lang]);
+    html=head(L.all,F.length+" "+L.fFiches)+grouped(F,f=>f.matiere.key,k=>tr(MATS.find(m=>m.key===k)));
   } else if(route.view==="chrono"){
     const ans=annees(), an=(route.key&&(route.key==="all"||ans.indexOf(route.key)>=0))?route.key:ans[0];
     const r=an==="all"?F:F.filter(f=>f.dateISO.slice(0,4)===an);
     const chip=(k,lab,n)=>'<button data-v="chrono" data-k="'+k+'" aria-current="'+(an===k)+'">'+esc(lab)+' <span style="opacity:.6">'+n+'</span></button>';
-    html=head(L.chrono,D.couverture[lang])
+    html=head(L.chrono,tr(D.couverture))
      +'<div class="yearnav">'+ans.map(y=>chip(y,y,F.filter(f=>f.dateISO.slice(0,4)===y).length)).join("")+chip("all",L.allYears,F.length)+'</div>'
      +grouped(r,f=>f.dateISO.slice(0,7),k=>fmtMonth(k+"-01"));
   } else if(route.view==="verdict"){
     const r=F.filter(f=>f.verdict===route.key);
     html=head('<span class="dot '+route.key+'"></span>'+L[route.key],r.length+" "+L.fFiches)
      +'<p style="max-width:70ch;color:var(--muted);margin:-4px 0 4px">'+(route.key==="best"?L.legendBest:route.key==="bad"?L.legendBad:L.legendWatch)+'</p>'
-     +grouped(r,f=>f.matiere.key,k=>MATS.find(m=>m.key===k)[lang]);
+     +grouped(r,f=>f.matiere.key,k=>tr(MATS.find(m=>m.key===k)));
   } else if(route.view==="matiere"){
     const m=MATS.find(x=>x.key===route.key)||MATS[0],r=F.filter(f=>f.matiere.key===m.key);
-    html=head(esc(m[lang]),r.length+" "+L.fFiches)+grouped(r,f=>f.theme[lang],k=>k);
+    html=head(esc(tr(m)),r.length+" "+L.fFiches)+grouped(r,f=>tr(f.theme),k=>k);
   } else if(route.view==="inst"){
     const r=F.filter(f=>f.inst.indexOf(route.key)>=0);
-    html=head(esc(L.instName[route.key]||route.key),r.length+" "+L.fFiches)+grouped(r,f=>f.matiere.key,k=>MATS.find(m=>m.key===k)[lang]);
+    html=head(esc(L.instName[route.key]||route.key),r.length+" "+L.fFiches)+grouped(r,f=>f.matiere.key,k=>tr(MATS.find(m=>m.key===k)));
   } else if(route.view==="city"){
     const r=F.filter(f=>f.villeKey===route.key);
-    html=head(esc(route.key),r.length+" "+L.fFiches)+grouped(r,f=>f.matiere.key,k=>MATS.find(m=>m.key===k)[lang]);
+    html=head(esc(vk(route.key)),r.length+" "+L.fFiches)+grouped(r,f=>f.matiere.key,k=>tr(MATS.find(m=>m.key===k)));
   } else if(route.view==="cities"){
-    const cities=[...new Set(F.map(f=>f.villeKey))].map(c=>[c,F.filter(f=>f.villeKey===c)]).sort((a,b)=>b[1].length-a[1].length||a[0].localeCompare(b[0]));
+    const cities=[...new Set(F.map(f=>f.villeKey))].map(c=>[c,F.filter(f=>f.villeKey===c)]).sort((a,b)=>b[1].length-a[1].length||vk(a[0]).localeCompare(vk(b[0])));
     html=head(L.cities,cities.length+" "+L.fVilles)+'<div class="grid">'+cities.map(([c,list])=>
-      '<button class="tile" data-v="city" data-k="'+esc(c)+'"><span class="h"><b>'+esc(c)+'</b><span>'+list.length+'</span></span>'+vbar(list)+'<span class="sub">'+esc(list[0].pays)+'</span></button>').join("")+'</div>';
+      '<button class="tile" data-v="city" data-k="'+esc(c)+'"><span class="h"><b>'+esc(vk(c))+'</b><span>'+list.length+'</span></span>'+vbar(list)+'<span class="sub">'+esc(list[0].pays)+'</span></button>').join("")+'</div>';
   } else if(route.view==="editions"){
     html=head(L.editions,D.editions.length)+'<p style="max-width:74ch;color:var(--muted);margin:-4px 0 12px">'+L.libraryNote+'</p>'
-     +'<div class="rowlist">'+D.editions.map(e=>'<button class="row" data-v="edition" data-k="'+e.id+'"><span><b>'+esc(e.periode[lang])+'</b><br><span class="n">'+L.production+' '+esc(e.production[lang])+'</span></span><span class="n">'+F.filter(f=>f.edition===e.id).length+' '+L.fFiches+' →</span></button>').join("")+'</div>';
+     +'<div class="rowlist">'+D.editions.map(e=>'<button class="row" data-v="edition" data-k="'+e.id+'"><span><b>'+esc(tr(e.periode))+'</b><br><span class="n">'+L.production+' '+esc(tr(e.production))+'</span></span><span class="n">'+F.filter(f=>f.edition===e.id).length+' '+L.fFiches+' →</span></button>').join("")+'</div>';
   } else if(route.view==="edition"){
     const e=D.editions.find(x=>x.id===route.key)||ed,r=F.filter(f=>f.edition===e.id);
-    html=head(esc(e.periode[lang]),L.production+" "+e.production[lang])
-     +'<div class="lead"><p>'+esc(e.top3[lang])+'</p></div>'
-     +grouped(r,f=>f.matiere.key,k=>MATS.find(m=>m.key===k)[lang])
-     +head(L.followH)+'<ul class="plain">'+e.aSuivre[lang].map(a=>'<li>'+esc(a)+'</li>').join("")+'</ul>'
-     +head(L.noRes)+'<p style="max-width:74ch;color:var(--muted)">'+esc(e.sansResultat[lang])+'</p>';
-  } else if(route.view==="method"){
-    html=head(L.methodH,D.couverture[lang])
-     +'<p style="max-width:74ch">'+L.methodIntro+'</p><p style="max-width:74ch">'+L.methodVerdict+'</p><p style="max-width:74ch">'+L.libraryNote+'</p>'
-     +head(L.doubts,ed.periode[lang])+'<ul class="plain">'+ed.doutes[lang].map(a=>'<li>'+esc(a)+'</li>').join("")+'</ul>';
+    html=head(esc(tr(e.periode)),L.production+" "+tr(e.production))
+     +'<div class="lead"><p>'+esc(tr(e.top3))+'</p></div>'
+     +grouped(r,f=>f.matiere.key,k=>tr(MATS.find(m=>m.key===k)))
+     +head(L.followH)+'<ul class="plain">'+tr(e.aSuivre).map(a=>'<li>'+esc(a)+'</li>').join("")+'</ul>'
+     +head(L.noRes)+'<p style="max-width:74ch;color:var(--muted)">'+esc(tr(e.sansResultat))+'</p>';
   } else if(route.view==="auteur"){
     const A={
-     fr:{h:"Olivier Willocx",sub:"Député au Parlement de la Région de Bruxelles-Capitale (MR)",
+     fr:{h:"Olivier Willocx",sub:"Député au Parlement de la Région de Bruxelles-Capitale (MR) · Enseignant",
       p:["Olivier Willocx, né à Bruxelles en 1966, est député au Parlement bruxellois pour le MR depuis les élections du 9 juin 2024. Il est aussi conseiller communal à Schaerbeek.",
+         "Il enseigne depuis près de vingt ans, aujourd'hui à l'EPFC, où il donne notamment le business plan. Il a été durant vingt et un ans vice-président de la plus grande école de promotion sociale de Bruxelles et huit ans membre du comité de gestion de Bruxelles Formation — c'est-à-dire au cœur d'une des compétences que ce site passe en revue.",
          "Avant d'entrer au Parlement, il a passé près d'un quart de siècle à la tête de BECI, la Chambre de commerce et Union des entreprises de Bruxelles (2000-2024), dont il a été directeur général puis administrateur délégué. Il a présidé le Conseil économique et social de la Région de Bruxelles-Capitale (2012-2015) et siégé comme juge social au tribunal puis conseiller social à la Cour du travail de Bruxelles.",
-         "Économiste de formation (ULB), titulaire d'un master en droit européen de l'Université d'Amsterdam, il a été conseiller au cabinet d'un ministre bruxellois et attaché économique de la Région auprès de l'Union européenne. Il a enseigné pendant près de vingt ans et a été, durant 21 ans, vice-président de la plus grande école de promotion sociale de Bruxelles.",
+         "Économiste de formation (ULB), titulaire d'un master en droit européen de l'Université d'Amsterdam, il a été conseiller au cabinet d'un ministre bruxellois et attaché économique de la Région auprès de l'Union européenne.",
          "CityScan prolonge ce parcours : regarder ce que les autres villes d'Europe ont réellement fait, mesurer ce qui a marché et ce qui a raté, et en tirer des propositions concrètes pour Bruxelles."],
       k:"Parcours",
-      tl:[["2024 –","Député bruxellois (MR)"],["2000 – 2024","Directeur général puis administrateur délégué de BECI"],["2012 – 2015","Président du Conseil économique et social bruxellois"],["2014 – 2021","Conseiller social à la Cour du travail de Bruxelles"],["1995 – 1997","Conseiller au cabinet d'un ministre bruxellois"]],
+      tl:[["2024 –","Député bruxellois (MR)"],["depuis ~2006","Enseignant, aujourd'hui à l'EPFC"],["2000 – 2024","Directeur général puis administrateur délégué de BECI"],["21 ans","Vice-président de la plus grande école de promotion sociale de Bruxelles"],["8 ans","Comité de gestion de Bruxelles Formation"],["2012 – 2015","Président du Conseil économique et social bruxellois"],["2014 – 2021","Conseiller social à la Cour du travail de Bruxelles"],["1995 – 1997","Conseiller au cabinet d'un ministre bruxellois"]],
       c:"Contact"},
-     nl:{h:"Olivier Willocx",sub:"Volksvertegenwoordiger in het Brussels Hoofdstedelijk Parlement (MR)",
+     nl:{h:"Olivier Willocx",sub:"Volksvertegenwoordiger in het Brussels Hoofdstedelijk Parlement (MR) · Leerkracht",
       p:["Olivier Willocx, geboren in Brussel in 1966, is sinds de verkiezingen van 9 juni 2024 Brussels volksvertegenwoordiger voor de MR. Hij is ook gemeenteraadslid in Schaarbeek.",
+         "Hij geeft al bijna twintig jaar les, vandaag aan het EPFC, waar hij onder meer het businessplan doceert. Hij was eenentwintig jaar ondervoorzitter van de grootste school voor sociale promotie in Brussel en acht jaar lid van het beheerscomité van Bruxelles Formation — dus midden in een van de bevoegdheden die deze site doorlicht.",
          "Voor zijn intrede in het Parlement leidde hij bijna een kwarteeuw BECI, de Kamer van Koophandel en Verbond van Ondernemingen van Brussel (2000-2024), eerst als directeur-generaal en daarna als gedelegeerd bestuurder. Hij was voorzitter van de Economische en Sociale Raad van het Brussels Hoofdstedelijk Gewest (2012-2015) en zetelde als rechter in sociale zaken en raadsheer in sociale zaken bij het Arbeidshof van Brussel.",
-         "Hij is econoom (ULB) en behaalde een master Europees recht aan de Universiteit van Amsterdam. Hij was adviseur op het kabinet van een Brussels minister en economisch attaché van het Gewest bij de Europese Unie. Hij gaf bijna twintig jaar les en was 21 jaar ondervoorzitter van de grootste school voor sociale promotie in Brussel.",
+         "Hij is econoom (ULB) en behaalde een master Europees recht aan de Universiteit van Amsterdam. Hij was adviseur op het kabinet van een Brussels minister en economisch attaché van het Gewest bij de Europese Unie.",
          "CityScan bouwt daarop voort: kijken wat andere Europese steden echt gedaan hebben, meten wat werkte en wat mislukte, en daaruit concrete voorstellen voor Brussel halen."],
       k:"Loopbaan",
-      tl:[["2024 –","Brussels volksvertegenwoordiger (MR)"],["2000 – 2024","Directeur-generaal en daarna gedelegeerd bestuurder van BECI"],["2012 – 2015","Voorzitter van de Brusselse Economische en Sociale Raad"],["2014 – 2021","Raadsheer in sociale zaken, Arbeidshof Brussel"],["1995 – 1997","Adviseur op het kabinet van een Brussels minister"]],
+      tl:[["2024 –","Brussels volksvertegenwoordiger (MR)"],["sinds ~2006","Leerkracht, vandaag aan het EPFC"],["2000 – 2024","Directeur-generaal en daarna gedelegeerd bestuurder van BECI"],["21 jaar","Ondervoorzitter van de grootste school voor sociale promotie in Brussel"],["8 jaar","Beheerscomité van Bruxelles Formation"],["2012 – 2015","Voorzitter van de Brusselse Economische en Sociale Raad"],["2014 – 2021","Raadsheer in sociale zaken, Arbeidshof Brussel"],["1995 – 1997","Adviseur op het kabinet van een Brussels minister"]],
+      c:"Contact"},
+     en:{h:"Olivier Willocx",sub:"Member of the Parliament of the Brussels-Capital Region (MR) · Teacher",
+      p:["Olivier Willocx, born in Brussels in 1966, has been a Member of the Brussels Parliament for the MR since the elections of 9 June 2024. He is also a municipal councillor in Schaerbeek.",
+         "He has been teaching for close to twenty years, today at the EPFC, where he teaches the business plan among other subjects. For twenty-one years he was vice-president of the largest adult education college in Brussels, and for eight years a member of the management committee of Bruxelles Formation — that is, at the heart of one of the competences this site reviews.",
+         "Before entering Parliament he spent close to a quarter of a century at the head of BECI, the Brussels Chamber of Commerce and Union of Enterprises (2000-2024), as director general and then chief executive. He chaired the Economic and Social Council of the Brussels-Capital Region (2012-2015) and sat as a lay judge and then lay counsellor at the Brussels Labour Court.",
+         "An economist by training (ULB) with a master's degree in European law from the University of Amsterdam, he served as an adviser in the cabinet of a Brussels minister and as the Region's economic attaché to the European Union.",
+         "CityScan continues that path: looking at what other comparable cities have actually done, measuring what worked and what failed, and drawing concrete proposals for Brussels out of it."],
+      k:"Career",
+      tl:[["2024 –","Member of the Brussels Parliament (MR)"],["since ~2006","Teacher, today at the EPFC"],["2000 – 2024","Director general then chief executive of BECI"],["21 years","Vice-president of the largest adult education college in Brussels"],["8 years","Management committee of Bruxelles Formation"],["2012 – 2015","Chair of the Brussels Economic and Social Council"],["2014 – 2021","Lay counsellor at the Brussels Labour Court"],["1995 – 1997","Adviser in the cabinet of a Brussels minister"]],
       c:"Contact"}}[lang];
     html='<section class="thesis"><div class="eyebrow">CityScan</div><h1>'+A.h+'</h1><p style="margin-top:6px;font-weight:600;color:var(--ink)">'+A.sub+'</p>'
      +A.p.map(x=>'<p>'+esc(x)+'</p>').join("")+'</section>'
-     +head(A.k)+'<ul class="plain">'+A.tl.map(r=>'<li style="display:grid;grid-template-columns:120px 1fr;gap:12px"><span class="eyebrow" style="padding-top:3px;font-variant-numeric:tabular-nums">'+r[0]+'</span><span>'+esc(r[1])+'</span></li>').join("")+'</ul>'
-     +head(A.c)+'<ul class="plain"><li>olivier.willocx@mrbruxelles.be</li><li><a href="https://www.linkedin.com/in/olivierwillocx/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://www.parlement.brussels" target="_blank" rel="noopener">parlement.brussels</a></li></ul>';
+     +head(A.k)+'<ul class="plain">'+A.tl.map(r=>'<li style="display:grid;grid-template-columns:130px 1fr;gap:12px"><span class="eyebrow" style="padding-top:3px;font-variant-numeric:tabular-nums">'+esc(r[0])+'</span><span>'+esc(r[1])+'</span></li>').join("")+'</ul>'
+     +head(A.c)+'<ul class="plain"><li>olivier.willocx@mrbruxelles.be</li><li><a href="https://www.parlement.brussels" target="_blank" rel="noopener">parlement.brussels</a></li></ul>';
+  } else if(route.view==="pourquoi"){
+    const P=PG().pourquoi;
+    html=P ? head(esc(tr(P.titre)))+'<div class="prose">'+P.blocs.map(function(b){
+        return b.signature
+          ? '<p class="sig">'+txt(tr(b.texte)).replace(/\n/g,"<br>")+'</p>'
+          : '<p>'+(b.lead?'<strong>'+txt(tr(b.lead))+'</strong> ':'')+txt(tr(b.texte))+'</p>';
+      }).join("")+'</div>'
+      : head(L.why)+'<div class="empty">—</div>';
+  } else if(route.view==="mentions"){
+    const M=PG().mentions;
+    html=M ? head(esc(tr(M.titre)),(function(){var V=(window.LABMR&&window.LABMR.version);return V?(L.ver+" "+V.num+" — "+tr(V.date)):"";})())+'<div class="legal">'+M.sections.map(function(x){
+        return '<section><h3>'+esc(tr(x.t))+'</h3><p>'+txt(tr(x.c)).replace(/\n/g,"<br>")+'</p></section>';
+      }).join("")+'</div>'
+      : head(L.legalShort)+'<div class="empty">—</div>';
+  } else if(route.view==="reco"){
+    const R=PG().recommandations, ML=(window.LABMR&&window.LABMR.contact)||"olivier.willocx@mrbruxelles.be";
+    if(!R){ html=head(L.reco)+'<div class="empty">—</div>'; }
+    else {
+      var href="mailto:"+ML+"?subject="+encodeURIComponent(tr(R.sujet))+"&body="+encodeURIComponent(tr(R.corps));
+      html=head(esc(tr(R.titre)))+'<div class="prose">'+R.blocs.map(function(b){
+          return '<p>'+(b.lead?'<strong>'+txt(tr(b.lead))+'</strong> ':'')+txt(tr(b.texte))+'</p>';
+        }).join("")
+        +'<p><a class="cta" href="'+esc(href)+'">'+esc(tr(R.bouton))+'</a></p>'
+        +'<p class="fine">'+esc(ML)+'</p>'
+        +'<p class="fine">'+txt(tr(R.vieprivee))+'</p></div>';
+    }
+  } else if(route.view==="method"){
+    html=head(L.methodH,tr(D.couverture))
+     +'<p style="max-width:74ch">'+L.methodIntro+'</p><p style="max-width:74ch">'+L.methodVerdict+'</p><p style="max-width:74ch">'+L.libraryNote+'</p>'
+     +head(L.doubts,tr(ed.periode))+'<ul class="plain">'+tr(ed.doutes).map(a=>'<li>'+esc(a)+'</li>').join("")+'</ul>';
   }
+  if(lang==="en"&&L.noEn&&/^(all|chrono|verdict|matiere|inst|city|edition)$/.test(route.view)&&F.some(function(f){return f.titre.en==null}))
+    html='<div class="note">'+esc(L.noEn)+'</div>'+html;
   const m=document.getElementById("main");m.innerHTML=html;
   m.querySelectorAll("[data-v]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.v,b.dataset.k||null)));
 }
@@ -389,15 +494,20 @@ function render(){
   document.getElementById("q").placeholder=L.search;
   document.getElementById("lfr").setAttribute("aria-pressed",lang==="fr");
   document.getElementById("lnl").setAttribute("aria-pressed",lang==="nl");
-  document.getElementById("foot").innerHTML='<p>'+L.foot1+'</p><p>'+L.foot2+' © '+esc(D.auteur)+'.</p><p style="margin-top:8px;color:var(--muted);font-size:12px">'+(lang==="nl"?"Verantwoordelijke uitgever: Olivier Willocx, Huart Hamoirlaan 71, 1030 Brussel":"Éditeur responsable : Olivier Willocx, Avenue Huart Hamoir 71, 1030 Bruxelles")+'</p>';
+  document.getElementById("len").setAttribute("aria-pressed",lang==="en");
+  const foot=document.getElementById("foot");
+  const V=(window.LABMR&&window.LABMR.version)||null;
+  foot.innerHTML='<p>'+L.foot1+'</p><p>'+L.foot2+' © '+esc(D.auteur)+'.</p>'
+   +(V?'<p class="fine">'+L.ver+' '+esc(V.num)+' — '+esc(tr(V.date))+'</p>':'')
+   +'<p class="footnav"><button data-v="pourquoi">'+L.why+'</button><button data-v="reco">'+L.recoShort+'</button><button data-v="mentions">'+L.legalShort+'</button></p>';
+  foot.querySelectorAll("[data-v]").forEach(function(b){b.addEventListener("click",function(){go(b.dataset.v)})});
   renderSide();renderMain();window.scrollTo({top:0});
 }
 document.getElementById("lfr").addEventListener("click",()=>setLang("fr"));
 document.getElementById("lnl").addEventListener("click",()=>setLang("nl"));
+document.getElementById("len").addEventListener("click",()=>setLang("en"));
 document.getElementById("q").addEventListener("input",e=>{q=e.target.value.trim();renderMain()});
 window.addEventListener("hashchange",()=>{parseHash();render()});
 parseHash();render();
 })();
 </script>
-
-</body></html>

@@ -14,4 +14,36 @@ RewriteCond %{HTTP_HOST} ^www\.cityscan\.be$ [NC]
 RewriteRule (.*) https://cityscan.be/$1 [R=301,L]
 </IfModule>
 
+# --- Encodage UTF-8 (evite « Matiere » sur les fiches .js) ---
 AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .html .js .css .json .md
+</IfModule>
+
+# --- Compression (les fiches ~4,8 Mo -> ~800 Ko) ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE text/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# --- Mise en cache ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/javascript        "access plus 7 days"
+  ExpiresByType text/css               "access plus 7 days"
+  ExpiresByType image/svg+xml          "access plus 30 days"
+  ExpiresByType text/html              "access plus 0 seconds"
+</IfModule>
+
+# --- En-tetes de securite ---
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-Frame-Options "SAMEORIGIN"
+  <FilesMatch "\.(js|json)$">
+    Header set X-Robots-Tag "noindex"
+  </FilesMatch>
+</IfModule>
