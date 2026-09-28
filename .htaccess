@@ -1,0 +1,17 @@
+# CityScan — configuration Apache (hebergement OVH)
+DirectoryIndex index.html
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# 1) Forcer HTTPS (regle OVH : detection via l'en-tete du load-balancer)
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule (.*) https://%{HTTP_HOST}/$1 [R=301,L]
+
+# 2) Adresse canonique : www.cityscan.be -> cityscan.be
+RewriteCond %{HTTP_HOST} ^www\.cityscan\.be$ [NC]
+RewriteRule (.*) https://cityscan.be/$1 [R=301,L]
+</IfModule>
+
+AddDefaultCharset UTF-8
