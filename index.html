@@ -498,6 +498,7 @@ function render(){
   const foot=document.getElementById("foot");
   const V=(window.LABMR&&window.LABMR.version)||null;
   foot.innerHTML='<p>'+L.foot1+'</p><p>'+L.foot2+' © '+esc(D.auteur)+'.</p>'
+   +'<p class="fine">'+(lang==="nl"?"Verantwoordelijke uitgever: Olivier Willocx, Huart Hamoirlaan 71, 1030 Brussel":lang==="en"?"Responsible publisher: Olivier Willocx, Avenue Huart Hamoir 71, 1030 Brussels":"Éditeur responsable : Olivier Willocx, Avenue Huart Hamoir 71, 1030 Bruxelles")+'</p>'
    +(V?'<p class="fine">'+L.ver+' '+esc(V.num)+' — '+esc(tr(V.date))+'</p>':'')
    +'<p class="footnav"><button data-v="pourquoi">'+L.why+'</button><button data-v="reco">'+L.recoShort+'</button><button data-v="mentions">'+L.legalShort+'</button></p>';
   foot.querySelectorAll("[data-v]").forEach(function(b){b.addEventListener("click",function(){go(b.dataset.v)})});
