@@ -1,4 +1,4 @@
-name: Deploy to OVH (SFTP)
+name: Deploy to OVH (FTP)
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: ovh-sftp-deploy
+  group: ovh-ftp-deploy
   cancel-in-progress: true
 
 jobs:
@@ -16,24 +16,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install lftp
-        run: sudo apt-get update -qq && sudo apt-get install -y lftp >/dev/null
-
-      - name: Deploiement SFTP vers OVH (/home/citysca/www)
-        env:
-          SRV: ${{ secrets.OVH_FTP_SERVER }}
-          USR: ${{ secrets.OVH_FTP_USERNAME }}
-          PWD: ${{ secrets.OVH_FTP_PASSWORD }}
-        run: |
-          lftp -c "
-          set sftp:auto-confirm yes;
-          set net:max-retries 2;
-          set net:timeout 25;
-          open -u \"$USR\",\"$PWD\" sftp://$SRV:22;
-          mirror -R --delete --verbose --parallel=4 \
-            --exclude-glob .git* \
-            --exclude .github/ \
-            --exclude README.md \
-            --exclude MISE-A-JOUR.md \
-            ./ /home/citysca/www/;
-          "
+      - name: Deploiement FTP vers OVH (dossier www)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.OVH_FTP_SERVER }}
+          username: ${{ secrets.OVH_FTP_USERNAME }}
+          password: ${{ secrets.OVH_FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          server-dir: www/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            README.md
+            MISE-A-JOUR.md
