@@ -149,6 +149,42 @@ button.fig:hover{border-color:var(--accent)}
 .foot{max-width:1240px;margin:0 auto;padding:18px 20px 44px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
 .foot p{margin:4px 0;max-width:90ch}
 @media (prefers-reduced-motion:no-preference){.card summary,.tile,.row{transition:background .15s,border-color .15s}}
+.aibar{background:var(--watch-soft);border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.45}
+.aibar-in{max-width:1240px;margin:0 auto;padding:7px 20px;display:flex;gap:4px 12px;align-items:baseline;flex-wrap:wrap}
+.aibar b{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--watch);white-space:nowrap}
+.aibar span{flex:1 1 320px;min-width:0}
+.aibar button{color:var(--accent);text-decoration:underline;text-underline-offset:3px;padding:0;font-size:13.5px;white-space:nowrap}
+.filters{display:grid;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.frow{display:grid;grid-template-columns:104px minmax(0,1fr);gap:6px 12px;align-items:start}
+@media (max-width:660px){.frow{grid-template-columns:1fr}}
+.frow>span{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:6px}
+.fchips{display:flex;gap:6px;flex-wrap:wrap;min-width:0}
+.fchips button{font-size:13.5px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);text-align:left}
+.fchips button:hover{border-color:var(--accent)}
+.fchips button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:transparent;font-weight:600}
+.fchips button .k{opacity:.7;font-family:var(--mono);font-size:11px;margin-left:5px;font-variant-numeric:tabular-nums}
+.acts{display:flex;gap:8px;flex-wrap:wrap;padding:0 18px 16px}
+.btn{display:inline-block;border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:13.5px;background:var(--bg);color:var(--ink);text-decoration:none}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.warn:hover{border-color:var(--bad);color:var(--bad)}
+.btn.main{background:var(--accent);color:var(--accent-ink);border-color:transparent;font-weight:600}
+.btn.main:hover{color:var(--accent-ink);filter:brightness(1.08)}
+.form{display:grid;gap:14px;max-width:80ch;margin-top:16px}
+.form label{display:grid;gap:5px;font-size:14px;font-weight:600}
+.form label small{font-weight:400;color:var(--muted)}
+.form input,.form textarea,.form select{font:inherit;font-weight:400;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 11px;width:100%;min-width:0}
+.form textarea{min-height:110px;resize:vertical}
+.out{background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:10px;max-width:80ch;margin-top:18px}
+.out h3{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.out pre{margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--mono);font-size:13px;line-height:1.5;max-height:300px;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.out .row2{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.addr{font-family:var(--mono);font-size:14px;user-select:all;word-break:break-all}
+.status{font-size:14px;color:var(--best);min-height:1.3em}
+.checks{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:6px 14px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--surface)}
+.checks label{display:flex;grid-template-columns:none;gap:8px;align-items:center;font-weight:400;font-size:15px}
+.checks input{width:auto;accent-color:var(--accent)}
+.form fieldset{border:0;padding:0;margin:0;display:grid;gap:6px;min-width:0}
+.form legend{font-size:14px;font-weight:600;padding:0;margin-bottom:6px}
 </style>
 
 <header class="top"><div class="top-in">
@@ -156,6 +192,7 @@ button.fig:hover{border-color:var(--accent)}
   <label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder=""></label>
   <div class="lang" role="group" aria-label="Langue / Taal / Language"><button id="lfr" aria-pressed="true">FR</button><button id="lnl" aria-pressed="false">NL</button><button id="len" aria-pressed="false">EN</button></div>
 </div></header>
+<div class="aibar" role="note"><div class="aibar-in"><b id="aitag"></b><span id="aitxt"></span><button id="aimore" data-v="ia"></button><button id="aicontest" data-v="contribuer" data-k="c"></button></div></div>
 
 <div class="wrap">
   <aside class="side" id="side"></aside>
@@ -166,11 +203,13 @@ button.fig:hover{border-color:var(--accent)}
 <script>window.LABMR = { auteur: "Olivier Willocx", editions: [], fiches: [] };</script>
 <!-- Une ligne par fichier de donnees. Pour ajouter une livraison : deposer data/AAAA-MM-JJ.js et ajouter sa ligne ici. -->
 <script src="data/pages.js"></script>
+<script src="data/pages-ia.js"></script>
 <script src="data/archive.js"></script>
 <script src="data/2026-09-14.js"></script>
 <script src="data/2026-09-20.js"></script>
 <script src="data/2026-09-21.js"></script>
 <script src="data/2026-09-25.js"></script>
+<script src="data/2026-10-02.js"></script>
 <script src="data/new-aide.js"></script>
 <script src="data/new-centre.js"></script>
 <script src="data/new-eco-fisc.js"></script>
@@ -209,6 +248,8 @@ const D=(function(){
 const F=D.fiches;
 const T={
  fr:{
+  "news": "Newsletter", "nlSub": "S'abonner", "nlUnsub": "Se désabonner", "nlThemes": "Thèmes souhaités", "nlAllT": "Tout cocher", "nlNone": "Tout décocher", "nlLang": "Langue de la newsletter", "nlEmail": "Votre adresse électronique", "nlEmailH": "L'adresse abonnée est celle depuis laquelle vous envoyez le message.", "nlConsent": "Je demande à recevoir chaque mois la newsletter CityScan pour les thèmes ci-dessous. Je peux me désabonner à tout moment.", "nlBye": "Je demande à ne plus recevoir la newsletter CityScan.", "nlNeed": "Cochez au moins un thème.", "nlHome": "Recevoir chaque mois les fiches de vos thèmes", "nlCodes": "Codes", "nlAddr": "Adresse", "nlSubj": "Objet",
+  "explorer": "Explorer", "exTitle": "Explorer par semaine et par thème", "exIntro": "Choisissez une semaine, puis un thème. Les filtres se combinent ; les chiffres indiquent le nombre de fiches.", "exWeek": "Semaine", "exMat": "Thème", "exVerdict": "Verdict", "exInst": "Institution", "exAll": "Toutes", "exAllM": "Tous", "exLib": "Bibliothèque (rattrapage 2023-2026)", "exReset": "Réinitialiser", "exFromWeek": "Filtrer cette semaine par thème", "exHome": "Explorer par semaine et par thème", "aiTag": "Fait avec l'IA", "aiBar": "Les fiches sont recherchées, rédigées et traduites par une intelligence artificielle, sous la responsabilité de l'éditeur. Des erreurs sont possibles.", "aiMore": "Comment c'est fait", "aiContest": "Contester une fiche", "aiFoot": "Site produit avec une intelligence artificielle générative ; chaque fiche peut être contestée.", "contribute": "Proposer ou contester", "cContest": "Contester cette fiche", "cFix": "Corriger ou compléter", "tyP": "Proposer une initiative", "tyC": "Contester une fiche", "tyK": "Corriger ou compléter", "sbP": "CityScan — proposition d'une initiative", "sbC": "CityScan — contestation d'une fiche", "sbK": "CityScan — correction ou complément", "fFiche": "Fiche concernée", "fFicheH": "Le bouton au bas de chaque fiche remplit ce champ. Sinon, indiquez son titre ou sa ville.", "fPoint": "Ce que vous contestez", "fArg": "Votre argument", "fArgH": "Ce qui est faux ou injuste, et ce qui serait exact selon vous.", "fCorr": "Ce qu'il faut corriger ou ajouter", "fSrcU": "Source à l'appui", "fSrcH": "Lien vers un article de presse ou un document public daté.", "fVilleP": "Ville ou autorité", "fDateP": "Date de la décision", "fQuoiP": "De quoi s'agit-il", "fQuoiH": "Quelques lignes : le problème, la mesure, le budget.", "fResP": "Résultats connus, si publiés", "fNom": "Votre nom et votre qualité", "fOpt": "facultatif", "fCite": "Souhaitez-vous être cité si la fiche est publiée ou corrigée ?", "yes": "oui", "no": "non", "pts": ["un chiffre", "une date", "la source", "le verdict", "l'analyse bruxelloise (transposabilité, compétence)", "autre chose"], "outH": "Votre message", "outTo": "À envoyer à", "copy": "Copier le message", "copyAddr": "Copier l'adresse", "copied": "Message copié. Collez-le dans un courriel adressé à ", "copiedAddr": "Adresse copiée.", "copyFail": "La copie automatique n'a pas fonctionné : le texte est sélectionné, copiez-le avec Ctrl+C ou Cmd+C.", "mail": "Ouvrir dans ma messagerie", "mailH": "Ce lien peut ne rien faire selon votre navigateur ; dans ce cas, copiez le message et l'adresse.", "lang": "Langue de la page", "type": "Type",
   who:"par Olivier Willocx, député bruxellois (MR)", search:"Rechercher une ville, un thème…",
   thesis:"Ce qui marche — et ce qui rate — dans les <em>villes comparables</em>, lu depuis Bruxelles.",
   thesisP:"CityScan passe la presse européenne — et celle de quelques démocraties comparables hors d'Europe — au crible des compétences de la Région bruxelloise, de la COCOM et de la COCOF. Pas une liste d'idées : des décisions prises, des budgets votés, des résultats publiés — et, pour chacune, ce qui existe déjà à Bruxelles, ce qui bloquerait et la question parlementaire qui peut en sortir. Les bonnes pratiques sont retenues d'où qu'elles viennent ; les mauvaises aussi, parce qu'un échec documenté ailleurs vaut une étude d'impact gratuite.",
@@ -233,6 +274,8 @@ const T={
   foot2:"Chaque fiche renvoie à au moins une source de presse datée. Mise à jour hebdomadaire, le lundi."
  },
  nl:{
+  "news": "Nieuwsbrief", "nlSub": "Inschrijven", "nlUnsub": "Uitschrijven", "nlThemes": "Gewenste thema's", "nlAllT": "Alles aanvinken", "nlNone": "Alles uitvinken", "nlLang": "Taal van de nieuwsbrief", "nlEmail": "Uw e-mailadres", "nlEmailH": "Het ingeschreven adres is het adres van waaruit u het bericht verstuurt.", "nlConsent": "Ik vraag om elke maand de CityScan-nieuwsbrief te ontvangen voor de onderstaande thema's. Ik kan me op elk moment uitschrijven.", "nlBye": "Ik vraag om de CityScan-nieuwsbrief niet meer te ontvangen.", "nlNeed": "Vink minstens één thema aan.", "nlHome": "Ontvang elke maand de fiches van uw thema's", "nlCodes": "Codes", "nlAddr": "Adres", "nlSubj": "Onderwerp",
+  "explorer": "Verkennen", "exTitle": "Verkennen per week en per thema", "exIntro": "Kies een week en dan een thema. De filters worden gecombineerd; de cijfers geven het aantal fiches.", "exWeek": "Week", "exMat": "Thema", "exVerdict": "Oordeel", "exInst": "Instelling", "exAll": "Alle", "exAllM": "Alle", "exLib": "Bibliotheek (inhaalslag 2023-2026)", "exReset": "Wissen", "exFromWeek": "Deze week per thema filteren", "exHome": "Verkennen per week en per thema", "aiTag": "Gemaakt met AI", "aiBar": "De fiches worden opgezocht, geschreven en vertaald door artificiële intelligentie, onder de verantwoordelijkheid van de uitgever. Fouten zijn mogelijk.", "aiMore": "Hoe het gemaakt wordt", "aiContest": "Een fiche betwisten", "aiFoot": "Site gemaakt met generatieve artificiële intelligentie; elke fiche kan betwist worden.", "contribute": "Voorstellen of betwisten", "cContest": "Deze fiche betwisten", "cFix": "Corrigeren of aanvullen", "tyP": "Een initiatief voorstellen", "tyC": "Een fiche betwisten", "tyK": "Corrigeren of aanvullen", "sbP": "CityScan — voorstel van een initiatief", "sbC": "CityScan — betwisting van een fiche", "sbK": "CityScan — correctie of aanvulling", "fFiche": "Betrokken fiche", "fFicheH": "De knop onderaan elke fiche vult dit veld in. Vermeld anders de titel of de stad.", "fPoint": "Wat u betwist", "fArg": "Uw argument", "fArgH": "Wat fout of onbillijk is, en wat volgens u juist zou zijn.", "fCorr": "Wat gecorrigeerd of toegevoegd moet worden", "fSrcU": "Bron ter ondersteuning", "fSrcH": "Link naar een persartikel of een gedateerd openbaar document.", "fVilleP": "Stad of overheid", "fDateP": "Datum van de beslissing", "fQuoiP": "Waarover gaat het", "fQuoiH": "Enkele lijnen: het probleem, de maatregel, het budget.", "fResP": "Bekende resultaten, indien gepubliceerd", "fNom": "Uw naam en hoedanigheid", "fOpt": "facultatief", "fCite": "Wenst u vermeld te worden als de fiche gepubliceerd of gecorrigeerd wordt?", "yes": "ja", "no": "nee", "pts": ["een cijfer", "een datum", "de bron", "het oordeel", "de Brusselse analyse (overdraagbaarheid, bevoegdheid)", "iets anders"], "outH": "Uw bericht", "outTo": "Te versturen naar", "copy": "Bericht kopiëren", "copyAddr": "Adres kopiëren", "copied": "Bericht gekopieerd. Plak het in een e-mail aan ", "copiedAddr": "Adres gekopieerd.", "copyFail": "Automatisch kopiëren lukte niet: de tekst is geselecteerd, kopieer hem met Ctrl+C of Cmd+C.", "mail": "Openen in mijn mailprogramma", "mailH": "Deze link doet mogelijk niets, afhankelijk van uw browser; kopieer in dat geval het bericht en het adres.", "lang": "Taal van de pagina", "type": "Type",
   who:"door Olivier Willocx, Brussels volksvertegenwoordiger (MR)", search:"Zoek een stad, een thema…",
   thesis:"Wat werkt — en wat mislukt — in <em>vergelijkbare steden</em>, gelezen vanuit Brussel.",
   thesisP:"CityScan zeeft de Europese pers — en die van enkele vergelijkbare democratieën buiten Europa — door de bevoegdheden van het Brussels Gewest, de GGC en de COCOF. Geen ideeënlijst: genomen beslissingen, gestemde budgetten, gepubliceerde resultaten — en voor elk ervan wat al in Brussel bestaat, wat zou blokkeren en de parlementaire vraag die eruit kan volgen. Goede praktijken worden weerhouden waar ze ook vandaan komen; slechte ook, want een elders gedocumenteerde mislukking is een gratis impactstudie.",
@@ -257,6 +300,8 @@ const T={
   foot2:"Elke fiche verwijst naar minstens één gedateerde persbron. Wekelijks bijgewerkt, op maandag."
  },
  en:{
+  "news": "Newsletter", "nlSub": "Subscribe", "nlUnsub": "Unsubscribe", "nlThemes": "Themes you want", "nlAllT": "Tick all", "nlNone": "Untick all", "nlLang": "Newsletter language", "nlEmail": "Your email address", "nlEmailH": "The subscribed address is the one you send the message from.", "nlConsent": "I ask to receive the CityScan newsletter each month for the themes below. I can unsubscribe at any time.", "nlBye": "I ask to stop receiving the CityScan newsletter.", "nlNeed": "Tick at least one theme.", "nlHome": "Receive your themes' entries every month", "nlCodes": "Codes", "nlAddr": "Address", "nlSubj": "Subject",
+  "explorer": "Explore", "exTitle": "Explore by week and by theme", "exIntro": "Pick a week, then a theme. Filters combine; the figures give the number of entries.", "exWeek": "Week", "exMat": "Theme", "exVerdict": "Verdict", "exInst": "Institution", "exAll": "All", "exAllM": "All", "exLib": "Library (2023-2026 catch-up)", "exReset": "Reset", "exFromWeek": "Filter this week by theme", "exHome": "Explore by week and by theme", "aiTag": "Made with AI", "aiBar": "The entries are researched, written and translated by artificial intelligence, under the publisher's responsibility. Errors are possible.", "aiMore": "How it is made", "aiContest": "Contest an entry", "aiFoot": "Site produced with generative artificial intelligence; every entry can be contested.", "contribute": "Propose or contest", "cContest": "Contest this entry", "cFix": "Correct or add to it", "tyP": "Propose an initiative", "tyC": "Contest an entry", "tyK": "Correct or add to an entry", "sbP": "CityScan — proposing an initiative", "sbC": "CityScan — contesting an entry", "sbK": "CityScan — correction or addition", "fFiche": "Entry concerned", "fFicheH": "The button at the bottom of each entry fills this in. Otherwise give its title or city.", "fPoint": "What you contest", "fArg": "Your argument", "fArgH": "What is wrong or unfair, and what you believe is accurate.", "fCorr": "What should be corrected or added", "fSrcU": "Supporting source", "fSrcH": "Link to a press article or a dated public document.", "fVilleP": "City or authority", "fDateP": "Date of the decision", "fQuoiP": "What it is about", "fQuoiH": "A few lines: the problem, the measure, the budget.", "fResP": "Known results, if published", "fNom": "Your name and capacity", "fOpt": "optional", "fCite": "Would you like to be credited if the entry is published or corrected?", "yes": "yes", "no": "no", "pts": ["a figure", "a date", "the source", "the verdict", "the Brussels analysis (transferability, competence)", "something else"], "outH": "Your message", "outTo": "Send it to", "copy": "Copy the message", "copyAddr": "Copy the address", "copied": "Message copied. Paste it into an email to ", "copiedAddr": "Address copied.", "copyFail": "Automatic copy did not work: the text is selected, copy it with Ctrl+C or Cmd+C.", "mail": "Open in my mail app", "mailH": "This link may do nothing depending on your browser; if so, copy the message and the address.", "lang": "Page language", "type": "Type",
   who:"by Olivier Willocx, Member of the Brussels Parliament (MR)", search:"Search a city, a topic…",
   thesis:"What works — and what fails — in <em>comparable cities</em>, read from Brussels.",
   thesisP:"CityScan sifts the European press — and that of a few comparable democracies beyond Europe — through the competences of the Brussels Region, the COCOM and the COCOF. Not a list of ideas: decisions taken, budgets voted, results published — and, for each, what already exists in Brussels, what would block it, and the parliamentary question that can come out of it. Good practices are kept wherever they come from; so are bad ones, because a failure documented elsewhere is a free impact study.",
@@ -289,6 +334,7 @@ const vk=function(c){const e=VT()[c];return (e&&e[lang])||c;};
 const txt=s=>esc(s).replace(/\[\[(.+?)\]\]/g,'<span class="todo">$1</span>');
 const PG=()=>(window.LABMR&&window.LABMR.pages)||{};
 let lang="fr", route={view:"home",key:null}, q="";
+let ex={mat:null,verdict:null,inst:null}; const draft={};
 const t=()=>T[lang];
 const MATS=(function(){const m=new Map();F.forEach(f=>{if(!m.has(f.matiere.key))m.set(f.matiere.key,f.matiere)});return [...m.values()].sort((a,b)=>cnt(b.key)-cnt(a.key))})();
 function cnt(k){return F.filter(f=>f.matiere.key===k).length}
@@ -334,7 +380,7 @@ function card(f){
   +'<dt>'+L.fTrans+'</dt><dd>'+esc(tr(f.transposabilite))+'</dd>'
   +'<dt>'+L.fAngle+'</dt><dd class="angle">'+esc(tr(f.angle))+'</dd>'
   +'<dt>'+L.fSrc+'</dt><dd class="src"><ul>'+f.sources.map(s=>'<li>'+esc(s.media)+', '+esc(s.date)+' — <a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.url.replace(/^https?:\/\/(www\.)?/,"").slice(0,64))+(s.url.length>72?"…":"")+'</a></li>').join("")+'</ul></dd>'
-  +'</dl></details>';
+  +'</dl><div class="acts"><button class="btn warn" data-v="contribuer" data-k="c:'+esc(f.id)+'">'+L.cContest+'</button><button class="btn" data-v="contribuer" data-k="k:'+esc(f.id)+'">'+L.cFix+'</button></div></details>';
 }
 function grouped(list,keyFn,labelFn){
   const g=new Map();list.forEach(f=>{const k=keyFn(f);if(!g.has(k))g.set(k,[]);g.get(k).push(f)});
@@ -344,11 +390,12 @@ function head(title,meta){return '<div class="sec"><h2>'+title+'</h2>'+(meta?'<s
 
 function renderSide(){
   const L=t();
-  const item=(v,k,label,n,dot)=>'<li><button data-v="'+v+'" data-k="'+(k||"")+'" aria-current="'+(route.view===v&&(route.key||null)===(k||null))+'">'+(dot?'<span><span class="dot '+dot+'"></span>'+esc(label)+'</span>':'<span>'+esc(label)+'</span>')+(n!=null?'<span class="n">'+n+'</span>':"")+'</button></li>';
+  const cur=(v,k)=>(v==="explorer"||v==="contribuer"||v==="newsletter")?route.view===v:(route.view===v&&(route.key||null)===(k||null));
+  const item=(v,k,label,n,dot)=>'<li><button data-v="'+v+'" data-k="'+(k||"")+'" aria-current="'+cur(v,k)+'">'+(dot?'<span><span class="dot '+dot+'"></span>'+esc(label)+'</span>':'<span>'+esc(label)+'</span>')+(n!=null?'<span class="n">'+n+'</span>':"")+'</button></li>';
   const cities=[...new Set(F.map(f=>f.villeKey))].map(c=>[c,F.filter(f=>f.villeKey===c).length]).sort((a,b)=>b[1]-a[1]||vk(a[0]).localeCompare(vk(b[0])));
   document.getElementById("side").innerHTML=
    '<nav class="menu"><h4>'+L.mNav+'</h4><ul>'
-   +item("home",null,L.home)+item("pourquoi",null,L.why)+item("reco",null,L.recoShort)+item("all",null,L.all,F.length)+item("chrono",null,L.chrono)
+   +item("home",null,L.home)+item("explorer",null,L.explorer)+item("pourquoi",null,L.why)+item("contribuer",null,L.contribute)+item("newsletter",null,L.news)+item("ia",null,L.aiTag)+item("all",null,L.all,F.length)+item("chrono",null,L.chrono)
    +item("edition",D.editions[0].id,L.latest,F.filter(f=>f.edition===D.editions[0].id).length)
    +item("editions",null,L.editions,D.editions.length)+item("method",null,L.method)+item("auteur",null,L.author)+'</ul></nav>'
    +'<nav class="menu"><h4>'+L.mVerdict+'</h4><ul>'
@@ -381,7 +428,9 @@ function renderMain(){
         return '<button class="tile" data-v="matiere" data-k="'+m.key+'"><span class="h"><b>'+esc(tr(m))+'</b><span>'+list.length+'</span></span>'+vbar(list)+'<span class="sub"><b class="cb">'+vc.best+'</b> · <b class="cd">'+vc.bad+'</b> · <b class="cw">'+vc.watch+'</b></span></button>'}).join("")+'</div>'
      +head(L.latest,tr(ed.periode))
      +'<div class="lead"><p>'+esc(tr(ed.top3))+'</p></div>'
-     +'<div class="rowlist" style="margin-top:10px"><button class="row" data-v="edition" data-k="'+ed.id+'"><b>'+esc(tr(ed.periode))+'</b><span class="n">'+F.filter(f=>f.edition===ed.id).length+' '+L.fFiches+' →</span></button></div>';
+     +'<div class="rowlist" style="margin-top:10px"><button class="row" data-v="edition" data-k="'+ed.id+'"><b>'+esc(tr(ed.periode))+'</b><span class="n">'+F.filter(f=>f.edition===ed.id).length+' '+L.fFiches+' →</span></button>'
+     +'<button class="row" data-v="explorer" data-k="'+ed.id+'"><b>'+L.exHome+'</b><span class="n">→</span></button>'
+     +'<button class="row" data-v="newsletter"><b>'+L.nlHome+'</b><span class="n">'+L.news+' →</span></button></div>';
   } else if(route.view==="all"){
     html=head(L.all,F.length+" "+L.fFiches)+grouped(F,f=>f.matiere.key,k=>tr(MATS.find(m=>m.key===k)));
   } else if(route.view==="chrono"){
@@ -416,6 +465,7 @@ function renderMain(){
     const e=D.editions.find(x=>x.id===route.key)||ed,r=F.filter(f=>f.edition===e.id);
     html=head(esc(tr(e.periode)),L.production+" "+tr(e.production))
      +'<div class="lead"><p>'+esc(tr(e.top3))+'</p></div>'
+     +'<p style="margin:12px 0 0"><button class="btn" data-v="explorer" data-k="'+e.id+'">'+L.exFromWeek+' →</button></p>'
      +grouped(r,f=>f.matiere.key,k=>tr(MATS.find(m=>m.key===k)))
      +head(L.followH)+'<ul class="plain">'+tr(e.aSuivre).map(a=>'<li>'+esc(a)+'</li>').join("")+'</ul>'
      +head(L.noRes)+'<p style="max-width:74ch;color:var(--muted)">'+esc(tr(e.sansResultat))+'</p>';
@@ -466,27 +516,148 @@ function renderMain(){
         return '<section><h3>'+esc(tr(x.t))+'</h3><p>'+txt(tr(x.c)).replace(/\n/g,"<br>")+'</p></section>';
       }).join("")+'</div>'
       : head(L.legalShort)+'<div class="empty">—</div>';
-  } else if(route.view==="reco"){
-    const R=PG().recommandations, ML=(window.LABMR&&window.LABMR.contact)||"olivier.willocx@mrbruxelles.be";
-    if(!R){ html=head(L.reco)+'<div class="empty">—</div>'; }
-    else {
-      var href="mailto:"+ML+"?subject="+encodeURIComponent(tr(R.sujet))+"&body="+encodeURIComponent(tr(R.corps));
-      html=head(esc(tr(R.titre)))+'<div class="prose">'+R.blocs.map(function(b){
-          return '<p>'+(b.lead?'<strong>'+txt(tr(b.lead))+'</strong> ':'')+txt(tr(b.texte))+'</p>';
-        }).join("")
-        +'<p><a class="cta" href="'+esc(href)+'">'+esc(tr(R.bouton))+'</a></p>'
-        +'<p class="fine">'+esc(ML)+'</p>'
-        +'<p class="fine">'+txt(tr(R.vieprivee))+'</p></div>';
-    }
+  } else if(route.view==="explorer"){
+    html=viewExplorer();
+  } else if(route.view==="ia"){
+    const P=PG().ia;
+    html=P ? head(esc(tr(P.titre)))+'<div class="prose">'+P.blocs.map(function(b){
+        return '<p>'+(b.lead?'<strong>'+txt(tr(b.lead))+'</strong> ':'')+txt(tr(b.texte))+'</p>';
+      }).join("")+'<p><button class="btn main" data-v="contribuer" data-k="c">'+L.aiContest+'</button> <button class="btn" data-v="method">'+L.method+'</button></p></div>'
+      : head(L.aiTag)+'<div class="empty">—</div>';
+  } else if(route.view==="reco"||route.view==="contribuer"){
+    html=viewContrib();
+  } else if(route.view==="newsletter"){
+    html=viewNews();
   } else if(route.view==="method"){
     html=head(L.methodH,tr(D.couverture))
      +'<p style="max-width:74ch">'+L.methodIntro+'</p><p style="max-width:74ch">'+L.methodVerdict+'</p><p style="max-width:74ch">'+L.libraryNote+'</p>'
+     +'<p><button class="btn" data-v="ia">'+L.aiTag+' — '+L.aiMore+'</button></p>'
      +head(L.doubts,tr(ed.periode))+'<ul class="plain">'+tr(ed.doutes).map(a=>'<li>'+esc(a)+'</li>').join("")+'</ul>';
   }
-  if(lang==="en"&&L.noEn&&/^(all|chrono|verdict|matiere|inst|city|edition)$/.test(route.view)&&F.some(function(f){return f.titre.en==null}))
+  if(lang==="en"&&L.noEn&&/^(all|chrono|verdict|matiere|inst|city|edition|explorer)$/.test(route.view)&&F.some(function(f){return f.titre.en==null}))
     html='<div class="note">'+esc(L.noEn)+'</div>'+html;
   const m=document.getElementById("main");m.innerHTML=html;
   m.querySelectorAll("[data-v]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.v,b.dataset.k||null)));
+  m.querySelectorAll("[data-exk]").forEach(b=>b.addEventListener("click",()=>{
+    if(b.dataset.exk==="reset"){ex={mat:null,verdict:null,inst:null};if(route.key){go("explorer",null);return;}}
+    else ex[b.dataset.exk]=b.dataset.exv||null;
+    renderMain();}));
+  if(m.querySelector("#cf")) wireContrib(m);
+  if(m.querySelector("#nf")) wireNews(m);
+}
+const NLADDR=()=>(window.LABMR&&(window.LABMR.newsletterContact||window.LABMR.contact))||"";
+function viewNews(){
+  const L=t(), N=PG().newsletter||{}, un=route.key==="u", A=NLADDR();
+  if(!draft.nlThemes) draft.nlThemes={};
+  if(!draft.nlLang) draft.nlLang=lang.toUpperCase();
+  const mode=(k,label)=>'<button data-v="newsletter" data-k="'+k+'" aria-pressed="'+((k==="u")===un)+'">'+label+'</button>';
+  const checks=MATS.map(m=>'<label><input type="checkbox" id="nf-t-'+m.key+'" data-t="'+m.key+'"'+(draft.nlThemes[m.key]?' checked':'')+'>'+esc(tr(m))+'</label>').join("");
+  return head(esc(tr(N.titre)||L.news))
+   +'<div class="prose"><p>'+txt(tr(N.intro))+'</p></div>'
+   +'<div class="filters" style="max-width:80ch"><div class="fchips">'+mode("s",L.nlSub)+mode("u",L.nlUnsub)+'</div></div>'
+   +'<form class="form" id="nf" data-un="'+(un?1:0)+'" novalidate>'
+   +(un?'':'<fieldset><legend>'+L.nlThemes+'</legend><div class="checks">'+checks+'</div><div class="row2" style="display:flex;gap:8px;margin-top:6px"><button class="btn" type="button" id="nf-all">'+L.nlAllT+'</button><button class="btn" type="button" id="nf-none">'+L.nlNone+'</button></div></fieldset>'
+     +'<label for="nf-lang">'+L.nlLang+'<select id="nf-lang">'+["FR","NL","EN"].map(c=>'<option'+(draft.nlLang===c?' selected':'')+'>'+c+'</option>').join("")+'</select></label>')
+   +'<label for="nf-email">'+L.nlEmail+'<small>'+L.nlEmailH+'</small><input id="nf-email" type="email" autocomplete="email" value="'+esc(draft.nlEmail||"")+'"></label>'
+   +'</form>'
+   +'<div class="out"><h3>'+L.outH+'</h3><pre id="nf-out" tabindex="0"></pre>'
+   +'<div class="row2"><button class="btn main" id="nf-copy" type="button">'+L.copy+'</button><a class="btn" id="nf-mail" href="mailto:'+esc(A)+'">'+L.mail+'</a></div>'
+   +'<div class="row2"><span>'+L.outTo+'</span> <span class="addr" id="nf-addr">'+esc(A)+'</span> <button class="btn" id="nf-copyaddr" type="button">'+L.copyAddr+'</button></div>'
+   +'<div class="status" id="nf-status" role="status"></div><p class="fine" style="margin:0">'+L.mailH+'</p></div>'
+   +'<p class="fine" style="margin-top:16px">'+txt(tr(N.suite))+'</p><p class="fine">'+txt(tr(N.vieprivee))+'</p>';
+}
+function newsMessage(un){
+  const L=t(), keys=MATS.filter(m=>draft.nlThemes&&draft.nlThemes[m.key]);
+  // Objets fixes, en francais quelle que soit la langue : ils servent au tri automatique des demandes.
+  if(un) return {subject:"[CityScan newsletter] Désabonnement", body:L.nlBye+"\n\n"+L.nlAddr+" : "+(draft.nlEmail||"").trim()+"\n", ok:true};
+  return {subject:"[CityScan newsletter] Abonnement", ok:keys.length>0,
+    body:L.nlConsent+"\n\n"+L.nlThemes+" : "+keys.map(m=>tr(m)).join(", ")+"\n"+L.nlCodes+" : "+keys.map(m=>m.key).join(", ")+"\n"+L.nlLang+" : "+draft.nlLang+"\n"+L.nlAddr+" : "+(draft.nlEmail||"").trim()+"\n"};
+}
+function wireNews(m){
+  const L=t(), form=m.querySelector("#nf"), un=form.dataset.un==="1", out=m.querySelector("#nf-out"), mail=m.querySelector("#nf-mail"), status=m.querySelector("#nf-status"), addr=m.querySelector("#nf-addr").textContent;
+  let cur={ok:true};
+  const refresh=()=>{cur=newsMessage(un);out.textContent=L.nlSubj+" : "+cur.subject+"\n\n"+cur.body;mail.href="mailto:"+addr+"?subject="+encodeURIComponent(cur.subject)+"&body="+encodeURIComponent(cur.body);};
+  form.addEventListener("submit",e=>e.preventDefault());
+  form.querySelectorAll("[data-t]").forEach(el=>el.addEventListener("change",()=>{draft.nlThemes[el.dataset.t]=el.checked;status.textContent="";refresh();}));
+  const all=v=>{form.querySelectorAll("[data-t]").forEach(el=>{el.checked=v;draft.nlThemes[el.dataset.t]=v;});status.textContent="";refresh();};
+  const ba=m.querySelector("#nf-all"), bn=m.querySelector("#nf-none"), sl=m.querySelector("#nf-lang"), em=m.querySelector("#nf-email");
+  if(ba) ba.addEventListener("click",()=>all(true)); if(bn) bn.addEventListener("click",()=>all(false));
+  if(sl) sl.addEventListener("change",()=>{draft.nlLang=sl.value;refresh();});
+  em.addEventListener("input",()=>{draft.nlEmail=em.value;refresh();});
+  const selectText=el=>{const r=document.createRange();r.selectNodeContents(el);const s=window.getSelection();s.removeAllRanges();s.addRange(r);};
+  const copy=(text,el,okMsg)=>{const fail=()=>{selectText(el);status.textContent=L.copyFail;};
+    try{navigator.clipboard.writeText(text).then(()=>{status.textContent=okMsg;},fail);}catch(e){fail();}};
+  m.querySelector("#nf-copy").addEventListener("click",()=>{if(!cur.ok){status.textContent=L.nlNeed;return;}copy(out.textContent,out,L.copied+addr+".");});
+  mail.addEventListener("click",e=>{if(!cur.ok){e.preventDefault();status.textContent=L.nlNeed;}});
+  m.querySelector("#nf-copyaddr").addEventListener("click",()=>copy(addr,m.querySelector("#nf-addr"),L.copiedAddr));
+  refresh();
+}
+const weekOf=f=>f.edition||"lib";
+function exList(week,o){return F.filter(f=>(!week||weekOf(f)===week)&&(!o.mat||f.matiere.key===o.mat)&&(!o.verdict||f.verdict===o.verdict)&&(!o.inst||f.inst.indexOf(o.inst)>=0));}
+function shortWeek(e){return tr(e.periode).replace(/^(Semaine du|Week van|Week of)\s+/i,"");}
+function viewExplorer(){
+  const L=t(), weeks=D.editions.map(e=>e.id), week=(route.key&&(route.key==="lib"||weeks.indexOf(route.key)>=0))?route.key:null;
+  const chip=(k,v,label,n,on)=>'<button data-exk="'+k+'" data-exv="'+esc(v||"")+'" aria-pressed="'+on+'">'+esc(label)+'<span class="k">'+n+'</span></button>';
+  const wchip=(v,label)=>'<button data-v="explorer" data-k="'+(v||"")+'" aria-pressed="'+(week===v)+'">'+esc(label)+'<span class="k">'+exList(v,ex).length+'</span></button>';
+  const mats=MATS.filter(m=>ex.mat===m.key||exList(week,{mat:m.key,verdict:ex.verdict,inst:ex.inst}).length);
+  const r=exList(week,ex);
+  const any=week||ex.mat||ex.verdict||ex.inst;
+  return head(L.exTitle,r.length+" "+L.fFiches)
+   +'<p style="max-width:74ch;color:var(--muted);margin:-4px 0 12px">'+L.exIntro+'</p>'
+   +'<div class="filters">'
+   +'<div class="frow"><span>'+L.exWeek+'</span><div class="fchips">'+wchip(null,L.exAll)+D.editions.map(e=>wchip(e.id,shortWeek(e))).join("")+wchip("lib",L.exLib)+'</div></div>'
+   +'<div class="frow"><span>'+L.exMat+'</span><div class="fchips">'+chip("mat",null,L.exAllM,exList(week,{mat:null,verdict:ex.verdict,inst:ex.inst}).length,!ex.mat)+mats.map(m=>chip("mat",m.key,tr(m),exList(week,{mat:m.key,verdict:ex.verdict,inst:ex.inst}).length,ex.mat===m.key)).join("")+'</div></div>'
+   +'<div class="frow"><span>'+L.exVerdict+'</span><div class="fchips">'+chip("verdict",null,L.exAllM,exList(week,{mat:ex.mat,verdict:null,inst:ex.inst}).length,!ex.verdict)+["best","bad","watch"].map(v=>chip("verdict",v,L[v],exList(week,{mat:ex.mat,verdict:v,inst:ex.inst}).length,ex.verdict===v)).join("")+'</div></div>'
+   +'<div class="frow"><span>'+L.exInst+'</span><div class="fchips">'+chip("inst",null,L.exAll,exList(week,{mat:ex.mat,verdict:ex.verdict,inst:null}).length,!ex.inst)+["Région","COCOM","COCOF"].map(v=>chip("inst",v,L.instName[v],exList(week,{mat:ex.mat,verdict:ex.verdict,inst:v}).length,ex.inst===v)).join("")+'</div></div>'
+   +(any?'<div><button class="btn" data-exk="reset">'+L.exReset+'</button></div>':'')
+   +'</div>'
+   +(r.length?(ex.mat?grouped(r,f=>tr(f.theme),k=>k):grouped(r,f=>f.matiere.key,k=>tr(MATS.find(m=>m.key===k)))):'<div class="empty" style="margin-top:16px">'+L.none+'</div>');
+}
+function contribState(){
+  const k=route.view==="reco"?"p":(route.key||"p"), ty=("pck".indexOf(k.charAt(0))>=0?k.charAt(0):"p"), id=k.indexOf(":")>0?k.slice(k.indexOf(":")+1):null;
+  const f=id?F.find(x=>x.id===id):null;
+  return {ty:ty,f:f};
+}
+function viewContrib(){
+  const L=t(), C=PG().contribuer||{}, st=contribState(), ML=(window.LABMR&&window.LABMR.contact)||"olivier.willocx@mrbruxelles.be";
+  if(st.f) draft.fiche=st.f.id+" — "+vk(st.f.villeKey)+" — "+tr(st.f.titre);
+  const v=k=>esc(draft[k]||"");
+  const inp=(k,label,hint,opt)=>'<label for="cf-'+k+'">'+label+(opt?' <small>('+L.fOpt+')</small>':'')+(hint?'<small>'+hint+'</small>':'')+'<input id="cf-'+k+'" data-f="'+k+'" type="text" value="'+v(k)+'"></label>';
+  const ta=(k,label,hint)=>'<label for="cf-'+k+'">'+label+(hint?'<small>'+hint+'</small>':'')+'<textarea id="cf-'+k+'" data-f="'+k+'">'+v(k)+'</textarea></label>';
+  const sel=(k,label,opts)=>'<label for="cf-'+k+'">'+label+'<select id="cf-'+k+'" data-f="'+k+'"><option value=""></option>'+opts.map(o=>'<option'+(draft[k]===o?' selected':'')+'>'+esc(o)+'</option>').join("")+'</select></label>';
+  const tyBtn=(c,label)=>'<button data-v="contribuer" data-k="'+c+(st.f&&c!=="p"?":"+esc(st.f.id):"")+'" aria-pressed="'+(st.ty===c)+'">'+label+'</button>';
+  let fields="";
+  if(st.ty==="p") fields=inp("ville",L.fVilleP)+inp("date",L.fDateP)+ta("quoi",L.fQuoiP,L.fQuoiH)+inp("source",L.fSrcU,L.fSrcH)+ta("resultats",L.fResP)+inp("nom",L.fNom,null,true)+sel("cite",L.fCite,[L.yes,L.no]);
+  else if(st.ty==="c") fields=inp("fiche",L.fFiche,L.fFicheH)+sel("point",L.fPoint,L.pts)+ta("argument",L.fArg,L.fArgH)+inp("source",L.fSrcU,L.fSrcH)+inp("nom",L.fNom,null,true)+sel("cite",L.fCite,[L.yes,L.no]);
+  else fields=inp("fiche",L.fFiche,L.fFicheH)+ta("correction",L.fCorr)+inp("source",L.fSrcU,L.fSrcH)+inp("nom",L.fNom,null,true)+sel("cite",L.fCite,[L.yes,L.no]);
+  return head(esc(tr(C.titre)||L.contribute))
+   +'<div class="filters" style="max-width:80ch"><div class="fchips">'+tyBtn("p",L.tyP)+tyBtn("c",L.tyC)+tyBtn("k",L.tyK)+'</div></div>'
+   +'<div class="prose" style="margin-top:16px"><p>'+txt(tr((C.intro||{})[st.ty]))+'</p></div>'
+   +'<form class="form" id="cf" data-ty="'+st.ty+'" novalidate>'+fields+'</form>'
+   +'<div class="out"><h3>'+L.outH+'</h3><pre id="cf-out" tabindex="0"></pre>'
+   +'<div class="row2"><button class="btn main" id="cf-copy" type="button">'+L.copy+'</button><a class="btn" id="cf-mail" href="mailto:'+esc(ML)+'">'+L.mail+'</a></div>'
+   +'<div class="row2"><span>'+L.outTo+'</span> <span class="addr" id="cf-addr">'+esc(ML)+'</span> <button class="btn" id="cf-copyaddr" type="button">'+L.copyAddr+'</button></div>'
+   +'<div class="status" id="cf-status" role="status"></div><p class="fine" style="margin:0">'+L.mailH+'</p></div>'
+   +'<p class="fine" style="margin-top:16px">'+txt(tr(C.suite))+'</p><p class="fine">'+txt(tr(C.vieprivee))+'</p>';
+}
+function contribMessage(ty){
+  const L=t(), lab={ville:L.fVilleP,date:L.fDateP,quoi:L.fQuoiP,source:L.fSrcU,resultats:L.fResP,nom:L.fNom,cite:L.fCite,fiche:L.fFiche,point:L.fPoint,argument:L.fArg,correction:L.fCorr};
+  const order={p:["ville","date","quoi","source","resultats","nom","cite"],c:["fiche","point","argument","source","nom","cite"],k:["fiche","correction","source","nom","cite"]}[ty];
+  const subject={p:L.sbP,c:L.sbC,k:L.sbK}[ty];
+  const body=L.type+" : "+{p:L.tyP,c:L.tyC,k:L.tyK}[ty]+"\n\n"+order.map(k=>lab[k]+(/\?$/.test(lab[k])?"":" :")+"\n"+(draft[k]||"").trim()).join("\n\n")+"\n\n"+L.lang+" : "+lang.toUpperCase()+"\n";
+  return {subject:subject,body:body};
+}
+function wireContrib(m){
+  const L=t(), form=m.querySelector("#cf"), ty=form.dataset.ty, out=m.querySelector("#cf-out"), mail=m.querySelector("#cf-mail"), status=m.querySelector("#cf-status"), addr=m.querySelector("#cf-addr").textContent;
+  const refresh=()=>{const x=contribMessage(ty);out.textContent=x.subject+"\n\n"+x.body;mail.href="mailto:"+addr+"?subject="+encodeURIComponent(x.subject)+"&body="+encodeURIComponent(x.body);};
+  form.addEventListener("submit",e=>e.preventDefault());
+  form.querySelectorAll("[data-f]").forEach(el=>{const h=()=>{draft[el.dataset.f]=el.value;status.textContent="";refresh();};el.addEventListener("input",h);el.addEventListener("change",h);});
+  const selectText=el=>{const r=document.createRange();r.selectNodeContents(el);const s=window.getSelection();s.removeAllRanges();s.addRange(r);};
+  const copy=(text,el,okMsg)=>{const fail=()=>{selectText(el);status.textContent=L.copyFail;};
+    try{navigator.clipboard.writeText(text).then(()=>{status.textContent=okMsg;},fail);}catch(e){fail();}};
+  m.querySelector("#cf-copy").addEventListener("click",()=>copy(out.textContent,out,L.copied+addr+"."));
+  m.querySelector("#cf-copyaddr").addEventListener("click",()=>copy(addr,m.querySelector("#cf-addr"),L.copiedAddr));
+  refresh();
 }
 function render(){
   const L=t();document.documentElement.lang=lang;
@@ -497,10 +668,12 @@ function render(){
   document.getElementById("len").setAttribute("aria-pressed",lang==="en");
   const foot=document.getElementById("foot");
   const V=(window.LABMR&&window.LABMR.version)||null;
-  foot.innerHTML='<p>'+L.foot1+'</p><p>'+L.foot2+' © '+esc(D.auteur)+'.</p>'
-   +'<p class="fine">'+(lang==="nl"?"Verantwoordelijke uitgever: Olivier Willocx, Huart Hamoirlaan 71, 1030 Brussel":lang==="en"?"Responsible publisher: Olivier Willocx, Avenue Huart Hamoir 71, 1030 Brussels":"Éditeur responsable : Olivier Willocx, Avenue Huart Hamoir 71, 1030 Bruxelles")+'</p>'
+  document.getElementById("aitag").textContent=L.aiTag;document.getElementById("aitxt").textContent=L.aiBar;
+  document.getElementById("aimore").textContent=L.aiMore;document.getElementById("aicontest").textContent=L.aiContest;
+  foot.innerHTML='<p>'+L.foot1+'</p><p>'+L.foot2+' © '+esc(D.auteur)+'.</p><p>'+L.aiFoot+'</p>'
+   +'<p class="fine">'+(lang==="nl"?"Verantwoordelijke uitgever: Olivier Willocx, Huart Hamoirlaan 71, 1030 Brussel":lang==="en"?"Responsible publisher: Olivier Willocx, Avenue Huart Hamoir 71, 1030 Brussels":"Éditeur responsable : Olivier Willocx, Avenue Huart Hamoir 71, 1030 Bruxelles")+'</p>'
    +(V?'<p class="fine">'+L.ver+' '+esc(V.num)+' — '+esc(tr(V.date))+'</p>':'')
-   +'<p class="footnav"><button data-v="pourquoi">'+L.why+'</button><button data-v="reco">'+L.recoShort+'</button><button data-v="mentions">'+L.legalShort+'</button></p>';
+   +'<p class="footnav"><button data-v="pourquoi">'+L.why+'</button><button data-v="ia">'+L.aiTag+'</button><button data-v="contribuer">'+L.contribute+'</button><button data-v="newsletter">'+L.news+'</button><button data-v="mentions">'+L.legalShort+'</button></p>';
   foot.querySelectorAll("[data-v]").forEach(function(b){b.addEventListener("click",function(){go(b.dataset.v)})});
   renderSide();renderMain();window.scrollTo({top:0});
 }
@@ -508,6 +681,7 @@ document.getElementById("lfr").addEventListener("click",()=>setLang("fr"));
 document.getElementById("lnl").addEventListener("click",()=>setLang("nl"));
 document.getElementById("len").addEventListener("click",()=>setLang("en"));
 document.getElementById("q").addEventListener("input",e=>{q=e.target.value.trim();renderMain()});
+document.querySelectorAll(".aibar [data-v]").forEach(function(b){b.addEventListener("click",function(){q="";document.getElementById("q").value="";go(b.dataset.v,b.dataset.k||null)})});
 window.addEventListener("hashchange",()=>{parseHash();render()});
 parseHash();render();
 })();
