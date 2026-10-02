@@ -200,7 +200,8 @@ LABMR.matieresEN = {
  formation:"Training and social cohesion", urbanisme:"Planning and public space",
  proprete:"Cleanliness and waste", environnement:"Environment and energy",
  securite:"Safety and prevention", economie:"Economy and tourism", logement:"Housing",
- culture:"Culture, sport and schools", gouvernance:"Governance and digitalisation" };
+ culture:"Culture, sport and schools", gouvernance:"Governance and digitalisation",
+ resilience:"Resilience and crisis management" };
 
 // Noms de villes et d entites en NL et EN. Seules les formes qui different du francais
 // figurent ici ; toutes les autres sont identiques dans les trois langues.
@@ -240,6 +241,7 @@ LABMR.villesTrad = {
  "La Haye":                 { nl:"Den Haag",                     en:"The Hague" },
  "Lettonie":                { nl:"Letland",                      en:"Latvia" },
  "Lisbonne":                { nl:"Lissabon",                     en:"Lisbon" },
+ "Kharkiv":                 { nl:"Charkiv",                      en:"Kharkiv" },
  "Liège":                   { nl:"Luik",                         en:"Liège" },
  "Lombardie":               { nl:"Lombardije",                   en:"Lombardy" },
  "Londres":                 { nl:"Londen",                       en:"London" },
@@ -265,6 +267,7 @@ LABMR.villesTrad = {
  "Tibériade":               { nl:"Tiberias",                     en:"Tiberias" },
  "Turin":                   { nl:"Turijn",                       en:"Turin" },
  "Uruguay":                 { nl:"Uruguay",                      en:"Uruguay" },
+ "Vallée de la Vesdre":     { nl:"Vesdervallei",                 en:"Vesdre valley" },
  "Valence":                 { nl:"Valencia",                     en:"Valencia" },
  "Varsovie":                { nl:"Warschau",                     en:"Warsaw" },
  "Venise":                  { nl:"Venetië",                      en:"Venice" },

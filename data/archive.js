@@ -5425,13 +5425,15 @@ LABMR.fiches.push(...
   "villeKey": "Milan",
   "pays": "IT",
   "theme": {
-   "fr": "Eau et inondations",
-   "nl": "Water en overstromingen"
+   "fr": "Résilience — inondations",
+   "nl": "Veerkracht — overstromingen",
+   "en": "Resilience — floods"
   },
   "matiere": {
-   "key": "environnement",
-   "fr": "Environnement et énergie",
-   "nl": "Leefmilieu en energie"
+   "key": "resilience",
+   "fr": "Résilience et gestion de crise",
+   "nl": "Veerkracht en crisisbeheer",
+   "en": "Resilience and crisis management"
   },
   "titre": {
    "fr": "Milan : les bassins d'orage du Seveso ont évité dix débordements en deux ans, mais deux d'entre eux n'ont pas suffi le 22 septembre 2025",
@@ -6282,13 +6284,15 @@ LABMR.fiches.push(...
   "villeKey": "Madrid",
   "pays": "ES",
   "theme": {
-   "fr": "Santé — hôpitaux",
-   "nl": "Gezondheid — ziekenhuizen"
+   "fr": "Résilience — pandémie",
+   "nl": "Veerkracht — pandemie",
+   "en": "Resilience — pandemic"
   },
   "matiere": {
-   "key": "sante",
-   "fr": "Santé",
-   "nl": "Gezondheid"
+   "key": "resilience",
+   "fr": "Résilience et gestion de crise",
+   "nl": "Veerkracht en crisisbeheer",
+   "en": "Resilience and crisis management"
   },
   "titre": {
    "fr": "Madrid : plus de 300 millions d'euros engloutis par l'hôpital Zendal depuis 2020, sans rapport de la Cour des comptes régionale depuis 2021",

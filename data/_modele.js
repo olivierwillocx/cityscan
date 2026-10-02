@@ -28,7 +28,7 @@ LABMR.fiches.push(
  "pays": "DK",                   // code a deux lettres majuscules
  "theme":   { "fr": "Mobilité — stationnement", "nl": "Mobiliteit — parkeren" },
  "matiere": { "key": "mobilite", "fr": "Mobilité", "nl": "Mobiliteit" },
- // Les treize valeurs possibles de "matiere", a reprendre au caractere pres :
+ // Les quatorze valeurs possibles de "matiere", a reprendre au caractere pres :
  //  {"key":"mobilite","fr":"Mobilité","nl":"Mobiliteit"}
  //  {"key":"logement","fr":"Logement","nl":"Huisvesting"}
  //  {"key":"urbanisme","fr":"Urbanisme et espace public","nl":"Stedenbouw en openbare ruimte"}
@@ -42,6 +42,8 @@ LABMR.fiches.push(
  //  {"key":"aide","fr":"Aide aux personnes","nl":"Bijstand aan personen"}
  //  {"key":"formation","fr":"Formation et cohésion sociale","nl":"Opleiding en sociale cohesie"}
  //  {"key":"culture","fr":"Culture, sport et écoles","nl":"Cultuur, sport en scholen"}
+ //  {"key":"resilience","fr":"Résilience et gestion de crise","nl":"Veerkracht en crisisbeheer"}
+ //      (themes : "Résilience — inondations", "Résilience — pandémie", "Résilience — guerre et protection civile")
  "titre":           { "fr": "La mesure en une ligne.", "nl": "..." },
  "ville":           { "fr": "Copenhague — Danemark, commune (Københavns Kommune)", "nl": "Kopenhagen — Denemarken, gemeente (Københavns Kommune)" },
  "date":            { "fr": "24 septembre 2026 (décision du conseil municipal)", "nl": "24 september 2026 (beslissing van de gemeenteraad)" },
