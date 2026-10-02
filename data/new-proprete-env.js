@@ -620,9 +620,9 @@ LABMR.fiches.push(
  "theme":   { "fr": "Recyclage — coût du transport et objectifs régionaux", "nl": "Recyclage — transportkosten en gewestelijke doelstellingen", "en": "Recycling — transport costs and regional targets" },
  "matiere": { "key": "proprete", "fr": "Propreté et déchets", "nl": "Netheid en afval", "en": "Cleanliness and waste" },
  "titre": {
-  "fr": "Une commune du Queensland déclare l'objectif régional de recyclage inatteignable : 300 dollars la tonne contre 100 dans la métropole",
-  "nl": "Een Queenslandse gemeente verklaart de gewestelijke recyclagedoelstelling onhaalbaar: 300 dollar per ton tegen 100 in de metropool",
-  "en": "A Queensland council declares the state recycling target unachievable: $300 a tonne against $100 in the metropolitan area"
+  "fr": "Une commune du Queensland déclare l'objectif régional de recyclage inatteignable : 300 dollars la tonne contre 100 dans le sud-est de l'État",
+  "nl": "Een Queenslandse gemeente verklaart de gewestelijke recyclagedoelstelling onhaalbaar: 300 dollar per ton tegen 100 in het zuidoosten van de staat",
+  "en": "A Queensland council declares the state recycling target unachievable: $300 a tonne against $100 in the state's south-east"
  },
  "ville": {
   "fr": "Rockhampton — Australie, commune (Rockhampton Regional Council) et État (gouvernement du Queensland)",
@@ -630,9 +630,9 @@ LABMR.fiches.push(
   "en": "Rockhampton — Australia, council (Rockhampton Regional Council) and state (Queensland Government)"
  },
  "date": {
-  "fr": "24 septembre 2026 (déclaration du maire et annonce de onze millions de dollars par le ministre de l'Environnement de l'État)",
-  "nl": "24 september 2026 (verklaring van de burgemeester en aankondiging van elf miljoen dollar door de staatsminister van Leefmilieu)",
-  "en": "24 September 2026 (mayor's statement and eleven-million-dollar announcement by the state environment minister)"
+  "fr": "24 septembre 2026 (déclaration du maire et réponse du ministre de l'Environnement de l'État, qui fait état de onze millions de dollars de financement)",
+  "nl": "24 september 2026 (verklaring van de burgemeester en antwoord van de staatsminister van Leefmilieu, die gewag maakt van elf miljoen dollar financiering)",
+  "en": "24 September 2026 (mayor's statement and response from the state environment minister, who cites eleven million dollars in funding)"
  },
  "competence": {
   "fr": "Région — objectifs de recyclage imposés aux pouvoirs locaux et financement des infrastructures de tri ; ministre chargé de la Propreté publique",
@@ -645,9 +645,9 @@ LABMR.fiches.push(
   "en": "Queensland imposes a 65% recycling target on its councils by 2035, which for regional cities means halving waste sent to landfill. Rockhampton each year hauls ten thousand tonnes of household recyclables six hundred kilometres to the Sunshine Coast for processing. Waste services cost it three million Australian dollars a year, more than a third of that for transport alone, around three hundred dollars a tonne against one hundred in the state's south-east. The cause is identified: the local private sorting centre was destroyed by a battery fire in 2020 and no company has rebuilt a facility since."
  },
  "resultats": {
-  "fr": "Le maire est explicite : « nos plans déchets sont faits et nos services disent que nous ne pouvons pas atteindre les objectifs que le gouvernement de l'État impose aux communes ». L'objectif régional est donc contredit par une commune qui en assume publiquement l'impossibilité financière. Le ministre de l'Environnement de l'État a annoncé onze millions de dollars pour les infrastructures de tri régionales et la création d'un fonds destiné à couvrir une partie des coûts de traitement des communes régionales. Le ministre fédéral de l'Environnement met en avant l'harmonisation des règles d'emballage entre juridictions.",
-  "nl": "De burgemeester is expliciet: « onze afvalplannen zijn klaar en onze diensten zeggen dat we de doelstellingen die de staatsregering aan de gemeenten oplegt niet kunnen halen ». De gewestelijke doelstelling wordt dus tegengesproken door een gemeente die de financiële onmogelijkheid publiek op zich neemt. De staatsminister van Leefmilieu kondigde elf miljoen dollar aan voor regionale sorteerinfrastructuur en de oprichting van een fonds om een deel van de verwerkingskosten van de regionale gemeenten te dekken. De federale minister van Leefmilieu benadrukt de harmonisatie van de verpakkingsregels tussen jurisdicties.",
-  "en": "The mayor is explicit: \"we've done our waste plans and our staff are saying that we can't achieve the targets that the state government is putting onto councils\". The regional target is thus contradicted by a council that publicly accepts it is financially impossible. The state environment minister announced eleven million dollars for regional sorting infrastructure and a new fund to cover part of regional councils' processing costs. The federal environment minister emphasises harmonising packaging rules across jurisdictions."
+  "fr": "Le maire est explicite : « nos plans déchets sont faits et nos services disent que nous ne pouvons pas atteindre les objectifs que le gouvernement de l'État impose aux communes ». L'objectif régional est donc contredit par une commune qui en assume publiquement l'impossibilité financière. Le ministre de l'Environnement de l'État a annoncé onze millions de dollars pour les infrastructures de tri régionales et indiqué qu'un nouveau fonds, encore en cours de conception, doit aider les communes régionales à acheminer leurs recyclables vers les centres de traitement. Le ministre fédéral de l'Environnement met en avant l'harmonisation des règles d'emballage entre juridictions.",
+  "nl": "De burgemeester is expliciet: « onze afvalplannen zijn klaar en onze diensten zeggen dat we de doelstellingen die de staatsregering aan de gemeenten oplegt niet kunnen halen ». De gewestelijke doelstelling wordt dus tegengesproken door een gemeente die de financiële onmogelijkheid publiek op zich neemt. De staatsminister van Leefmilieu kondigde elf miljoen dollar aan voor regionale sorteerinfrastructuur en gaf aan dat een nieuw fonds, dat nog in ontwerp is, de regionale gemeenten moet helpen hun recycleerbaar afval naar de verwerkingscentra te brengen. De federale minister van Leefmilieu benadrukt de harmonisatie van de verpakkingsregels tussen jurisdicties.",
+  "en": "The mayor is explicit: \"we've done our waste plans and our staff are saying that we can't achieve the targets that the state government is putting onto councils\". The regional target is thus contradicted by a council that publicly accepts it is financially impossible. The state environment minister announced eleven million dollars for regional sorting infrastructure and indicated that a new fund, still being designed, is to help regional councils transport their recyclables to processing centres. The federal environment minister emphasises harmonising packaging rules across jurisdictions."
  },
  "transposabilite": {
   "fr": "Bruxelles est dans la situation inverse de Rockhampton : le territoire est dense et les distances de transport courtes, ce qui rend le coût à la tonne plus favorable. L'enseignement reste pertinent sur un point précis : un objectif de recyclage fixé par la Région n'est atteignable que si la capacité de tri existe à distance raisonnable et si son coût est couvert. La dépendance bruxelloise à des centres de tri situés hors Région pour certaines fractions, et le prix payé pour ce traitement, mériteraient d'être documentés avant tout relèvement d'objectif.",

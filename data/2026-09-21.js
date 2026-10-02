@@ -568,20 +568,20 @@ LABMR.fiches.push(...
    "nl": "Keulen — Duitsland, Stad Keulen (administratie en gemeenteraad)"
   },
   "titre": {
-   "fr": "Une toilette publique gardée en permanence contre la consommation de drogue coûte 334 000 € en trois ans, en attendant un centre d'aide aux toxicomanes de 8,72 M€ en 2027",
-   "nl": "Een permanent bewaakt openbaar toilet tegen drugsgebruik kost 334 000 € in drie jaar, in afwachting van een verslavingshulpcentrum van 8,72 miljoen € in 2027"
+   "fr": "Une toilette publique gardée pendant ses heures d'ouverture contre la consommation de drogue coûte 334 000 € en trois ans, en attendant un centre d'aide aux toxicomanes de 8,72 M€ en 2027",
+   "nl": "Een tijdens de openingsuren bewaakt openbaar toilet tegen drugsgebruik kost 334 000 € in drie jaar, in afwachting van een verslavingshulpcentrum van 8,72 miljoen € in 2027"
   },
   "date": {
-   "fr": "16 au 18 septembre 2026 (réponse de la Ville à une question du conseil, dépêche dpa)",
-   "nl": "16 tot 18 september 2026 (antwoord van de Stad op een vraag van de raad, dpa-bericht)"
+   "fr": "17 et 18 septembre 2026 (chiffres communiqués par la Ville, dépêche dpa)",
+   "nl": "17 en 18 september 2026 (cijfers meegedeeld door de Stad, dpa-bericht)"
   },
   "competence": {
    "fr": "Région — espace public et propreté (sanitaires publics, gestion des nuisances) ; COCOM — aide aux usagers de drogues ; ministre de la Propreté et membres du Collège réuni en charge de la Santé, titulaires à confirmer",
    "nl": "Gewest — openbare ruimte en netheid (openbare toiletten, overlastbeheer); GGC — hulp aan drugsgebruikers; minister van Netheid en leden van het Verenigd College bevoegd voor Gezondheid, titularissen te bevestigen"
   },
   "quoi": {
-   "fr": "La toilette publique de la Krebsgasse, au Neumarkt, épicentre de la scène de la drogue, avait été fermée dès 2015 à cause de son usage comme lieu de consommation et de couchage. Rouverte en mai 2022 avec un poste de gardiennage attenant et un tarif de 0,50 € par usage, elle est surveillée en permanence pour empêcher tout « mésusage ». Réponse de la Ville : la surveillance a coûté environ 334 000 € de mai 2022 à mai 2025, soit 111 000 € par an ; le conseil doit décider de la poursuite. En parallèle, la Ville construit un centre d'aide aux toxicomanes au Perlengraben (8,72 M€, livraison 2027) pour que la consommation ait lieu en conditions sûres plutôt qu'en rue.",
-   "nl": "Het openbaar toilet in de Krebsgasse, aan de Neumarkt, epicentrum van de drugsscène, was al in 2015 gesloten omdat het als gebruiks- en slaapplaats diende. Heropend in mei 2022 met een aanpalende bewakingspost en een tarief van 0,50 € per gebruik, wordt het permanent bewaakt om elk « oneigenlijk gebruik » te verhinderen. Antwoord van de Stad: de bewaking kostte ongeveer 334 000 € van mei 2022 tot mei 2025, ofwel 111 000 € per jaar; de raad moet over de voortzetting beslissen. Tegelijk bouwt de Stad een verslavingshulpcentrum aan de Perlengraben (8,72 miljoen €, oplevering 2027) zodat het gebruik in veilige omstandigheden plaatsvindt in plaats van op straat."
+   "fr": "La toilette publique de la Krebsgasse, au Neumarkt, épicentre de la scène de la drogue, avait été fermée dès 2015 à cause de son usage comme lieu de consommation et de couchage. Rouverte en mai 2022 avec un poste de gardiennage attenant et un tarif de 0,50 € par usage, elle est surveillée pendant ses heures d'ouverture (9 h-21 h en semaine, 9 h-18 h les dimanches et jours fériés) pour empêcher tout « mésusage ». Selon la Ville, la surveillance a coûté environ 334 000 € de mai 2022 à mai 2025, soit 111 000 € par an ; le conseil doit décider de la poursuite. En parallèle, la Ville prévoit un centre d'aide aux toxicomanes au Perlengraben (8,72 M€, livraison 2027) pour que la consommation ait lieu en conditions sûres plutôt qu'en rue.",
+   "nl": "Het openbaar toilet in de Krebsgasse, aan de Neumarkt, epicentrum van de drugsscène, was al in 2015 gesloten omdat het als gebruiks- en slaapplaats diende. Heropend in mei 2022 met een aanpalende bewakingspost en een tarief van 0,50 € per gebruik, wordt het tijdens de openingsuren (9-21 uur op weekdagen, 9-18 uur op zon- en feestdagen) bewaakt om elk « oneigenlijk gebruik » te verhinderen. Volgens de Stad kostte de bewaking ongeveer 334 000 € van mei 2022 tot mei 2025, ofwel 111 000 € per jaar; de raad moet over de voortzetting beslissen. Tegelijk plant de Stad een verslavingshulpcentrum aan de Perlengraben (8,72 miljoen €, oplevering 2027) zodat het gebruik in veilige omstandigheden plaatsvindt in plaats van op straat."
   },
   "resultats": {
    "fr": "Coût chiffré ; aucune évaluation d'effet sur la scène du Neumarkt. La presse nationale (dpa, RP Online) traite le dossier comme une absurdité budgétaire.",
@@ -608,7 +608,7 @@ LABMR.fiches.push(...
    },
    {
     "media": "t-online",
-    "date": "18/09/2026",
+    "date": "17/09/2026",
     "url": "https://www.t-online.de/nachrichten/panorama/buntes-kurioses/id_101440644/toilette-in-koeln-wird-bewacht-stadt-zahlt-334000-euro-drogen-problem.html"
    }
   ],

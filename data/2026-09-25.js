@@ -158,16 +158,16 @@ LABMR.fiches.push(...[
    "nl": "21 september 2026 (gemeentelijke commissie) en 22 september 2026 (pers)"
   },
   "competence": {
-   "fr": "Région — mobilité (réseau cyclable régional, plan Good Move) ; ministre de la Mobilité et des Travaux publics, titulaire à confirmer",
-   "nl": "Gewest — mobiliteit (gewestelijk fietsnetwerk, plan Good Move); minister van Mobiliteit en Openbare Werken, titularis te bevestigen"
+   "fr": "Région — mobilité (réseau cyclable régional, plan Good Move) ; ministre de la Mobilité, des Travaux publics et de la Sécurité routière (Elke Van den Brandt)",
+   "nl": "Gewest — mobiliteit (gewestelijk fietsnetwerk, plan Good Move); minister van Mobiliteit, Openbare Werken en Verkeersveiligheid (Elke Van den Brandt)"
   },
   "quoi": {
    "fr": "Le corridor cyclable Plaza de Castilla–Atocha (13 km unidirectionnels en six phases) a été adopté à l'unanimité en juillet 2020 dans les « Acuerdos de la Villa ». Seul le premier tronçon, entre Plaza de Castilla et Raimundo Fernández Villaverde, est ouvert. Le délégué à l'Urbanisme, à l'Environnement et à la Mobilité, Borja Carabante, annonce que la Ville va « repenser et reprogrammer » l'exécution et évaluer si le prolongement est « nécessaire et opportun » au vu de la demande, tout en affirmant que la politique cyclable n'est pas remise en cause.",
    "nl": "De fietscorridor Plaza de Castilla–Atocha (13 km eenrichting in zes fasen) werd in juli 2020 unaniem goedgekeurd in de « Acuerdos de la Villa ». Enkel het eerste deel, tussen Plaza de Castilla en Raimundo Fernández Villaverde, is open. De schepen van Stedenbouw, Leefmilieu en Mobiliteit, Borja Carabante, kondigt aan dat de Stad de uitvoering zal « herdenken en herplannen » en zal nagaan of de verlenging « nodig en opportuun » is gezien de vraag, terwijl hij stelt dat het fietsbeleid niet in vraag wordt gesteld."
   },
   "resultats": {
-   "fr": "Environ 500 cyclistes par jour contre 4 000 attendus (chiffre de la Ville, méthode de comptage non précisée). L'opposition dénonce un tronçon isolé « vers nulle part » après trois ans sans avancement.",
-   "nl": "Ongeveer 500 fietsers per dag tegenover 4 000 verwachte (cijfer van de Stad, telmethode niet gepreciseerd). De oppositie hekelt een geïsoleerd stuk « naar nergens » na drie jaar zonder vooruitgang."
+   "fr": "Environ 500 cyclistes par jour contre 4 000 attendus (chiffre de la Ville, méthode de comptage non précisée). Le premier tronçon, inauguré en 2023, n'a pas été prolongé depuis ; elDiario.es parle de trois ans passés à « repenser » le projet.",
+   "nl": "Ongeveer 500 fietsers per dag tegenover 4 000 verwachte (cijfer van de Stad, telmethode niet gepreciseerd). Het eerste stuk, ingehuldigd in 2023, is sindsdien niet verlengd; elDiario.es heeft het over drie jaar die zijn besteed aan het « herdenken » van het project."
   },
   "transposabilite": {
    "fr": "Le débat est identique à Bruxelles pour les pistes réalisées par tronçons : un maillon isolé n'atteint jamais sa fréquentation cible. La Région dispose des comptages de Bruxelles Mobilité qui permettent une évaluation par itinéraire. Le contre-exemple plaide pour des itinéraires livrés de bout en bout et pour des objectifs chiffrés publiés avant les travaux. Transposabilité forte.",
@@ -254,8 +254,8 @@ LABMR.fiches.push(...[
    "nl": "25 september 2026 (El País, gegevens van de belastingdienst over het aanslagjaar 2024, eerste toepassingsjaar)"
   },
   "competence": {
-   "fr": "Région — logement (lutte contre les logements inoccupés) et fiscalité régionale ; secrétaire d'État au Logement et ministre des Finances, titulaires à confirmer",
-   "nl": "Gewest — huisvesting (strijd tegen leegstaande woningen) en gewestelijke fiscaliteit; staatssecretaris voor Huisvesting en minister van Financiën, titularissen te bevestigen"
+   "fr": "Région — logement (lutte contre les logements inoccupés) et fiscalité régionale ; secrétaire d'État au Logement (Karine Lalieux) et ministre du Budget et des Finances (Dirk De Smedt)",
+   "nl": "Gewest — huisvesting (strijd tegen leegstaande woningen) en gewestelijke fiscaliteit; staatssecretaris voor Huisvesting (Karine Lalieux) en minister van Begroting en Financiën (Dirk De Smedt)"
   },
   "quoi": {
    "fr": "Annoncée en mai 2024 par le gouvernement Ayuso, la déduction régionale d'impôt sur le revenu de 1 000 € vise tout propriétaire qui remet en location, pour trois ans au moins, un logement vide depuis un an (maximum cinq logements, pas de location à un proche). Objectif affiché : 20 000 logements remis sur le marché, pour 20 M€ par an de moindres recettes. Première année : 1 588 contribuables ont demandé la déduction, coût de 1,21 M€, soit 94 % de moins que prévu, dans une région qui compte 187 586 logements vides (INE 2021). Le gouvernement régional retient que « près de 1 600 familles ont trouvé un logement » ; l'opposition réclame une taxe sur la vacance couplée à un programme public de location garantie.",
@@ -270,12 +270,13 @@ LABMR.fiches.push(...[
    "nl": "Brussel maakte de omgekeerde keuze: gewestelijke boete voor leegstaande woningen, beheerd door de cel leegstaande woningen van Brussel Huisvesting, met een regelmatig bekritiseerde inningsgraad, en renovatiepremies. Het Madrileense tegenvoorbeeld toont dat een fiscale stimulans alleen, van een laag bedrag, bijna niets in beweging brengt; het verheldert de Brusselse afweging tussen sanctie, stimulans en publiek beheer (sociale verhuurkantoren). Sterke overdraagbaarheid."
   },
   "angle": {
-   "fr": "Question écrite au secrétaire d'État au Logement : combien de logements inoccupés ont été identifiés, sanctionnés et effectivement remis sur le marché en 2025, avec quel montant d'amendes recouvrées, et le gouvernement a-t-il évalué le rapport coût-efficacité des primes par rapport à l'amende ?",
+   "fr": "Question écrite à la secrétaire d'État au Logement : combien de logements inoccupés ont été identifiés, sanctionnés et effectivement remis sur le marché en 2025, avec quel montant d'amendes recouvrées, et le gouvernement a-t-il évalué le rapport coût-efficacité des primes par rapport à l'amende ?",
    "nl": "Schriftelijke vraag aan de staatssecretaris voor Huisvesting: hoeveel leegstaande woningen werden in 2025 geïdentificeerd, gesanctioneerd en effectief opnieuw op de markt gebracht, voor welk bedrag aan geïnde boetes, en heeft de regering de kosteneffectiviteit van de premies afgewogen tegen die van de boete?"
   },
   "sources": [
    { "media": "El País", "date": "25/09/2026", "url": "https://elpais.com/espana/madrid/2026-09-25/la-medida-estrella-de-ayuso-para-sacar-pisos-vacios-al-mercado-del-alquiler-apenas-moviliza-1500-viviendas-en-un-ano.html" },
-   { "media": "El Español (cadastre régional des immeubles inoccupés)", "date": "20/09/2026", "url": "https://www.elespanol.com/madrid/sociedad/20260920/mapa-viviendas-vacias-ayuso-madrid-mitad-todas-region-inmuebles-desuso/1003744385942_0.html" }
+   { "media": "El Español (cadastre régional des immeubles inoccupés)", "date": "20/09/2026", "url": "https://www.elespanol.com/madrid/sociedad/20260920/mapa-viviendas-vacias-ayuso-madrid-mitad-todas-region-inmuebles-desuso/1003744385942_0.html" },
+   { "media": "El Español", "date": "08/05/2024", "url": "https://www.elespanol.com/madrid/comunidad/20240508/ayuso-anuncia-ayudas-fiscales-deduccion-eur-alquiler-pisos-vacios-hipotecas/853664824_0.amp.html" }
   ],
   "edition": "2026-09-25"
  },
@@ -451,8 +452,8 @@ LABMR.fiches.push(...[
    "nl": "Gewest — veiligheid en preventie (globaal veiligheids- en preventieplan, safe.brussels) en plaatselijke besturen (toezicht, steun aan de gemeenten); minister-president bevoegd voor Veiligheid en minister van Plaatselijke Besturen, titularissen te bevestigen"
   },
   "quoi": {
-   "fr": "En application de la loi du 15 janvier 2024 sur l'approche administrative de la criminalité (enquête d'intégrité), la Ville de Liège avait ordonné la fermeture définitive de six magasins de nuit pour nuisances et soupçons d'activités illicites. Le Conseil d'État suspend ces décisions : l'autorité « n'a pas suffisamment démontré pourquoi une sanction aussi lourde était nécessaire » ; une fermeture temporaire aurait pu suffire (proportionnalité). Les commerces restent ouverts. La Ville souligne qu'il s'agit de suspensions et non d'annulations, qu'elle est parmi les premières à appliquer cette loi en Belgique et qu'elle tirera les leçons des arrêts ; d'autres enquêtes d'intégrité sont en cours.",
-   "nl": "In toepassing van de wet van 15 januari 2024 op de bestuurlijke aanpak van criminaliteit (integriteitsonderzoek) had de Stad Luik de definitieve sluiting bevolen van zes nachtwinkels wegens overlast en vermoedens van illegale activiteiten. De Raad van State schorst die beslissingen: de overheid « heeft onvoldoende aangetoond waarom zo'n zware sanctie nodig was »; een tijdelijke sluiting had kunnen volstaan (evenredigheid). De winkels blijven open. De Stad benadrukt dat het om schorsingen gaat en niet om vernietigingen, dat zij tot de eerste behoort die deze wet in België toepassen en dat zij lessen zal trekken uit de arresten; andere integriteitsonderzoeken lopen."
+   "fr": "En application de la loi du 15 janvier 2024 sur l'approche administrative de la criminalité (enquête d'intégrité), la Ville de Liège avait ordonné la fermeture définitive de six magasins de nuit pour nuisances et soupçons d'activités illicites. Le Conseil d'État suspend ces décisions : l'autorité « n'a pas suffisamment démontré pourquoi une sanction aussi lourde était nécessaire » ; la Ville a méconnu le principe de proportionnalité en considérant que la fermeture définitive était la seule option légale possible. Les commerces restent ouverts. La Ville souligne qu'il s'agit de suspensions et non d'annulations, que c'est la première fois que cette loi trouve à s'appliquer en Belgique et qu'elle tirera les leçons des arrêts ; d'autres enquêtes d'intégrité sont en cours.",
+   "nl": "In toepassing van de wet van 15 januari 2024 op de bestuurlijke aanpak van criminaliteit (integriteitsonderzoek) had de Stad Luik de definitieve sluiting bevolen van zes nachtwinkels wegens overlast en vermoedens van illegale activiteiten. De Raad van State schorst die beslissingen: de overheid « heeft onvoldoende aangetoond waarom zo'n zware sanctie nodig was »; de Stad heeft het evenredigheidsbeginsel miskend door ervan uit te gaan dat de definitieve sluiting de enige wettelijk mogelijke optie was. De winkels blijven open. De Stad benadrukt dat het om schorsingen gaat en niet om vernietigingen, dat het de eerste keer is dat deze wet in België toepassing vindt en dat zij lessen zal trekken uit de arresten; andere integriteitsonderzoeken lopen."
   },
   "resultats": {
    "fr": "Six décisions suspendues ; première jurisprudence sur la loi de 2024, utile à toute commune bruxelloise qui l'applique.",
@@ -468,14 +469,15 @@ LABMR.fiches.push(...[
   },
   "sources": [
    { "media": "TodayInLiège", "date": "23/09/2026", "url": "https://www.todayinliege.be/six-night-shops-qui-devaient-etre-fermes-definitivement-a-cause-dactivites-illicites-gagnent-leur-recours-au-conseil-detat/" },
-   { "media": "7sur7", "date": "21/09/2026", "url": "https://www.7sur7.be/belgique/le-conseil-detat-suspend-la-fermeture-de-magasins-de-nuit-prononcee-par-la-ville-de-liege~ae162012/" }
+   { "media": "7sur7", "date": "21/09/2026", "url": "https://www.7sur7.be/belgique/le-conseil-detat-suspend-la-fermeture-de-magasins-de-nuit-prononcee-par-la-ville-de-liege~ae162012/" },
+   { "media": "RTBF / Belga", "date": "21/09/2026", "url": "https://www.rtbf.be/article/le-conseil-d-etat-suspend-la-fermeture-de-magasins-de-nuit-prononcee-par-la-ville-de-liege-11788183" }
   ],
   "edition": "2026-09-25"
  },
  {
   "id": "2026-09-25-09",
   "inst": "COCOM",
-  "verdict": "bad",
+  "verdict": "watch",
   "transpo": "moyenne",
   "matiere": { "key": "aide", "fr": "Aide aux personnes", "nl": "Bijstand aan personen" },
   "theme": { "fr": "Aide aux personnes — sans-abrisme", "nl": "Bijstand aan personen — dakloosheid" },
@@ -491,8 +493,8 @@ LABMR.fiches.push(...[
    "nl": "Dakloosheid op straat stijgt met 23 % in Camden ondanks 78 miljoen £ uitgaven sinds mei 2024, terwijl Londen met 10 % en Islington met 18 % daalt"
   },
   "date": {
-   "fr": "21 septembre 2026 (données CHAIN 2025-2026)",
-   "nl": "21 september 2026 (CHAIN-gegevens 2025-2026)"
+   "fr": "21 septembre 2026 (données CHAIN, période non précisée par l'article)",
+   "nl": "21 september 2026 (CHAIN-gegevens, periode niet gepreciseerd door het artikel)"
   },
   "competence": {
    "fr": "COCOM — aide aux personnes (sans-abrisme et urgence sociale, Bruss'help, New Samusocial) ; membres du Collège réuni chargés de l'Aide aux personnes, titulaires à confirmer",

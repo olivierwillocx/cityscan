@@ -206,6 +206,13 @@ LABMR.matieresEN = {
 // Noms de villes et d entites en NL et EN. Seules les formes qui different du francais
 // figurent ici ; toutes les autres sont identiques dans les trois langues.
 LABMR.villesTrad = {
+ "Berlin":                  { nl:"Berlijn",                      en:"Berlin" },
+ "Lille":                   { nl:"Rijsel",                       en:"Lille" },
+ "Occitanie":               { nl:"Occitanië",                    en:"Occitania" },
+ "Paris":                   { nl:"Parijs",                       en:"Paris" },
+ "Strasbourg":              { nl:"Straatsburg",                  en:"Strasbourg" },
+ "Tel-Aviv":                { nl:"Tel Aviv",                     en:"Tel Aviv" },
+ "Zurich":                  { nl:"Zürich",                       en:"Zurich" },
  "Angleterre":              { nl:"Engeland",                     en:"England" },
  "Anvers":                  { nl:"Antwerpen",                    en:"Antwerp" },
  "Athènes":                 { nl:"Athene",                       en:"Athens" },
