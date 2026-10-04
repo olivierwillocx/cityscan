@@ -314,24 +314,24 @@ LABMR.fiches.push(...
    "nl": "15 september 2026 (Berliner Kurier), 17 september (immowelt-studie), 18 september 2026 (Berliner Morgenpost)"
   },
   "competence": {
-   "fr": "Région — logement (grille indicative des loyers, commission paritaire locative, lutte contre les loyers abusifs) ; ministre du Logement, titulaire à confirmer",
-   "nl": "Gewest — huisvesting (indicatief huurrooster, paritaire huurcommissie, strijd tegen abusieve huurprijzen); minister van Huisvesting, titularis te bevestigen"
+   "fr": "Région — logement (grille indicative des loyers, commission paritaire locative, lutte contre les loyers abusifs) ; secrétaire d'État au Logement (Karine Lalieux)",
+   "nl": "Gewest — huisvesting (indicatief huurrooster, paritaire huurcommissie, strijd tegen abusieve huurprijzen); staatssecretaris voor Huisvesting (Karine Lalieux)"
   },
   "quoi": {
-   "fr": "La Mietpreisbremse plafonne les nouveaux baux à 10 % au-dessus du loyer de référence (Mietspiegel 2026), hors logements neufs ou lourdement rénovés. Le portail immowelt compare les loyers d'annonce au 1er août 2026 au Mietspiegel pour un logement type de 75 m², trois pièces, années 1990, standard moyen : 90 des 93 quartiers dépassent la référence d'au moins 30 %, 77 d'au moins 40 %, 36 d'au moins 50 % ; record à Wilmersdorf (+64 %, 17,63 €/m² contre 10,75 €), puis Grunewald et Wilhelmstadt (+61,5 %) et Tiergarten (+60,2 %) ; minimum au Märkisches Viertel (+18,6 %). Le Berliner Kurier chiffre le surloyer moyen à 344 € par mois et jusqu'à +89 % à Friedrichshain-Kreuzberg. Berlin n'a pas de contrôle administratif systématique : c'est au locataire de contester. Contexte : élections berlinoises du 20 septembre dominées par le logement.",
-   "nl": "De Mietpreisbremse plafonneert nieuwe huurcontracten op 10 % boven de referentiehuur (Mietspiegel 2026), buiten nieuwbouw of zwaar gerenoveerde woningen. Het portaal immowelt vergelijkt de advertentiehuren op 1 augustus 2026 met de Mietspiegel voor een typewoning van 75 m², drie kamers, jaren 1990, gemiddelde standaard: 90 van de 93 wijken liggen minstens 30 % boven de referentie, 77 minstens 40 %, 36 minstens 50 %; record in Wilmersdorf (+64 %, 17,63 €/m² tegenover 10,75 €), gevolgd door Grunewald en Wilhelmstadt (+61,5 %) en Tiergarten (+60,2 %); minimum in het Märkisches Viertel (+18,6 %). De Berliner Kurier becijfert de gemiddelde meerhuur op 344 € per maand en tot +89 % in Friedrichshain-Kreuzberg. Berlijn kent geen systematische administratieve controle: de huurder moet zelf betwisten. Context: Berlijnse verkiezingen van 20 september, gedomineerd door huisvesting."
+   "fr": "La Mietpreisbremse plafonne les nouveaux baux à 10 % au-dessus du loyer de référence (Mietspiegel 2026), hors logements neufs ou lourdement rénovés. Le portail immowelt compare les loyers d'annonce au 1er août 2026 au Mietspiegel pour un logement type de 75 m², trois pièces, années 1990, standard moyen : 90 des 93 quartiers dépassent la référence d'au moins 30 %, 77 d'au moins 40 %, 36 d'au moins 50 % ; record à Wilmersdorf (+64 %, 17,63 €/m² contre 10,75 €), puis Grunewald et Wilhelmstadt (+61,5 %) et Tiergarten (+60,2 %) ; minimum au Märkisches Viertel (+18,6 %). Le Berliner Kurier chiffre le surloyer moyen à 344 € par mois et jusqu'à +89 % à Friedrichshain-Kreuzberg. Depuis juin 2026, le Land fait analyser automatiquement les annonces en ligne (« Mietenscan » : 2 102 annonces suspectes sur 4 539, soit 46 %) et écrit aux bailleurs concernés pour leur demander d'ajuster le loyer. Contexte : élections berlinoises du 20 septembre dominées par le logement.",
+   "nl": "De Mietpreisbremse plafonneert nieuwe huurcontracten op 10 % boven de referentiehuur (Mietspiegel 2026), buiten nieuwbouw of zwaar gerenoveerde woningen. Het portaal immowelt vergelijkt de advertentiehuren op 1 augustus 2026 met de Mietspiegel voor een typewoning van 75 m², drie kamers, jaren 1990, gemiddelde standaard: 90 van de 93 wijken liggen minstens 30 % boven de referentie, 77 minstens 40 %, 36 minstens 50 %; record in Wilmersdorf (+64 %, 17,63 €/m² tegenover 10,75 €), gevolgd door Grunewald en Wilhelmstadt (+61,5 %) en Tiergarten (+60,2 %); minimum in het Märkisches Viertel (+18,6 %). De Berliner Kurier becijfert de gemiddelde meerhuur op 344 € per maand en tot +89 % in Friedrichshain-Kreuzberg. Sinds juni 2026 laat het Land de onlineadvertenties automatisch analyseren (« Mietenscan »: 2 102 verdachte advertenties op 4 539, of 46 %) en schrijft het de betrokken verhuurders aan met de vraag de huur aan te passen. Context: Berlijnse verkiezingen van 20 september, gedomineerd door huisvesting."
   },
   "resultats": {
-   "fr": "Chiffres d'une étude de portail immobilier (intérêt propre), fondés sur des annonces et non sur des baux signés ; les exceptions légales (neuf, rénové, meublé) ne sont pas isolées. Ordre de grandeur cohérent avec le baromètre parisien cité dans la livraison du 14 septembre (37 % d'annonces hors plafond).",
-   "nl": "Cijfers van een studie van een vastgoedportaal (eigenbelang), gebaseerd op advertenties en niet op getekende contracten; de wettelijke uitzonderingen (nieuwbouw, gerenoveerd, gemeubeld) zijn niet afgezonderd. Orde van grootte in lijn met de Parijse barometer uit de editie van 14 september (37 % van de advertenties boven het plafond)."
+   "fr": "Chiffres d'une étude de portail immobilier (intérêt propre), fondés sur des annonces et non sur des baux signés, et sur des valeurs de référence par quartier estimées par immowelt (le Mietspiegel ne donne pas de valeur par quartier) ; les exceptions légales (neuf, rénové, meublé) ne sont pas isolées. Ordre de grandeur cohérent avec le baromètre parisien cité dans la livraison du 14 septembre (37 % d'annonces hors plafond).",
+   "nl": "Cijfers van een studie van een vastgoedportaal (eigenbelang), gebaseerd op advertenties en niet op getekende contracten, en op referentiewaarden per wijk die door immowelt zijn geschat (de Mietspiegel geeft geen waarde per wijk); de wettelijke uitzonderingen (nieuwbouw, gerenoveerd, gemeubeld) zijn niet afgezonderd. Orde van grootte in lijn met de Parijse barometer uit de editie van 14 september (37 % van de advertenties boven het plafond)."
   },
   "transposabilite": {
-   "fr": "Bruxelles a une grille de référence indicative et, depuis 2024, une commission paritaire locative saisissable en cas de loyer abusif, sans contrôle d'office ni sanction automatique. Le cas berlinois montre qu'un plafond sans contrôle ni sanction est ignoré à grande échelle et fige les ménages en place (effet « lock-in »). Avant tout renforcement de l'encadrement, la Région devrait mesurer l'écart annonces/grille par quartier, ce que permet l'exploitation des annonces en ligne, et se doter d'un dispositif de contrôle. Transposabilité forte, comme leçon.",
-   "nl": "Brussel heeft een indicatief referentierooster en sinds 2024 een paritaire huurcommissie die bij abusieve huur kan worden gevat, zonder ambtshalve controle of automatische sanctie. Het Berlijnse geval toont dat een plafond zonder controle of sanctie op grote schaal wordt genegeerd en de gezinnen vastzet (« lock-in »-effect). Vóór elke verstrenging van de regulering zou het Gewest de kloof tussen advertenties en rooster per wijk moeten meten, wat de verwerking van onlineadvertenties toelaat, en een controlesysteem moeten opzetten. Sterke overdraagbaarheid, als les."
+   "fr": "Bruxelles a une grille de référence, indicative mais servant depuis le 1er mai 2025 de seuil de présomption de loyer abusif (dépassement de 20 %), et, depuis 2024, une commission paritaire locative saisissable en cas de loyer abusif, sans contrôle d'office ni sanction automatique. Le cas berlinois montre qu'un plafond resté sans contrôle administratif jusqu'au « Mietenscan » de juin 2026 est ignoré à grande échelle et fige les ménages en place (effet « lock-in »). Avant tout renforcement de l'encadrement, la Région devrait mesurer l'écart annonces/grille par quartier, ce que permet l'exploitation des annonces en ligne, et se doter d'un dispositif de contrôle. Transposabilité forte, comme leçon.",
+   "nl": "Brussel heeft een referentierooster, indicatief maar sinds 1 mei 2025 gebruikt als drempel voor het vermoeden van abusieve huur (overschrijding met 20 %), en sinds 2024 een paritaire huurcommissie die bij abusieve huur kan worden gevat, zonder ambtshalve controle of automatische sanctie. Het Berlijnse geval toont dat een plafond dat tot de « Mietenscan » van juni 2026 zonder administratieve controle bleef, op grote schaal wordt genegeerd en de gezinnen vastzet (« lock-in »-effect). Vóór elke verstrenging van de regulering zou het Gewest de kloof tussen advertenties en rooster per wijk moeten meten, wat de verwerking van onlineadvertenties toelaat, en een controlesysteem moeten opzetten. Sterke overdraagbaarheid, als les."
   },
   "angle": {
-   "fr": "Question écrite à la ministre du Logement : la Région mesure-t-elle l'écart entre les loyers d'annonce et la grille de référence par quartier, et combien de saisines de la commission paritaire locative ont abouti à une baisse de loyer depuis sa création ?",
-   "nl": "Schriftelijke vraag aan de minister van Huisvesting: meet het Gewest de kloof tussen de advertentiehuren en het referentierooster per wijk, en hoeveel aanhangigmakingen bij de paritaire huurcommissie hebben sinds haar oprichting tot een huurverlaging geleid?"
+   "fr": "Question écrite à la secrétaire d'État au Logement : la Région mesure-t-elle l'écart entre les loyers d'annonce et la grille de référence par quartier, et combien de saisines de la commission paritaire locative ont abouti à une baisse de loyer depuis sa création ?",
+   "nl": "Schriftelijke vraag aan de staatssecretaris voor Huisvesting: meet het Gewest de kloof tussen de advertentiehuren en het referentierooster per wijk, en hoeveel aanhangigmakingen bij de paritaire huurcommissie hebben sinds haar oprichting tot een huurverlaging geleid?"
   },
   "sources": [
    {
@@ -348,7 +348,8 @@ LABMR.fiches.push(...
     "media": "immowelt / Presseportal (étude)",
     "date": "17/09/2026",
     "url": "https://www.presseportal.de/pm/24964/6353703"
-   }
+   },
+   { "media": "Sénat de Berlin (communiqué Mietenscan)", "date": "22/07/2026", "url": "https://www.berlin.de/sen/stadt/presse/pressemeldungen/pressemitteilung.1696337.php" }
   ],
   "edition": "2026-09-21"
  },
@@ -374,20 +375,20 @@ LABMR.fiches.push(...
    "nl": "Barcelona — Spanje, Stad Barcelona (IMHAB, gemeentelijk huisvestingsinstituut)"
   },
   "titre": {
-   "fr": "Surchauffe dans les logements publics neufs (32 à 33 °C) : audits énergétiques, excuses de l'adjoint au Logement et audit de tout le parc public avant l'été 2027",
-   "nl": "Oververhitting in nieuwe openbare woningen (32 tot 33 °C): energieaudits, excuses van de schepen van Huisvesting en audit van het hele openbare bestand vóór de zomer van 2027"
+   "fr": "Surchauffe dans les logements publics neufs (32 à 33 °C) : audits énergétiques, excuses de l'adjoint au Logement et audit de tout le parc public accepté, sans échéance confirmée",
+   "nl": "Oververhitting in nieuwe openbare woningen (32 tot 33 °C): energieaudits, excuses van de schepen van Huisvesting en audit van het hele openbare bestand aanvaard, zonder bevestigde termijn"
   },
   "date": {
    "fr": "15 septembre 2026 (commission Logement du conseil municipal), presse du 16 septembre 2026",
    "nl": "15 september 2026 (commissie Huisvesting van de gemeenteraad), pers van 16 september 2026"
   },
   "competence": {
-   "fr": "Région — logement social et public (SLRB, SISP), performance énergétique et confort d'été ; ministre du Logement, titulaire à confirmer",
-   "nl": "Gewest — sociale en openbare huisvesting (BGHM, OVM's), energieprestatie en zomercomfort; minister van Huisvesting, titularis te bevestigen"
+   "fr": "Région — logement social et public (SLRB, SISP), performance énergétique et confort d'été ; secrétaire d'État au Logement (Karine Lalieux)",
+   "nl": "Gewest — sociale en openbare huisvesting (BGHM, OVM's), energieprestatie en zomercomfort; staatssecretaris voor Huisvesting (Karine Lalieux)"
   },
   "quoi": {
-   "fr": "Des locataires des promotions publiques récentes Illa Glòries, Porta Trinitat et Illa F à Torre Baró ont signalé des températures intérieures de 32 à 33 °C et des factures de 120 à 150 € par mois ; en cause, des immeubles neufs équipés d'aérothermie mal calibrée et mal maîtrisée par les occupants, avec des problèmes connus à Torre Baró depuis 2023 et relevés par la Sindicatura de Greuges (médiateur). En commission, l'adjoint au Logement Jordi Valls (IMHAB) a présenté des excuses, commandé des audits énergétiques sur les trois promotions, reconnu environ 13 000 logements en ville avec déficiences thermiques et accepté la demande d'ERC d'auditer l'ensemble du parc public par lots avec un calendrier avant l'été 2027, ainsi que des protocoles de vérification du confort thermique pour les promotions futures.",
-   "nl": "Huurders van de recente openbare projecten Illa Glòries, Porta Trinitat en Illa F in Torre Baró meldden binnentemperaturen van 32 tot 33 °C en facturen van 120 tot 150 € per maand; oorzaak zijn nieuwe gebouwen met slecht afgestelde aerothermie die de bewoners niet beheersen, met sinds 2023 bekende problemen in Torre Baró, aangekaart door de Sindicatura de Greuges (ombudsdienst). In de commissie bood de schepen van Huisvesting Jordi Valls (IMHAB) zijn excuses aan, bestelde hij energieaudits voor de drie projecten, erkende hij ongeveer 13 000 woningen in de stad met thermische gebreken en aanvaardde hij de vraag van ERC om het hele openbare bestand in loten te auditeren met een kalender vóór de zomer van 2027, alsook protocollen om het thermisch comfort van toekomstige projecten te controleren."
+   "fr": "Des locataires des promotions publiques récentes Illa Glòries, Porta Trinitat et Illa F à Torre Baró ont signalé des températures intérieures de 32 à 33 °C et des factures de 120 à 150 € par mois ; en cause, des immeubles neufs équipés d'aérothermie mal calibrée et mal maîtrisée par les occupants, avec des problèmes connus à Torre Baró depuis 2023 et relevés par la Sindicatura de Greuges (médiateur). En commission, l'adjoint au Logement Jordi Valls (IMHAB) a présenté des excuses, commandé des audits énergétiques sur les trois promotions, reconnu environ 13 000 logements en ville avec déficiences thermiques et accepté la demande d'ERC d'auditer l'ensemble du parc public, par lots. ERC demandait en outre un plan d'action calendrier pour corriger les déficiences avant l'été 2027 et des protocoles de vérification du confort thermique pour les promotions futures, sans engagement explicite de l'adjoint sur ces deux points dans l'article lu.",
+   "nl": "Huurders van de recente openbare projecten Illa Glòries, Porta Trinitat en Illa F in Torre Baró meldden binnentemperaturen van 32 tot 33 °C en facturen van 120 tot 150 € per maand; oorzaak zijn nieuwe gebouwen met slecht afgestelde aerothermie die de bewoners niet beheersen, met sinds 2023 bekende problemen in Torre Baró, aangekaart door de Sindicatura de Greuges (ombudsdienst). In de commissie bood de schepen van Huisvesting Jordi Valls (IMHAB) zijn excuses aan, bestelde hij energieaudits voor de drie projecten, erkende hij ongeveer 13 000 woningen in de stad met thermische gebreken en aanvaardde hij de vraag van ERC om het hele openbare bestand in loten te auditeren. ERC vroeg bovendien een actieplan met kalender om de gebreken vóór de zomer van 2027 te verhelpen en protocollen om het thermisch comfort van toekomstige projecten te controleren, zonder uitdrukkelijke verbintenis van de schepen op die twee punten in het gelezen artikel."
   },
   "resultats": {
    "fr": "Audits commandés, pas de résultats ; source unique, mais déclarations faites en commission officielle.",
@@ -398,15 +399,16 @@ LABMR.fiches.push(...
    "nl": "De BGHM en de OVM's leveren nieuwe woningen met hoge energieprestatie, ontworpen voor de winter; het zomercomfort wordt niet gemeten noch contractueel vastgelegd in de bestekken, terwijl het Gewest tegelijk een hitteplan financiert. Het Barcelonese geval suggereert een zomercomforttest bij de oplevering van openbare woningen en een opleiding van de huurders in de geïnstalleerde systemen. Haalbaar zonder nieuwe tekst, via de bestekken van de BGHM. Sterke overdraagbaarheid."
   },
   "angle": {
-   "fr": "Question orale à la ministre du Logement : la SLRB mesure-t-elle les températures intérieures estivales dans les logements neufs et rénovés, et les cahiers des charges des SISP prévoient-ils un critère de confort d'été et une prise en main des installations par les locataires ?",
-   "nl": "Mondelinge vraag aan de minister van Huisvesting: meet de BGHM de zomerse binnentemperaturen in nieuwe en gerenoveerde woningen, en voorzien de bestekken van de OVM's een criterium voor zomercomfort en een begeleiding van de huurders bij de installaties?"
+   "fr": "Question orale à la secrétaire d'État au Logement : la SLRB mesure-t-elle les températures intérieures estivales dans les logements neufs et rénovés, et les cahiers des charges des SISP prévoient-ils un critère de confort d'été et une prise en main des installations par les locataires ?",
+   "nl": "Mondelinge vraag aan de staatssecretaris voor Huisvesting: meet de BGHM de zomerse binnentemperaturen in nieuwe en gerenoveerde woningen, en voorzien de bestekken van de OVM's een criterium voor zomercomfort en een begeleiding van de huurders bij de installaties?"
   },
   "sources": [
    {
     "media": "Metrópoli Abierta (El Español)",
     "date": "16/09/2026",
     "url": "https://metropoliabierta.elespanol.com/economia/20260916/ayuntamiento-barcelona-reconoce-problemas-calor-pisos-publicos-illa-glories-encarga-auditoria/1003742794681_0.html"
-   }
+   },
+   { "media": "Híbridos y Eléctricos", "date": "12/08/2026", "url": "https://www.hibridosyelectricos.com/energia/aerotermia-calor-sofocante-facturas-disparadas-238-viviendas-publicas-barcelona-denuncian-temperaturas-hasta-32-grados-120-factura_88644_102.html" }
   ],
   "edition": "2026-09-21"
  },

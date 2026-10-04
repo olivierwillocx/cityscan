@@ -657,7 +657,7 @@ LABMR.fiches.push(...
  {
   "id": "2026-09-14-02",
   "inst": "Région",
-  "verdict": "bad",
+  "verdict": "watch",
   "transpo": "moyenne",
   "theme": {
    "fr": "Logement",
@@ -679,8 +679,8 @@ LABMR.fiches.push(...
   },
   "dateISO": "2026-09-03",
   "competence": {
-   "fr": "Région — logement (grille indicative des loyers, commission paritaire locative) ; ministre du Logement (titulaire à confirmer)",
-   "nl": "Gewest — huisvesting (indicatief huurrooster, paritaire huurcommissie); minister van Huisvesting (titularis te bevestigen)"
+   "fr": "Région — logement (grille indicative des loyers, commission paritaire locative) ; secrétaire d'État au Logement (Karine Lalieux)",
+   "nl": "Gewest — huisvesting (indicatief huurrooster, paritaire huurcommissie); staatssecretaris voor Huisvesting (Karine Lalieux)"
   },
   "quoi": {
    "fr": "Analyse de plus de 10 000 annonces (août 2025 – août 2026) dans près de 70 communes soumises à l'encadrement. Part des annonces dépassant le loyer de référence majoré : Paris 46 % (31 % un an plus tôt), Plaine-Commune 61 %, Est-Ensemble 36 %, Lyon-Villeurbanne 26 %, Lille 25 %, Bordeaux 17 %, Montpellier 12 % ; 37 % en moyenne, en hausse de 5 points. Le dépassement moyen recule (159 €/mois contre environ 192 €) mais sa fréquence augmente ; trop-perçu estimé à environ 2 000 €/an pour un locataire parisien concerné. Non-conformité la plus forte pour les logements nus loués par des particuliers. L'expérimentation expire en novembre 2026 sauf loi de prolongation.",
@@ -691,12 +691,12 @@ LABMR.fiches.push(...
    "nl": "De bovenstaande cijfers vormen de evaluatie. Methode gebaseerd op advertenties en niet op ondertekende huurcontracten: mogelijke overschatting van de reële niet-naleving."
   },
   "transposabilite": {
-   "fr": "Bruxelles n'a pas d'encadrement contraignant : grille indicative des loyers et commission paritaire locative. Le baromètre montre qu'un plafonnement sans contrôle produit une non-conformité croissante, ce qui pèse dans le débat bruxellois sur un encadrement obligatoire. Directement réalisable : un baromètre régional annuel de conformité des annonces à la grille indicative, pour objectiver le débat avant toute mesure contraignante.",
-   "nl": "Brussel heeft geen bindende begrenzing: indicatief huurrooster en paritaire huurcommissie. De barometer toont dat een plafond zonder controle tot groeiende niet-naleving leidt, wat weegt in het Brusselse debat over een verplichte begrenzing. Rechtstreeks haalbaar: een jaarlijkse gewestelijke barometer van de overeenstemming van advertenties met het indicatieve rooster, om het debat te objectiveren vóór elke bindende maatregel."
+   "fr": "Bruxelles n'a pas de plafond légal de loyer comparable, mais la grille n'est plus purement indicative : depuis mai 2025, un loyer supérieur de 20 % au loyer de référence est présumé abusif, sauf éléments de confort substantiels, et peut être contesté devant la commission paritaire locative ou le juge de paix. Le baromètre montre qu'un plafonnement sans contrôle produit une non-conformité croissante, ce qui pèse dans le débat bruxellois sur un encadrement obligatoire. Directement réalisable : un baromètre régional annuel de conformité des annonces à la grille indicative, pour objectiver le débat avant toute mesure contraignante.",
+   "nl": "Brussel heeft geen vergelijkbaar wettelijk huurplafond, maar het rooster is niet langer louter indicatief: sinds mei 2025 wordt een huurprijs die 20 % hoger ligt dan de referentiehuurprijs vermoed buitensporig te zijn, behoudens substantiële comfortelementen, en kan die worden betwist voor de paritaire huurcommissie of de vrederechter. De barometer toont dat een plafond zonder controle tot groeiende niet-naleving leidt, wat weegt in het Brusselse debat over een verplichte begrenzing. Rechtstreeks haalbaar: een jaarlijkse gewestelijke barometer van de overeenstemming van advertenties met het indicatieve rooster, om het debat te objectiveren vóór elke bindende maatregel."
   },
   "angle": {
-   "fr": "Question orale au ministre du Logement : quel est le taux d'annonces dépassant la grille de référence à Bruxelles, combien de saisines de la commission paritaire locative ont abouti, et le Gouvernement accepte-t-il de commander un baromètre annuel de conformité ? Demande d'audition de l'Observatoire des loyers.",
-   "nl": "Mondelinge vraag aan de minister van Huisvesting: welk aandeel advertenties overschrijdt het referentierooster in Brussel, hoeveel zaken bij de paritaire huurcommissie leidden tot een uitkomst, en aanvaardt de Regering een jaarlijkse nalevingsbarometer te bestellen? Verzoek tot hoorzitting van het Observatorium van de huurprijzen."
+   "fr": "Question orale à la secrétaire d'État au Logement : quel est le taux d'annonces dépassant la grille de référence à Bruxelles, combien de saisines de la commission paritaire locative ont abouti, et le Gouvernement accepte-t-il de commander un baromètre annuel de conformité ? Demande d'audition de l'Observatoire des loyers.",
+   "nl": "Mondelinge vraag aan de staatssecretaris voor Huisvesting: welk aandeel advertenties overschrijdt het referentierooster in Brussel, hoeveel zaken bij de paritaire huurcommissie leidden tot een uitkomst, en aanvaardt de Regering een jaarlijkse nalevingsbarometer te bestellen? Verzoek tot hoorzitting van het Observatorium van de huurprijzen."
   },
   "sources": [
    {
