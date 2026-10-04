@@ -507,7 +507,7 @@ LABMR.fiches.push(
  "id": "w2-log-10",
  "edition": "",
  "inst": "Région",
- "verdict": "bad",
+ "verdict": "watch",
  "transpo": "moyenne",
  "dateISO": "2025-04-29",
  "villeKey": "Santiago",

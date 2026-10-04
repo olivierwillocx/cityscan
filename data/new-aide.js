@@ -325,7 +325,7 @@ LABMR.fiches.push(
  "id": "w2-aid-16",
  "edition": "",
  "inst": "COCOM",
- "verdict": "bad",
+ "verdict": "watch",
  "transpo": "faible",
  "dateISO": "2025-04-29",
  "villeKey": "Santiago",

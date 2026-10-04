@@ -383,7 +383,7 @@ LABMR.fiches.push(
  "id": "w2-nord-18",
  "edition": "",
  "inst": "COCOM",
- "verdict": "bad",
+ "verdict": "watch",
  "transpo": "moyenne",
  "dateISO": "2024-02-23",
  "villeKey": "Odense",
