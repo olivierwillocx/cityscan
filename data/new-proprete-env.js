@@ -229,7 +229,7 @@ LABMR.fiches.push(
  "inst": "Région",
  "verdict": "bad",
  "transpo": "forte",
- "dateISO": "2026-02-10",
+ "dateISO": "2026-09-09",
  "villeKey": "Montevideo",
  "pays": "UY",
  "theme":   { "fr": "Propreté — conteneurs et dépôts sauvages", "nl": "Netheid — containers en sluikstorten", "en": "Cleanliness — containers and fly-tipping" },
@@ -245,9 +245,9 @@ LABMR.fiches.push(
   "en": "Montevideo — Uruguay, department (Intendencia de Montevideo)"
  },
  "date": {
-  "fr": "10 février 2026 (bilan de l'année 2025 et annonce du plan pilote de conteneurs à clé numérique)",
-  "nl": "10 februari 2026 (balans van 2025 en aankondiging van het proefproject met digitaal vergrendelde containers)",
-  "en": "10 February 2026 (2025 review and announcement of the digital-lock container pilot)"
+  "fr": "9 septembre 2026 (bilan de l'année 2025 et annonce du plan pilote de conteneurs à clé numérique)",
+  "nl": "9 september 2026 (balans van 2025 en aankondiging van het proefproject met digitaal vergrendelde containers)",
+  "en": "9 September 2026 (2025 review and announcement of the digital-lock container pilot)"
  },
  "competence": {
   "fr": "Région — propreté publique, collecte en conteneurs et lutte contre les dépôts clandestins ; ministre chargé de la Propreté publique",
@@ -255,14 +255,14 @@ LABMR.fiches.push(
   "en": "Region — public cleanliness, container collection and tackling fly-tipping; minister responsible for public cleanliness"
  },
  "quoi": {
-  "fr": "Montevideo collecte l'essentiel de ses déchets par conteneurs de rue. L'Intendencia publie chaque année le nombre de plaintes reçues et le respect de ses engagements de service. Pour 2025, elle a reçu 727 637 plaintes liées aux déchets, en baisse de 9 % sur un an ; 57 % portaient sur des déchets répandus sur le trottoir et 21 % sur des sacs déposés à côté des conteneurs. L'Intendencia s'était fixé un maximum de vingt jours par an où 10 % des conteneurs publics resteraient non vidés pendant quatre jours ou plus. Le résultat constaté est de quarante-neuf jours, plus du double de l'objectif. Elle annonce pour 2027 un pilote d'environ cent cinquante conteneurs à ouverture réservée aux riverains, dans trois municipios (B, C et CH), les quartiers précis restant à arrêter avec les maires et les conseils de quartier.",
-  "nl": "Montevideo zamelt het grootste deel van zijn afval in via straatcontainers. De Intendencia publiceert jaarlijks het aantal klachten en de naleving van haar dienstverbintenissen. Voor 2025 kreeg ze 727 637 afvalklachten, 9 % minder dan het jaar ervoor; 57 % ging over afval op het trottoir en 21 % over zakken naast de containers. De Intendencia had zich een maximum van twintig dagen per jaar gesteld waarop 10 % van de openbare containers vier dagen of langer niet geledigd bleef. Het vastgestelde resultaat is negenenveertig dagen, meer dan het dubbele. Voor 2027 kondigt ze een proefproject aan met ongeveer honderdvijftig containers die alleen voor buurtbewoners opengaan, in drie municipios (B, C en CH); de precieze wijken moeten nog met de burgemeesters en de wijkraden worden vastgelegd.",
-  "en": "Montevideo collects most of its waste through street containers. The Intendencia publishes each year the number of complaints received and its performance against service commitments. For 2025 it received 727,637 waste-related complaints, down 9% on the year; 57% concerned waste strewn on the pavement and 21% bags left beside containers. The Intendencia had set itself a maximum of twenty days a year on which 10% of public containers would remain unemptied for four days or more. The recorded result is forty-nine days, more than double the target. For 2027 it announces a pilot of around one hundred and fifty containers that open only for local residents, in three municipios (B, C and CH), with the precise neighbourhoods still to be settled with the mayors and neighbourhood councils."
+  "fr": "Montevideo collecte l'essentiel de ses déchets par conteneurs de rue. L'Intendencia a présenté à la Junta Departamental, dans le cadre de la reddition des comptes 2025, le nombre de plaintes reçues et le respect de ses objectifs de service. Pour 2025, elle a reçu 727 637 plaintes liées aux déchets, en baisse de 9 % sur un an ; 57 % portaient sur des déchets répandus sur le trottoir et 21 % sur des sacs déposés à côté des conteneurs. L'Intendencia s'était fixé un maximum de vingt jours par an où 10 % des conteneurs publics resteraient non vidés pendant quatre jours ou plus. Le résultat constaté est de quarante-neuf jours, plus du double de l'objectif. Elle annonce pour 2027 un pilote de conteneurs à ouverture réservée aux riverains (environ cent cinquante selon le corps de l'article, 450 selon son titre), dans trois municipios (B, C et CH), les quartiers précis restant à arrêter avec les maires et les conseils de quartier.",
+  "nl": "Montevideo zamelt het grootste deel van zijn afval in via straatcontainers. De Intendencia legde in het kader van de rekeningaflegging 2025 aan de Junta Departamental het aantal ontvangen klachten en de naleving van haar dienstdoelstellingen voor. Voor 2025 kreeg ze 727 637 afvalklachten, 9 % minder dan het jaar ervoor; 57 % ging over afval op het trottoir en 21 % over zakken naast de containers. De Intendencia had zich een maximum van twintig dagen per jaar gesteld waarop 10 % van de openbare containers vier dagen of langer niet geledigd bleef. Het vastgestelde resultaat is negenenveertig dagen, meer dan het dubbele. Voor 2027 kondigt ze een proefproject aan met containers die alleen voor buurtbewoners opengaan (ongeveer honderdvijftig volgens de tekst van het artikel, 450 volgens de titel), in drie municipios (B, C en CH); de precieze wijken moeten nog met de burgemeesters en de wijkraden worden vastgelegd.",
+  "en": "Montevideo collects most of its waste through street containers. The Intendencia presented to the Junta Departamental, as part of the 2025 rendering of accounts, the number of complaints received and its performance against service targets. For 2025 it received 727,637 waste-related complaints, down 9% on the year; 57% concerned waste strewn on the pavement and 21% bags left beside containers. The Intendencia had set itself a maximum of twenty days a year on which 10% of public containers would remain unemptied for four days or more. The recorded result is forty-nine days, more than double the target. For 2027 it announces a pilot of containers that open only for local residents (around one hundred and fifty according to the body of the article, 450 according to its headline), in three municipios (B, C and CH), with the precise neighbourhoods still to be settled with the mayors and neighbourhood councils."
  },
  "resultats": {
-  "fr": "L'objectif de régularité de la vidange n'est pas atteint : quarante-neuf jours contre vingt. Quarante-cinq pour cent des plaintes se concentrent dans les municipios B, C et CH, précisément ceux qui n'ont pas encore de collecte en porte-à-porte, déjà en place ailleurs dans la capitale. Le directeur du développement environnemental justifie le recours aux conteneurs à clé numérique en indiquant que la technologie existe ailleurs dans le monde et qu'« il faut pouvoir l'appliquer ». Le pilote n'est pas encore budgété publiquement ni localisé.",
-  "nl": "De doelstelling inzake regelmaat van de lediging wordt niet gehaald: negenenveertig dagen tegen twintig. Vijfenveertig procent van de klachten concentreert zich in de municipios B, C en CH, precies die zonder huis-aan-huisinzameling, die elders in de hoofdstad al bestaat. De directeur milieuontwikkeling verantwoordt de digitaal vergrendelde containers met de vaststelling dat de technologie elders bestaat en dat « we ze moeten kunnen toepassen ». Het proefproject is nog niet publiek gebudgetteerd noch gelokaliseerd.",
-  "en": "The target for regular emptying is missed: forty-nine days against twenty. Forty-five per cent of complaints are concentrated in municipios B, C and CH, precisely those without door-to-door collection, which already exists elsewhere in the capital. The environmental development director justifies digital-lock containers by noting that the technology exists elsewhere and that \"we have to be able to apply it\". The pilot is not yet publicly budgeted or located."
+  "fr": "L'objectif de régularité de la vidange n'est pas atteint : quarante-neuf jours contre vingt. Quarante-cinq pour cent des plaintes se concentrent dans les municipios B, C et CH, précisément ceux qui n'ont pas encore de collecte en porte-à-porte, déjà en place ailleurs dans la capitale. Le directeur du développement environnemental justifie le recours aux conteneurs à clé numérique en indiquant que la technologie existe ailleurs dans le monde et qu'« il faut pouvoir l'appliquer ». Les quartiers du pilote ne sont pas encore arrêtés ; l'article ne mentionne aucun budget.",
+  "nl": "De doelstelling inzake regelmaat van de lediging wordt niet gehaald: negenenveertig dagen tegen twintig. Vijfenveertig procent van de klachten concentreert zich in de municipios B, C en CH, precies die zonder huis-aan-huisinzameling, die elders in de hoofdstad al bestaat. De directeur milieuontwikkeling verantwoordt de digitaal vergrendelde containers met de vaststelling dat de technologie elders bestaat en dat « we ze moeten kunnen toepassen ». De wijken van het proefproject liggen nog niet vast; het artikel vermeldt geen budget.",
+  "en": "The target for regular emptying is missed: forty-nine days against twenty. Forty-five per cent of complaints are concentrated in municipios B, C and CH, precisely those without door-to-door collection, which already exists elsewhere in the capital. The environmental development director justifies digital-lock containers by noting that the technology exists elsewhere and that \"we have to be able to apply it\". The pilot's neighbourhoods have not yet been settled; the article mentions no budget."
  },
  "transposabilite": {
   "fr": "Bruxelles connaît le même symptôme — sacs et encombrants déposés à côté des points de collecte — avec une organisation différente, puisque la collecte se fait surtout en sacs et que les conteneurs enterrés restent l'exception. Deux enseignements sont transposables sans changement de compétence : publier un engagement de service chiffré et vérifiable sur le délai de ramassage, puis publier chaque année l'écart constaté ; et rapprocher la carte des plaintes de la carte des services réellement offerts, ce qui à Montevideo montre que les zones les plus dégradées sont celles qui n'ont pas la collecte la plus fine.",
@@ -275,7 +275,7 @@ LABMR.fiches.push(
   "en": "Can the minister responsible for public cleanliness set and publish a quantified commitment on the maximum time to clear reported dumping, together with the annual gap between that commitment and reality?"
  },
  "sources": [
-  { "media": "El Observador (Uruguay)", "date": "10/02/2026", "url": "https://www.elobservador.com.uy/nacional/basura-montevideo-mas-700000-denuncias-un-ano-la-meta-que-no-logro-cumplir-la-im-y-el-plan-piloto-450-contenedores-llave-digital-n6056766" }
+  { "media": "El Observador (Uruguay)", "date": "09/09/2026", "url": "https://www.elobservador.com.uy/nacional/basura-montevideo-mas-700000-denuncias-un-ano-la-meta-que-no-logro-cumplir-la-im-y-el-plan-piloto-450-contenedores-llave-digital-n6056766" }
  ]
 },
 {
@@ -722,7 +722,7 @@ LABMR.fiches.push(
  "id": "w2-env-02",
  "edition": "",
  "inst": "Région",
- "verdict": "bad",
+ "verdict": "watch",
  "transpo": "moyenne",
  "dateISO": "2025-10-16",
  "villeKey": "Cracovie",
@@ -730,9 +730,9 @@ LABMR.fiches.push(
  "theme":   { "fr": "Qualité de l'air — chauffage résidentiel", "nl": "Luchtkwaliteit — residentiële verwarming", "en": "Air quality — residential heating" },
  "matiere": { "key": "environnement", "fr": "Environnement et énergie", "nl": "Leefmilieu en energie", "en": "Environment and energy" },
  "titre": {
-  "fr": "Six ans après l'interdiction du charbon, Cracovie figure encore parmi les dix villes les plus polluées au monde un jour d'octobre",
-  "nl": "Zes jaar na het kolenverbod staat Krakau op een oktoberdag nog bij de tien meest vervuilde steden ter wereld",
-  "en": "Six years after banning coal, Krakow still ranks among the world's ten most polluted cities on an October day"
+  "fr": "Six ans après l'interdiction du charbon, Cracovie figure encore au dixième rang du classement instantané IQAir des villes les plus polluées au monde un jour d'octobre",
+  "nl": "Zes jaar na het kolenverbod staat Krakau op een oktoberdag nog op de tiende plaats van de realtimeranglijst van IQAir van de meest vervuilde steden ter wereld",
+  "en": "Six years after banning coal, Krakow still ranks tenth in IQAir's live ranking of the world's most polluted cities on an October day"
  },
  "ville": {
   "fr": "Cracovie — Pologne, ville et voïvodie (ville de Cracovie ; voïvodie de Petite-Pologne)",
