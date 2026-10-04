@@ -5,7 +5,7 @@ LABMR.fiches.push(
  "inst": "Région",
  "verdict": "bad",
  "transpo": "moyenne",
- "dateISO": "2024-01-15",
+ "dateISO": "2024-01-14",
  "villeKey": "Auckland",
  "pays": "NZ",
  "theme":   { "fr": "Mobilité — tram et métro", "nl": "Mobiliteit — tram en metro", "en": "Mobility — tram and metro" },
@@ -21,9 +21,9 @@ LABMR.fiches.push(
   "en": "Auckland — New Zealand, city and central government (Auckland Light Rail Ltd, Ministry of Transport)"
  },
  "date": {
-  "fr": "15 janvier 2024 (annulation officielle par le gouvernement ; chantier arrêté dès novembre 2023)",
-  "nl": "15 januari 2024 (officiële annulering door de regering; werken al stilgelegd in november 2023)",
-  "en": "15 January 2024 (official cancellation by the government; work halted already in November 2023)"
+  "fr": "14 janvier 2024 (annulation officielle par le gouvernement ; chantier arrêté dès novembre 2023)",
+  "nl": "14 januari 2024 (officiële annulering door de regering; werken al stilgelegd in november 2023)",
+  "en": "14 January 2024 (official cancellation by the government; work halted already in November 2023)"
  },
  "competence": {
   "fr": "Région — mobilité et transport public structurant ; ministre chargé de la Mobilité",
@@ -31,14 +31,14 @@ LABMR.fiches.push(
   "en": "Region — mobility and structural public transport; minister responsible for Mobility"
  },
  "quoi": {
-  "fr": "Le projet de tramway entre le centre d'Auckland et l'aéroport, porté depuis 2017, devait coûter 15 milliards de dollars néo-zélandais, ramenés à 14,6 milliards après le choix d'un tracé partiellement en tunnel. Un scénario de dérapage chiffrait le coût maximal à 29,2 milliards. Le nouveau gouvernement a arrêté les travaux préparatoires en novembre 2023, puis annoncé l'annulation définitive le 15 janvier 2024, dans le cadre de son plan des cent premiers jours. Six ans d'études et de préparation avaient déjà consommé 228 millions de dollars sans qu'un seul mètre de voie soit posé. La dissolution de la société de projet devait encore coûter plusieurs millions sur six mois.",
-  "nl": "Het tramproject tussen het centrum van Auckland en de luchthaven, sinds 2017 in voorbereiding, moest 15 miljard Nieuw-Zeelandse dollar kosten, teruggebracht tot 14,6 miljard na de keuze voor een gedeeltelijk ondergronds tracé. Een scenario van kostenoverschrijding becijferde de maximale kost op 29,2 miljard. De nieuwe regering legde de voorbereidende werken stil in november 2023 en kondigde op 15 januari 2024 de definitieve annulering aan, als onderdeel van haar honderddagenplan. Zes jaar studies en voorbereiding hadden al 228 miljoen dollar opgeslorpt zonder dat één meter spoor was gelegd. De ontmanteling van de projectvennootschap zou nog enkele miljoenen kosten over zes maanden.",
-  "en": "The light rail project between central Auckland and the airport, under preparation since 2017, was to cost NZ$15 billion, brought down to NZ$14.6 billion after a partly tunnelled route was chosen. A cost-overrun scenario put the maximum at NZ$29.2 billion. The new government stopped preparatory works in November 2023 and announced final cancellation on 15 January 2024, as part of its first hundred days plan. Six years of studies and preparation had already consumed NZ$228 million without a single metre of track being laid. Winding up the project company was expected to cost several million more over six months."
+  "fr": "Le projet de tramway entre le centre d'Auckland et l'aéroport, porté depuis 2017, a vu son coût grimper à 14,6 milliards de dollars néo-zélandais après le choix d'un tracé partiellement en tunnel. Le ministre des Transports, Simeon Brown, parle de 15 milliards, avec des avis évoquant une hausse possible jusqu'à 29,2 milliards. Le nouveau gouvernement a arrêté les travaux préparatoires en novembre 2023, puis annoncé l'annulation définitive le 14 janvier 2024, dans le cadre de son plan des cent premiers jours. Six ans d'études et de préparation avaient déjà consommé 228 millions de dollars sans qu'un seul mètre de voie soit posé. La dissolution de la société de projet devait encore coûter plusieurs millions sur six mois.",
+  "nl": "Het tramproject tussen het centrum van Auckland en de luchthaven, sinds 2017 in voorbereiding, zag zijn kostprijs oplopen tot 14,6 miljard Nieuw-Zeelandse dollar na de keuze voor een gedeeltelijk ondergronds tracé. De minister van Transport, Simeon Brown, spreekt van 15 miljard, met adviezen die een mogelijke stijging tot 29,2 miljard vermelden. De nieuwe regering legde de voorbereidende werken stil in november 2023 en kondigde op 14 januari 2024 de definitieve annulering aan, als onderdeel van haar honderddagenplan. Zes jaar studies en voorbereiding hadden al 228 miljoen dollar opgeslorpt zonder dat één meter spoor was gelegd. De ontmanteling van de projectvennootschap zou nog enkele miljoenen kosten over zes maanden.",
+  "en": "The light rail project between central Auckland and the airport, under preparation since 2017, saw its cost climb to NZ$14.6 billion after a partly tunnelled route was chosen. The Transport Minister, Simeon Brown, speaks of NZ$15 billion, with advice pointing to a possible rise to NZ$29.2 billion. The new government stopped preparatory works in November 2023 and announced final cancellation on 14 January 2024, as part of its first hundred days plan. Six years of studies and preparation had already consumed NZ$228 million without a single metre of track being laid. Winding up the project company was expected to cost several million more over six months."
  },
  "resultats": {
-  "fr": "Selon RNZ, 228 millions de dollars néo-zélandais ont été dépensés en six ans sans aucune réalisation physique ; les analyses antérieures créditaient le projet de 14 500 voitures retirées de la route. Aucune alternative de transport structurant n'était financée au moment de l'annulation.",
-  "nl": "Volgens RNZ werd in zes jaar 228 miljoen Nieuw-Zeelandse dollar uitgegeven zonder enige fysieke realisatie; eerdere analyses schreven het project 14.500 minder auto's op de weg toe. Bij de annulering was geen enkel alternatief structurerend vervoersproject gefinancierd.",
-  "en": "According to RNZ, NZ$228 million was spent over six years with no physical delivery; earlier analyses credited the project with taking up to 14,500 cars off the road. No alternative structural transport project was funded at the time of cancellation."
+  "fr": "Selon le ministre des Transports Simeon Brown, cité par RNZ, plus de 228 millions de dollars néo-zélandais ont été dépensés en six ans sans aucune réalisation physique ; le projet avait le potentiel de retirer jusqu'à 14 500 voitures de la route. Au moment de l'annulation, le ministre renvoyait à l'achèvement du City Rail Link et au lancement d'un corridor de transport rapide au nord-ouest d'Auckland.",
+  "nl": "Volgens minister van Transport Simeon Brown, geciteerd door RNZ, werd in zes jaar meer dan 228 miljoen Nieuw-Zeelandse dollar uitgegeven zonder enige fysieke realisatie; het project had het potentieel om tot 14.500 auto's van de weg te halen. Bij de annulering verwees de minister naar de voltooiing van de City Rail Link en naar de start van een snelvervoercorridor in het noordwesten van Auckland.",
+  "en": "According to Transport Minister Simeon Brown, quoted by RNZ, more than NZ$228 million was spent over six years with no physical delivery; the project had the potential to take up to 14,500 cars off the road. At the time of cancellation, the minister pointed to the completion of the City Rail Link and the launch of a rapid transit corridor in north-west Auckland."
  },
  "transposabilite": {
   "fr": "Bruxelles connaît la même difficulté : des projets de transport structurant portés sur plus d'une décennie, dont le coût est révisé à la hausse avant le premier coup de pioche. Le cas d'Auckland montre le risque budgétaire propre aux phases d'études longues sans décision de financement ferme. Ce qui bloquerait ici : le partage de la maîtrise entre la Région, la STIB, Beliris et les dix-neuf communes, qui allonge la phase préparatoire. Directement réalisable : publier, pour chaque grand projet, le cumul des dépenses d'études engagées et le coût de sortie en cas d'abandon, avant chaque arbitrage budgétaire.",
@@ -51,16 +51,17 @@ LABMR.fiches.push(
   "en": "Project by project, how much study spending has already been committed to Brussels metro and tram extensions not yet decided, and what would abandoning them cost?"
  },
  "sources": [
-  { "media": "RNZ", "date": "01/2024", "url": "https://www.rnz.co.nz/news/national/506703/what-a-waste-residents-on-scrapped-light-rail-budget-blowout" }
- ]
+  { "media": "RNZ", "date": "15/01/2024", "url": "https://www.rnz.co.nz/news/national/506703/what-a-waste-residents-on-scrapped-light-rail-budget-blowout" },
+   { "media": "RNZ", "date": "14/01/2024", "url": "https://www.rnz.co.nz/news/political/506674/national-led-government-officially-cancels-auckland-light-rail-plans" }
+  ]
 },
 {
  "id": "w2-mob-02",
  "edition": "",
  "inst": "Région",
- "verdict": "bad",
+ "verdict": "watch",
  "transpo": "forte",
- "dateISO": "2024-08-15",
+ "dateISO": "2024-08-13",
  "villeKey": "Melbourne",
  "pays": "AU",
  "theme":   { "fr": "Mobilité — trottinettes partagées", "nl": "Mobiliteit — deelsteps", "en": "Mobility — shared e-scooters" },
@@ -76,9 +77,9 @@ LABMR.fiches.push(
   "en": "Melbourne — Australia, city (City of Melbourne)"
  },
  "date": {
-  "fr": "15 août 2024 (vote du conseil municipal, 6 voix contre 4)",
-  "nl": "15 augustus 2024 (gemeenteraadsstemming, 6 tegen 4)",
-  "en": "15 August 2024 (city council vote, 6 to 4)"
+  "fr": "13 août 2024 (vote du conseil municipal, 6 voix contre 4)",
+  "nl": "13 augustus 2024 (gemeenteraadsstemming, 6 tegen 4)",
+  "en": "13 August 2024 (city council vote, 6 to 4)"
  },
  "competence": {
   "fr": "Région — mobilité, police de la voirie et conventions avec les opérateurs de micromobilité ; ministre chargé de la Mobilité",
@@ -86,14 +87,14 @@ LABMR.fiches.push(
   "en": "Region — mobility, street management and agreements with micromobility operators; minister responsible for Mobility"
  },
  "quoi": {
-  "fr": "Après un essai lancé fin 2021, le conseil municipal de Melbourne a voté le 15 août 2024, par six voix contre quatre, la résiliation des contrats des deux opérateurs de trottinettes partagées, Lime et Neuron, avec un délai de trente jours pour retirer les engins. Le conseil a invoqué la circulation sur les trottoirs, le transport à deux sur un même engin, le non-port du casque et les accidents liés à l'alcool. L'hôpital Royal Melbourne avait recensé plus de deux cents blessures liées aux trottinettes en 2022. Melbourne est devenue la deuxième grande ville au monde à interdire ces services après Paris. Les trottinettes privées restent autorisées. Un mois plus tôt, le gouvernement de l'État de Victoria avait au contraire pérennisé les trottinettes après deux ans d'essai.",
-  "nl": "Na een proefproject dat eind 2021 startte, besliste de gemeenteraad van Melbourne op 15 augustus 2024 met zes tegen vier stemmen om de contracten van de twee deelstepoperatoren, Lime en Neuron, te verbreken, met dertig dagen om de voertuigen weg te halen. De raad verwees naar rijden op het voetpad, twee personen per step, het niet dragen van een helm en ongevallen onder invloed. Het Royal Melbourne Hospital telde in 2022 meer dan tweehonderd stepgerelateerde verwondingen. Melbourne werd na Parijs de tweede grote stad ter wereld die deze diensten verbood. Privésteps blijven toegelaten. Een maand eerder had de regering van de staat Victoria de steps net definitief gelegaliseerd na twee jaar proef.",
-  "en": "After a trial launched in late 2021, Melbourne City Council voted on 15 August 2024, by six votes to four, to terminate the contracts of the two shared e-scooter operators, Lime and Neuron, with thirty days to remove the vehicles. The council cited footpath riding, double-riding, helmet non-compliance and alcohol-related incidents. The Royal Melbourne Hospital had recorded more than two hundred scooter-related injuries in 2022. Melbourne became the second large city in the world to ban these services, after Paris. Privately owned scooters remain allowed. One month earlier, the Victorian state government had by contrast made shared e-scooters permanent after a two-year trial."
+  "fr": "Après un essai lancé en 2022, le conseil municipal de Melbourne a voté le 13 août 2024, par six voix contre quatre, la résiliation des contrats des deux opérateurs de trottinettes partagées, Lime et Neuron, avec un délai de trente jours pour retirer les engins. Le conseil a invoqué la circulation sur les trottoirs, le transport à deux sur un même engin, le non-port du casque et la conduite sous influence. L'hôpital Royal Melbourne avait recensé plus de deux cents blessures liées aux trottinettes en 2022. Melbourne est devenue la deuxième grande ville au monde à interdire ces services après Paris. Les trottinettes privées restent autorisées. Un mois plus tôt, le gouvernement de l'État de Victoria avait au contraire pérennisé les trottinettes après deux ans d'essai.",
+  "nl": "Na een proefproject dat in 2022 startte, besliste de gemeenteraad van Melbourne op 13 augustus 2024 met zes tegen vier stemmen om de contracten van de twee deelstepoperatoren, Lime en Neuron, te verbreken, met dertig dagen om de voertuigen weg te halen. De raad verwees naar rijden op het voetpad, twee personen per step, het niet dragen van een helm en rijden onder invloed. Het Royal Melbourne Hospital telde in 2022 meer dan tweehonderd stepgerelateerde verwondingen. Melbourne werd na Parijs de tweede grote stad ter wereld die deze diensten verbood. Privésteps blijven toegelaten. Een maand eerder had de regering van de staat Victoria de steps net definitief gelegaliseerd na twee jaar proef.",
+  "en": "After a trial launched in 2022, Melbourne City Council voted on 13 August 2024, by six votes to four, to terminate the contracts of the two shared e-scooter operators, Lime and Neuron, with thirty days to remove the vehicles. The council cited footpath riding, double-riding, helmet non-compliance and riding under the influence. The Royal Melbourne Hospital had recorded more than two hundred scooter-related injuries in 2022. Melbourne became the second large city in the world to ban these services, after Paris. Privately owned scooters remain allowed. One month earlier, the Victorian state government had by contrast made shared e-scooters permanent after a two-year trial."
  },
  "resultats": {
-  "fr": "Les engins ont été retirés dans le délai de trente jours. Le seul chiffre sanitaire cité par le conseil est celui de l'hôpital Royal Melbourne : plus de deux cents blessures en 2022. L'opérateur Neuron a fait valoir qu'il avait développé des caméras embarquées de détection des trottoirs. Le premier ministre de l'État a publiquement demandé au conseil de revoir sa décision. Aucune évaluation publique du retrait n'a été publiée à la date du vote.",
-  "nl": "De voertuigen werden binnen de dertig dagen weggehaald. Het enige gezondheidscijfer dat de raad aanhaalde komt van het Royal Melbourne Hospital: meer dan tweehonderd verwondingen in 2022. Operator Neuron wees erop dat het camera's had ontwikkeld om voetpadgebruik te detecteren. De premier van de staat vroeg de raad publiek om de beslissing te herzien. Op de dag van de stemming was geen publieke evaluatie van de intrekking beschikbaar.",
-  "en": "The vehicles were removed within the thirty-day deadline. The only health figure cited by the council came from the Royal Melbourne Hospital: more than two hundred injuries in 2022. Operator Neuron argued it had developed on-board cameras to detect footpath riding. The state premier publicly asked the council to reconsider. No public evaluation of the removal had been published at the time of the vote."
+  "fr": "Les opérateurs disposaient de trente jours pour retirer les engins. Le seul chiffre sanitaire cité par les sources est celui de l'hôpital Royal Melbourne : plus de deux cents blessés en 2022 selon Cities Today, 256 blessures dont un accident mortel selon CNN. L'opérateur Neuron a fait valoir qu'il avait développé des caméras embarquées de détection des trottoirs. La Première ministre de l'État, Jacinta Allan, a publiquement demandé au conseil de revoir sa décision. Aucune évaluation publique du retrait n'a été publiée à la date du vote.",
+  "nl": "De operatoren kregen dertig dagen om de voertuigen weg te halen. Het enige gezondheidscijfer dat de bronnen aanhalen komt van het Royal Melbourne Hospital: meer dan tweehonderd gewonden in 2022 volgens Cities Today, 256 verwondingen waaronder één dodelijk ongeval volgens CNN. Operator Neuron wees erop dat het camera's had ontwikkeld om voetpadgebruik te detecteren. De premier van de staat, Jacinta Allan, vroeg de raad publiek om de beslissing te herzien. Op de dag van de stemming was geen publieke evaluatie van de intrekking beschikbaar.",
+  "en": "The operators had thirty days to remove the vehicles. The only health figure cited by the sources came from the Royal Melbourne Hospital: more than two hundred people injured in 2022 according to Cities Today, 256 injuries including one fatal accident according to CNN. Operator Neuron argued it had developed on-board cameras to detect footpath riding. The state premier, Jacinta Allan, publicly asked the council to reconsider. No public evaluation of the removal had been published at the time of the vote."
  },
  "transposabilite": {
   "fr": "Bruxelles encadre déjà les trottinettes partagées par un système d'autorisations, des zones de stationnement obligatoires (drop zones) et un plafonnement du nombre d'engins. Le cas de Melbourne montre qu'un retrait complet est juridiquement possible quand la convention avec l'opérateur est résiliable, et qu'il se décide très vite. Ce qui bloquerait ici : la répartition entre la Région, qui règle l'usage de la voirie régionale et le cadre des opérateurs, et les dix-neuf communes, qui gèrent l'essentiel des trottoirs. Directement réalisable : exiger des opérateurs la transmission des données de blessures et d'infractions, et prévoir dans les autorisations une clause de retrait par paliers en cas de non-respect.",
@@ -106,7 +107,7 @@ LABMR.fiches.push(
   "en": "Do Brussels shared e-scooter permits include an effective withdrawal clause, and on what safety data would the Region rely to trigger it?"
  },
  "sources": [
-  { "media": "Cities Today", "date": "08/2024", "url": "https://cities-today.com/melbourne-announces-ban-on-shared-e-scooters/" },
+  { "media": "Cities Today", "date": "15/08/2024", "url": "https://cities-today.com/melbourne-announces-ban-on-shared-e-scooters/" },
   { "media": "CNN", "date": "15/08/2024", "url": "https://www.cnn.com/2024/08/15/travel/melbourne-electric-scooter-rental-ban-intl-hnk/index.html" }
  ]
 },
@@ -114,7 +115,7 @@ LABMR.fiches.push(
  "id": "w2-mob-03",
  "edition": "",
  "inst": "Région",
- "verdict": "bad",
+ "verdict": "watch",
  "transpo": "moyenne",
  "dateISO": "2024-09-17",
  "villeKey": "Calgary",
@@ -122,9 +123,9 @@ LABMR.fiches.push(
  "theme":   { "fr": "Mobilité — tram et métro", "nl": "Mobiliteit — tram en metro", "en": "Mobility — tram and metro" },
  "matiere": { "key": "mobilite", "fr": "Mobilité", "nl": "Mobiliteit", "en": "Mobility" },
  "titre": {
-  "fr": "Calgary arrête sa ligne de tram Green Line : 2,1 milliards de dollars perdus après le retrait du financement provincial",
-  "nl": "Calgary stopt zijn Green Line-tramlijn: 2,1 miljard dollar verloren na intrekking van de provinciale financiering",
-  "en": "Calgary halts its Green Line LRT: C$2.1 billion lost after the province withdrew its funding"
+  "fr": "Calgary vote en 2024 l'arrêt de sa ligne de tram Green Line après le retrait du financement provincial, pour un coût estimé à 2,1 milliards de dollars, puis relance le projet en 2025",
+  "nl": "Calgary stemt in 2024 voor de stopzetting van zijn Green Line-tramlijn na intrekking van de provinciale financiering, tegen een geraamde kostprijs van 2,1 miljard dollar, en herstart het project daarna in 2025",
+  "en": "Calgary votes in 2024 to halt its Green Line LRT after the province withdrew its funding, at an estimated cost of C$2.1 billion, then relaunches the project in 2025"
  },
  "ville": {
   "fr": "Calgary — Canada, ville et province (Ville de Calgary, gouvernement de l'Alberta)",
@@ -142,14 +143,14 @@ LABMR.fiches.push(
   "en": "Region — mobility and major public transport investment; minister responsible for Mobility"
  },
  "quoi": {
-  "fr": "La Green Line, nouvelle ligne de tram nord-sud de Calgary, était budgétée à 6,2 milliards de dollars canadiens, dont 1,53 milliard apportés par la province d'Alberta. Face à l'escalade des coûts, le conseil municipal a raccourci la première phase ; la province a alors retiré sa part. Le 17 septembre 2024, le conseil a voté par dix voix contre cinq l'arrêt du projet. La ville avait déjà dépensé 1,3 milliard ; le démantèlement était estimé à au moins 850 millions, soit plus de 2,1 milliards au total. Plus de huit cents personnes travaillaient sur le projet. Le ministre provincial des Transports a refusé de payer les frais de sortie, les attribuant à une décennie de mauvaise gestion municipale.",
-  "nl": "De Green Line, de nieuwe noord-zuidtramlijn van Calgary, was begroot op 6,2 miljard Canadese dollar, waarvan 1,53 miljard van de provincie Alberta. Door de kostenescalatie verkortte de gemeenteraad de eerste fase; daarop trok de provincie haar aandeel terug. Op 17 september 2024 stemde de raad met tien tegen vijf voor de stopzetting. De stad had al 1,3 miljard uitgegeven; de afbouw werd geschat op minstens 850 miljoen, samen meer dan 2,1 miljard. Meer dan achthonderd mensen werkten aan het project. De provinciale minister van Vervoer weigerde de uitstapkosten te betalen en schreef ze toe aan tien jaar slecht stedelijk beheer.",
-  "en": "The Green Line, Calgary's new north-south LRT, was budgeted at C$6.2 billion, including C$1.53 billion from the province of Alberta. Facing cost escalation, the city council shortened phase one; the province then withdrew its share. On 17 September 2024 the council voted ten to five to wind the project down. The city had already spent C$1.3 billion; wind-down was estimated at a minimum of C$850 million, more than C$2.1 billion in all. Over eight hundred people were working on the project. The provincial transport minister refused to cover the exit costs, blaming a decade of municipal mismanagement."
+  "fr": "La Green Line, nouvelle ligne de tram nord-sud de Calgary, était budgétée à 6,2 milliards de dollars canadiens, dont 1,53 milliard apportés par la province d'Alberta. Face à l'escalade des coûts, le conseil municipal a raccourci la première phase ; la province a alors retiré sa part. Le 17 septembre 2024, le conseil a voté par dix voix contre cinq l'arrêt du projet. La ville avait déjà dépensé 1,3 milliard ; le démantèlement était estimé à au moins 850 millions, soit plus de 2,1 milliards au total. Plus de huit cents personnes travaillaient sur le projet. Le ministre provincial des Transports a refusé de payer les frais de sortie, les attribuant à une décennie de mauvaise gestion municipale. L'arrêt n'a pas été mené à terme : ville et province ont annoncé le 10 octobre 2024 un accord pour poursuivre certains travaux, le conseil a voté le 28 janvier 2025 le lancement du tronçon sud-est, le financement des trois niveaux de pouvoir a été confirmé le 18 mars 2025 et le chantier a commencé en juin 2025.",
+  "nl": "De Green Line, de nieuwe noord-zuidtramlijn van Calgary, was begroot op 6,2 miljard Canadese dollar, waarvan 1,53 miljard van de provincie Alberta. Door de kostenescalatie verkortte de gemeenteraad de eerste fase; daarop trok de provincie haar aandeel terug. Op 17 september 2024 stemde de raad met tien tegen vijf voor de stopzetting. De stad had al 1,3 miljard uitgegeven; de afbouw werd geschat op minstens 850 miljoen, samen meer dan 2,1 miljard. Meer dan achthonderd mensen werkten aan het project. De provinciale minister van Vervoer weigerde de uitstapkosten te betalen en schreef ze toe aan tien jaar slecht stedelijk beheer. De stopzetting werd niet doorgevoerd: stad en provincie kondigden op 10 oktober 2024 een akkoord aan om bepaalde werken voort te zetten, de raad stemde op 28 januari 2025 voor de start van het zuidoostelijke traject, de financiering door de drie bestuursniveaus werd op 18 maart 2025 bevestigd en de werf ging in juni 2025 van start.",
+  "en": "The Green Line, Calgary's new north-south LRT, was budgeted at C$6.2 billion, including C$1.53 billion from the province of Alberta. Facing cost escalation, the city council shortened phase one; the province then withdrew its share. On 17 September 2024 the council voted ten to five to wind the project down. The city had already spent C$1.3 billion; wind-down was estimated at a minimum of C$850 million, more than C$2.1 billion in all. Over eight hundred people were working on the project. The provincial transport minister refused to cover the exit costs, blaming a decade of municipal mismanagement. The wind-down was not carried through: city and province announced on 10 October 2024 an agreement to continue certain works, the council voted on 28 January 2025 to launch the south-east segment, funding from the three levels of government was confirmed on 18 March 2025 and construction began in June 2025."
  },
  "resultats": {
-  "fr": "Selon Global News, 1,3 milliard de dollars canadiens avaient été dépensés, le coût de sortie était estimé à au moins 850 millions et chaque mois de suspension coûtait jusqu'à 30 millions. Aucune voie n'a été mise en service. La ville et la province se sont ensuite opposées sur un tracé de remplacement, la ville chiffrant à 1,3 milliard l'écart entre son estimation et celle de la province.",
-  "nl": "Volgens Global News was 1,3 miljard Canadese dollar uitgegeven, werd de uitstapkost op minstens 850 miljoen geschat en kostte elke maand opschorting tot 30 miljoen. Geen enkel spoor werd in dienst genomen. Stad en provincie raakten daarna in conflict over een vervangend tracé, waarbij de stad het verschil tussen haar schatting en die van de provincie op 1,3 miljard bracht.",
-  "en": "According to Global News, C$1.3 billion had been spent, the exit cost was estimated at a minimum of C$850 million and every month of suspension cost up to C$30 million. No track entered service. City and province then clashed over a replacement alignment, the city putting the gap between its estimate and the province's at C$1.3 billion."
+  "fr": "Selon Global News, 1,3 milliard de dollars canadiens avaient été dépensés, le coût de sortie était estimé à au moins 850 millions et chaque mois de suspension coûtait jusqu'à 30 millions. Aucune voie n'est encore en service : le tronçon sud-est, en chantier depuis juin 2025 avec 6,248 milliards de dollars d'engagements de financement de la ville, de la province et du gouvernement fédéral, doit ouvrir en 2031 selon la Ville de Calgary. La ville et la province se sont ensuite opposées sur un tracé de remplacement, la ville chiffrant à 1,3 milliard l'écart entre son estimation et celle de la province.",
+  "nl": "Volgens Global News was 1,3 miljard Canadese dollar uitgegeven, werd de uitstapkost op minstens 850 miljoen geschat en kostte elke maand opschorting tot 30 miljoen. Geen enkel spoor is al in dienst: het zuidoostelijke deel, in aanbouw sinds juni 2025 met 6,248 miljard dollar aan financieringstoezeggingen van de stad, de provincie en de federale regering, moet volgens de Stad Calgary in 2031 opengaan. Stad en provincie raakten daarna in conflict over een vervangend tracé, waarbij de stad het verschil tussen haar schatting en die van de provincie op 1,3 miljard bracht.",
+  "en": "According to Global News, C$1.3 billion had been spent, the exit cost was estimated at a minimum of C$850 million and every month of suspension cost up to C$30 million. No track is yet in service: the south-east section, under construction since June 2025 with C$6.248 billion in funding commitments from the city, the province and the federal government, is due to open in 2031 according to the City of Calgary. City and province then clashed over a replacement alignment, the city putting the gap between its estimate and the province's at C$1.3 billion."
  },
  "transposabilite": {
   "fr": "Le point directement transposable est la dépendance d'un grand projet de tram à une contribution d'un autre niveau de pouvoir, révocable si la ville modifie le périmètre. À Bruxelles, les grands chantiers de transport public combinent financement régional, Beliris et cofinancements fédéraux ou européens. Ce qui bloquerait ici : les conventions de financement pluriannuelles ne prévoient pas toujours ce que devient l'engagement quand le projet est redimensionné. Directement réalisable : inscrire dans chaque convention ce qui se passe en cas de réduction du périmètre, et publier le coût de sortie actualisé à chaque étape.",
@@ -162,9 +163,10 @@ LABMR.fiches.push(
   "en": "Do the funding agreements for major Brussels public transport projects set out what happens to other tiers' contributions if the project scope is reduced?"
  },
  "sources": [
-  { "media": "Global News", "date": "09/2024", "url": "https://globalnews.ca/news/10761323/calgary-wind-down-green-line-lrt-costs" },
-  { "media": "CBC News", "date": "09/2024", "url": "https://www.cbc.ca/news/canada/calgary/green-line-wind-down-calgary-cost-1.7325028" }
- ]
+  { "media": "Global News", "date": "18/09/2024", "url": "https://globalnews.ca/news/10761323/calgary-wind-down-green-line-lrt-costs" },
+  { "media": "CBC News", "date": "17/09/2024", "url": "https://www.cbc.ca/news/canada/calgary/green-line-wind-down-calgary-cost-1.7325028" },
+   { "media": "Ville de Calgary (page officielle Green Line, chronologie du projet)", "date": "04/10/2026", "url": "https://www.calgary.ca/green-line/about.html" }
+  ]
 },
 {
  "id": "w2-mob-04",
