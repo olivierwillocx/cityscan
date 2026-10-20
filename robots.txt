@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://cityscan.be/sitemap.xml
