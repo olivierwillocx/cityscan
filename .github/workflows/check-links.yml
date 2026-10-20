@@ -1,0 +1,20 @@
+name: Controle des liens (sources des fiches)
+
+# Chaque lundi, verifie que les sources citees dans les fiches existent toujours.
+# En cas de lien mort, l'execution echoue et GitHub envoie un courriel d'alerte ;
+# la liste des fiches a corriger figure dans le resume de l'execution.
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+jobs:
+  liens:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Controler les liens des sources
+        run: node .github/check-links.js
