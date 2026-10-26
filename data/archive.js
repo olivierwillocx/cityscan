@@ -541,7 +541,7 @@ LABMR.fiches.push(...
    {
     "media": "ingenieur.de",
     "date": "24/08/2026",
-    "url": "https://www.ingenieur.de/technik/fachbereiche/bau/elbtower-fiasko-warum-hamburgs-prestigeprojekt-zum-problemfall-wurde/"
+    "url": "https://www.ingenieur.de/elbtower-debakel-wie-hamburg-sein-prestigeprojekt-retten-will-ea03dd86-baff-4f09-bbb9-471ee58b10e7/"
    },
    { "media": "Entwicklungsstadt", "date": "14/08/2026", "url": "https://www.entwicklungsstadt.de/elbtower-in-hamburg-warum-der-weiterbau-noch-immer-nicht-beginnt/" }
   ],
@@ -10457,7 +10457,7 @@ LABMR.fiches.push(...
    {
     "media": "SNS — rapport de recherche (Mikael Priks)",
     "date": "14/02/2024",
-    "url": "https://snsse.cdn.triggerfish.cloud/uploads/2024/02/hur-paverkar-polis-och-overvakningskameror-brottslighet.pdf"
+    "url": "https://cms-production.sns.se/app/uploads/2024/02/hur-paverkar-polis-och-overvakningskameror-brottslighet.pdf"
    }
   ]
  },

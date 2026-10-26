@@ -312,7 +312,7 @@ LABMR.fiches.push(...
    {
     "media": "Ruter (anglais)",
     "date": "06/05/2026",
-    "url": "https://ruter.no/en/nyheter/the-price-of-a-30-day-ticket-for-adults-and-children-will-be-reduced-on-may-3"
+    "url": "https://ruter.no/en/news/the-price-of-a-30-day-ticket-for-adults-and-children-will-be-reduced-on-may-3"
    },
    {
     "media": "VårtOslo",

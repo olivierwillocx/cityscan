@@ -15,6 +15,9 @@ const ROOT = process.cwd();
 const UA = "Mozilla/5.0 (compatible; CityScanLinkCheck/1.0; +https://cityscan.be)";
 const TIMEOUT_MS = 20000;
 const CONCURRENCY = 8;
+// Sites qui répondent 404 aux robots alors que la page existe (vérifié à la main) :
+// leurs 404 sont classés « non vérifiables » plutôt que « morts ».
+const BOT_404_HOSTS = ["www.1news.co.nz"];
 
 function loadFiches() {
   const html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
@@ -48,8 +51,9 @@ async function probe(url) {
   return r;
 }
 
-function classify(r) {
+function classify(r, url) {
   if (r.status && r.status < 400) return "ok";
+  if (r.status === 404 && BOT_404_HOSTS.includes(new URL(url).hostname)) return "unverifiable";
   if (r.status === 404 || r.status === 410) return "dead";
   if (r.error === "ENOTFOUND") return "dead";
   return "unverifiable";
@@ -73,7 +77,7 @@ async function main() {
     while (next < urls.length) {
       const u = urls[next++];
       const r = await probe(u);
-      results.set(u, { ...r, cls: classify(r) });
+      results.set(u, { ...r, cls: classify(r, u) });
     }
   }
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));

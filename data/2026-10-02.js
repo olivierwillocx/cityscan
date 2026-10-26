@@ -770,9 +770,9 @@ LABMR.fiches.push(...
     "url": "https://laclepublique.fr/paris/articles/2026/2026-10-01-paris-ecoles-salles-rafraichies/"
    },
    {
-    "media": "20 Minutes via Yahoo Actualités",
+    "media": "L'info durable (AFP)",
     "date": "29/09/2026",
-    "url": "https://fr.news.yahoo.com/sport/face-canicules-mairie-paris-va-042729370.html"
+    "url": "https://www.linfodurable.fr/canicules-paris-la-ville-investit-400-millions-deuros-pour-adapter-les-ecoles-59176"
    },
    {
     "media": "Ville de Paris (communication officielle)",
